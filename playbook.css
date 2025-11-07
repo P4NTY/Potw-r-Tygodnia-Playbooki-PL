@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0 5mm;
+}
+
+article.site {
+  columns: 3;
+  border: 1px solid;
+  text-align: justify;
+  padding: 5mm;
+}
+
+@media print {
+  article.site {
+      page-break-before: always;
+      border: none;
+  }
+}
+
+
+.title p {
+  font-style: italic;
+}
+
+.move {
+  position: relative;
+  margin-left: 5mm;
+}
+
+.move label {
+  font-weight: bold;
+}
+
+.move label input {
+  display: none;
+}
+
+.move::before {
+  position: absolute;
+  content: '';
+  width: 3mm;
+  height: 3mm;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 2px;
+  left: -5mm;
+  top: 1mm;
+}
+
+.move:has(input:checked)::before {
+  background: blue;
+}
+
+.move:has(input:disabled:checked)::before {
+  background: gold;
+}
+
+label:has([name="unstable"])::before {
+  content: "|"
+}

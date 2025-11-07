@@ -1,0 +1,47 @@
+{
+  "id": "motyw-playbooks-pl",
+  "title": "Playbooki MotW PL",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "flags": {
+    "canUpload": true
+  },
+  "packs": [
+    {
+      "name": "pl-motyw-macro",
+      "label": "Skrypt",
+      "path": "packs/pl-motyw-macro",
+      "type": "Macro",
+      "system": "pbta",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "authors": [
+    {
+      "name": "Kiszu",
+      "email": "kadwao@gmail.com",
+      "url": "kiszu.site",
+      "discord": "2137",
+      "flags": {}
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "motw-for-pbta",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "description": "",
+  "url": "https://gitlab.com/riccisi/foundryvtt-dice-so-nice",
+  "manifest": "",
+  "download": ""
+}

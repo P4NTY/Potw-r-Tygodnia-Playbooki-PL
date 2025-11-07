@@ -1,0 +1,8 @@
+2025/11/06-16:44:15.434 9bac Recovering log #37
+2025/11/06-16:44:15.438 9bac Delete type=0 #37
+2025/11/06-16:44:15.438 9bac Delete type=3 #36
+2025/11/06-23:47:07.397 6228 Level-0 table #41: started
+2025/11/06-23:47:07.398 6228 Level-0 table #41: 0 bytes OK
+2025/11/06-23:47:07.399 6228 Delete type=0 #39
+2025/11/06-23:47:07.399 6228 Manual compaction at level-0 from '!folders!bJBz14vgy2PMBPdx' @ 72057594037927935 : 1 .. '!items!yG3jzI2hTtBRe8H7' @ 0 : 0; will stop at (end)
+2025/11/06-23:47:07.399 6228 Manual compaction at level-1 from '!folders!bJBz14vgy2PMBPdx' @ 72057594037927935 : 1 .. '!items!yG3jzI2hTtBRe8H7' @ 0 : 0; will stop at (end)
