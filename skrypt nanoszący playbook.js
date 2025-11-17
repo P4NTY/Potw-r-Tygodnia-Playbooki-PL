@@ -1,7 +1,7 @@
 const b_attrs = {
     "harm": {
-        "label": "Harm",
-        "description": "When you reach 4 or more, mark unstable.",
+        "label": "Rany",
+        "description": "Po otrzymaniu 4 Rany stajesz się Niestabilny.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -11,18 +11,18 @@ const b_attrs = {
         "steps": [false,false,false,false,false,false,false]
     },
     "unstable": {
-        "label": "Unstable",
-        "description": "(Unstable injuries will worsen as time passes)",
+        "label": "Niestabilny",
+        "description": "Twój stan będzie się pogarszał z czasem.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
         "type": "Checkbox",
-        "checkboxLabel": "Unstable Injuries",
+        "checkboxLabel": "Niestabliność",
         "value": false
     },
     "luck": {
-        "label": "Luck",
-        "description": "Mark luck to change a roll to 12 or avoid all harm.",
+        "label": "Fuks",
+        "description": "Zamień wynik na 12 lub uniknij obrażeń.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -32,8 +32,8 @@ const b_attrs = {
         "steps": [false,false,false,false,false,false,false]
     },
     "xp": {
-        "label": "Experience",
-        "description": "When you roll a miss, or when a move says to, mark Xp.",
+        "label": "Doświadczenie",
+        "description": "Przy porżce lub kiedy mói o tym ruch.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -43,8 +43,8 @@ const b_attrs = {
         "steps": [false,false,false,false,false]
     },
     "armour": {
-        "label": "Armour",
-        "description": "Armour reduces harm suffered by the armour rating.",
+        "label": "Pancerz",
+        "description": "Chroni przed otrzymaniem Ran.",
         "customLabel": false,
         "userLabel": false,
         "position": "left",
@@ -52,7 +52,7 @@ const b_attrs = {
         "value": 0
     },
     "luckspecial": {
-        "label": "Luck Special",
+        "label": "Zasada Fuksa",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -61,7 +61,7 @@ const b_attrs = {
         "value": ""
     },
     "look": {
-        "label": "Look",
+        "label": "Wygląd",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -70,7 +70,7 @@ const b_attrs = {
         "value": ""
     },
     "improvements": {
-        "label": "Improvements",
+        "label": "Rozwinięcia",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -79,7 +79,7 @@ const b_attrs = {
         "value": ""
     },
     "advancedimprovements": {
-        "label": "Advanced Improvements",
+        "label": "Rozwinięcia Zaaw.",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -387,7 +387,7 @@ const playbooks = [
                 "name": "Neurologia i Psychologia",
                 "rollType": "sharp",
                 "group": "Dziedzina Nauk",
-                "desc": "Kiedy podczas rozmowy doszukujesz się motywacji rozmówcy, rzuć + Sharp",
+                "desc": "Kiedy podczas rozmowy doszukujesz się motywacji rozmówcy, rzuć + Spryt",
                 "success": "MG powie ci czy rozmawiasz z człowiekiem, statystą, sprzymierzeńcem, świadkiem, złoczyńcom, potworem lub jego poplecnzikiem",
                 "patrial": "MG powie ci, czy coś jest z nim nie tak, ale nie jesteś pewien co dokładnie",
                 "failure": "to TY ujawniasz zbyt wiele o sobie"
@@ -396,7 +396,7 @@ const playbooks = [
                 "name": "Komputery i Elektronika",
                 "rollType": "cool",
                 "group": "Dziedzina Nauk",
-                "desc": "Kiedy zdobywasz dostęp do systemu komputerowego lub urządzenia elektronicznego, rzuć +Cool",
+                "desc": "Kiedy zdobywasz dostęp do systemu komputerowego lub urządzenia elektronicznego, rzuć +Spokój",
                 "success": "masz dostęp i kontrolę (w granicach możliwości tego systemu)",
                 "patrial": "zajmuje to więcej czasu lub dzieje się coś niespodziewanego",
                 "failure": "odpala się najczarniejszy scenariusz"
@@ -404,7 +404,7 @@ const playbooks = [
             {
                 "name": "Przemoc",
                 "group": "Dziedzina Nauk",
-                "desc": "Możesz Dwać Wyciks na Sharp. Kiedy przeprowadzasz naukowy atak możesz dodatkowo wybrać +1 harm albo +1 do następnego rzutu"
+                "desc": "Możesz Dwać Wyciks na Spryt. Kiedy przeprowadzasz naukowy atak możesz dodatkowo wybrać +1 harm albo +1 do następnego rzutu"
             },
             {
                 "name": "Mechanika i Inżynieria",
@@ -419,7 +419,7 @@ const playbooks = [
             {
                 "name": "Dowodzenie Hipotezy",
                 "rollType": "sharp",
-                "desc": "Kiedy testujesz potencjalne wyjaśnienie bazując na zdobytych danych, rzuć + Sharp. MG powie ci jeżeli jesteś na właściwym tropie, brakuje ci jakiś kluczowych danych, albo idziesz w złą stronę",
+                "desc": "Kiedy testujesz potencjalne wyjaśnienie bazując na zdobytych danych, rzuć + Spryt. MG powie ci jeżeli jesteś na właściwym tropie, brakuje ci jakiś kluczowych danych, albo idziesz w złą stronę",
                 "success": "możesz ufać uzyskanym odpowiedziom",
                 "patrial": "MG odpowie ci szczerze, ale straciłeś sporo czasu albo musiałem zniszczyć część kluczowych próbek",
                 "failure": "odpowiedzi jakie otrzymujesz są niezwiązane z faktami"
@@ -427,7 +427,7 @@ const playbooks = [
             {
                 "name": "Sabotaż",
                 "rollType": "sharp",
-                "desc": "Kiedy szybko niszczysz skomplikowane urządzenie, rzuć +Sharp",
+                "desc": "Kiedy szybko niszczysz skomplikowane urządzenie, rzuć +Spryt",
                 "success": "jest popsute. Wybierz czy zrobiłeś to po cichu albo zostawiłeś to całkowicie rozwalone",
                 "patrial": "jest popsute, ale nie jest to ciężkie do naprawy, a przy okazji narobiłeś rabanu",
                 "failure": "dzieje się najgorsze, najpewniej wybucha"
@@ -439,15 +439,15 @@ const playbooks = [
             {
                 "name": "Drzwi percepcji",
                 "rollType": "weird",
-                "desc": "Kiedy wprowadzasz się w trans za pomocą środków psychologicznych, farmaceutycznych lub technik medytacyjnych, rzuć +Weird",
+                "desc": "Kiedy wprowadzasz się w trans za pomocą środków psychologicznych, dalekimaceutycznych lub technik medytacyjnych, rzuć +Dziw",
                 "success": "wybierz 2",
                 "patrial": "wybierz 1, ale jesteś zamroczony, a twój umysł jest zamglony",
                 "failure": "gubisz się w odmiennych stanach świadomości",
                 "choices": [
                     "Rozmawiasz z kimś lub czymś z czym nie byłbyś w stanie normalnie się porozumieć",
-                    "Widzisz to, czego nie widać: takie rzeczy jak siły fizyczne, duchy i zjawy, intruzów z innych wymiarów i magiczne zjawiska",
+                    "Widzisz to, czego nie widać: takie rzeczy jak siły fizyczne, duchy i zjawy, intruzów z innych wymiarów i magicznezne zjawiska",
                     "Zadaj jedno pytanie z Badaj Tajemnice",
-                    "Przejrzystość: Otrzymujesz +1 do cech Cool, Sharp lub Weird na następną godzinę (maksymalnie +3)"
+                    "Przejrzystość: Otrzymujesz +1 do cech Spokój, Spryt lub Dziw na następną godzinę (maksymalnie +3)"
                 ]
             },
             {
@@ -456,21 +456,21 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Karabin Plazmowy", "group": "Broń naukowa", "tags": ["3-harm", "close", "loud", "area", "electricity", "batteries" ]},
-            {"type": "weapon", "name": "Przenośny przyspieszacz cząstek", "group": "Broń naukowa", "tags": ["3-harm", "close/far", "messy", "batteries" ]},
-            {"type": "weapon", "name": "Działo Laserowe", "group": "Broń naukowa", "tags": ["2-harm", "close/far", "quiet", "batteries" ]},
-            {"type": "weapon", "name": "Wyrzutnia sieci", "group": "Broń naukowa", "tags": ["0-harm", "close", "entangling" ]},
-            {"type": "weapon", "name": "Skalpel", "group": "Broń naukowa", "tags": ["1-harm", "intimate/hand" ]},
-            {"type": "weapon", "name": "Nóż kinetyczny", "group": "Broń naukowa", "tags": ["2-harm", "hand", "batteries"]},
-            {"type": "weapon", "name": "Karabin usypiający", "group": "Broń naukowa", "tags": ["1-harm", "close/far", "sedating" ]},
-            {"type": "weapon", "name": "Paralizator", "group": "Broń naukowa", "tags": ["0-harm","close","sedating"]},
-            {"type": "weapon", "name": "Dron Autonomiczny", "group": "Broń naukowa", "tags": ["2-harm", "far", "autonomous"]},
-            {"type": "weapon", "name": "Pistolet Atomowy", "group": "Broń naukowa", "tags": ["3-harm", "close", "radiation"]},
-            {"type": "armour", "name": "Kombinezon ochrony zakaźnej", "group": "Odzież Ochronna", "tags": ["air-supply", "sealed"]},
-            {"type": "armour", "name": "Fartuch laboranta", "group": "Odzież Ochronna", "tags": ["chemical-resistant"]},
+            {"type": "weapon", "name": "Karabin Plazmowy", "group": "Broń naukowa", "tags": ["3-ran", "bliski", "głośny", "obszarowe", "elektryczność", "na baterie" ]},
+            {"type": "weapon", "name": "Przenośny przyspieszacz cząstek", "group": "Broń naukowa", "tags": ["3-ran", "bliski/daleki", "niezdarne", "na baterie" ]},
+            {"type": "weapon", "name": "Działo Laserowe", "group": "Broń naukowa", "tags": ["2-ran", "bliski/daleki", "wyciszone", "na baterie" ]},
+            {"type": "weapon", "name": "Wyrzutnia sieci", "group": "Broń naukowa", "tags": ["0-ran", "bliski", "wiążące" ]},
+            {"type": "weapon", "name": "Skalpel", "group": "Broń naukowa", "tags": ["1-ran", "intymny/na dłoń" ]},
+            {"type": "weapon", "name": "Nóż kinetyczny", "group": "Broń naukowa", "tags": ["2-ran", "na dłoń", "na baterie"]},
+            {"type": "weapon", "name": "Karabin usypiający", "group": "Broń naukowa", "tags": ["1-ran", "bliski/daleki", "usypiający" ]},
+            {"type": "weapon", "name": "Paralizator", "group": "Broń naukowa", "tags": ["0-ran","bliski","usypiający"]},
+            {"type": "weapon", "name": "Dron Autonomiczny", "group": "Broń naukowa", "tags": ["2-ran", "daleki", "autonomiczny"]},
+            {"type": "weapon", "name": "Pistolet Atomowy", "group": "Broń naukowa", "tags": ["3-ran", "bliski", "radiacja"]},
+            {"type": "armour", "name": "Kombinezon ochrony zakaźnej", "group": "Odzież Ochronna", "tags": ["zasób powietrze", "zaizolowane"]},
+            {"type": "armour", "name": "Fartuch laboranta", "group": "Odzież Ochronna", "tags": ["odporność chemiczna"]},
             {"type": "armour", "name": "Strój techniczny", "group": "Odzież Ochronna"},
-            {"type": "armour", "name": "Kombinezon kosmiczny", "group": "Odzież Ochronna", "tags": ["air-supply", "sealed", "climate-control"]},
-            {"type": "armour", "name": "Pancerz Naukowy", "group": "Odzież Ochronna", "tags": ["2-armour", "batteries", "heavy"]},
+            {"type": "armour", "name": "Kombinezon kosmiczny", "group": "Odzież Ochronna", "tags": ["zasób powietrze", "zaizolowane", "kontrola klimatu"]},
+            {"type": "armour", "name": "Pancerz Naukowy", "group": "Odzież Ochronna", "tags": ["2-pancerz", "na baterie", "ciężki"]},
         ],
         "luck": "Kiedy wydasz Fuksa, jakieś urządzenie lub maszyna w pobliżu wkrótce zacznie działać nieprawidłowo, zepsuje się lub wybuchnie (dokładnie co, zależy od MG)",
         "stats": [
@@ -496,27 +496,27 @@ const playbooks = [
             "Jest ci wdzięczny po tym jak wyciągnąłeś go z kłopotów za pomocą szalonej nauki. Jakie to były kłopoty? co zrobiłeś?",
         ],
         "advance": [
-            "Get +1 Sharp, max +3",
-            "Get +1 Cool, max +2",
-            "Get +1 Weird, max +2",
-            "Get +1 Tough, max +2",
-            "Take another Action Scientist move",
-            "Take another Action Scientist move",
-            "Get a laboratory with staff, facilities, and instruments suited to your area of study",
-            "Gain an ally team of action scientists",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Spryt, max +3",
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Dziw, max +2",
+            "Weź +1 Hart, max +2",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Zarządzasz placówką badawczą związaną z twoją Dziedziną Nauk",
+            "Masz grupę wspierających ciebie naukowców",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 Cool, max +3",
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new playbook",
-            "Create a second hunter to play in addition to this one",
-            "Mark two of the basic moves as advanced",
-            "Mark another two of the basic moves as advanced",
-            "Retire this hunter to safety",
-            "Erase one used Luck mark from your playbook",
-            "New interest: add a second area of study",
+            "Weź +1 Spokój, max +3",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp tego łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Wybierz drugą Dziedzinę Nauk",
         ],
         "group_desc": {
             "Dziedzina Nauk": "Wybierz swoją specjalizację:",
@@ -535,7 +535,7 @@ const playbooks = [
                 "name": "Ploteczki",
                 "isActive": true,
                 "rollType": "sharp",
-                "desc": "Kiedy korzystasz z `faktów` poznanych w pracy, rzuć +Sharp",
+                "desc": "Kiedy korzystasz z `faktów` poznanych w pracy, rzuć +Spryt",
                 "success": "wybierz 2",
                 "patrial": "wybierz 1",
                 "failure": "wybierz dwa, ale jeden jest prawdziwy, drugi nie, i nie dowiesz się, który, dopóki nie będzie to miało znaczenia",
@@ -553,7 +553,7 @@ const playbooks = [
             {
                 "name": "Królowa Krzyku",
                 "rollType": "cool",
-                "desc": "Kiedy robisz zamieszanie, rzuć +Cool",
+                "desc": "Kiedy robisz zamieszanie, rzuć +Spokój",
                 "success": "przyciągasz całą uwagę, tak jak chcesz",
                 "patrial": "przyciagasz uwagę, ale również takiej jakiej nie chcesz, albo przyciągasz tylko częściowo",
                 "failure": "robisz z siebie błazna, ale nikt tego nie widzi"
@@ -561,7 +561,7 @@ const playbooks = [
             {
                 "name": "Znam ludzi",
                 "rollType": "charm",
-                "desc": "Masz przyjaciół na wysokich stanowiskach. Kiedy prosisz ich o pomoc, rzuć +Charm",
+                "desc": "Masz przyjaciół na wysokich stanowiskach. Kiedy prosisz ich o pomoc, rzuć +Urok",
                 "success": "są dostępni i pomocni – potrafią naprawić różne rzeczy, wykorzystać swoje kontakty, aby ominąć autorytety, przeprowadzić badania lub zdobyć specjalne informacje",
                 "patrial": "są gotowi pomóc, ale albo zajmie to trochę czasu, albo będziesz im winien przysługę",
                 "failure": "obrażasz ich"
@@ -574,8 +574,8 @@ const playbooks = [
             {
                 "name": "Rozbrajający",
                 "rollType": "charm",
-                "desc": "Wiesz, jak wyglądać nieszkodliwie. Kiedy odwodzisz kogoś lub coś od zrobienia ci krzywdy, rzuć +Charm",
-                "success": "postać waha się wystarczająco długo, aby ktoś mógł zareagować",
+                "desc": "Wiesz, jak wyglądać nieszkodliwie. Kiedy odwodzisz kogoś lub coś od zrobienia ci krzywdy, rzuć +Urok",
+                "success": "postać waha się wystarczająco długo, aby ktoś mógł zobszarowegować",
                 "patrial": "albo się powstrzymuje, albo atakuje kogoś innego",
                 "failure": "obrażasz ich"
             },
@@ -611,27 +611,27 @@ const playbooks = [
             "Doradzałeś Łowcy podczas polowania, co uratowało mu życie. Co to było?",
         ],
         "advance": [
-            "Get +1 Charm, max +3",
-            "Get +1 Tough, max +2",
-            "Get +1 Sharp, max +2",
-            "Get +1 Cool, max +2",
-            "Take another Celebrity move",
-            "Take another Celebrity move",
-            "Gain an ally group—an entourage",
-            "Choose two topics of occult lore (such as fringe science, ghosts, aliens, or incantations) and take +1 ongoing when using fakelore on those topics",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Urok, max +3",
+            "Weź +1 Hart, max +2",
+            "Weź +1 Spryt, max +2",
+            "Weź +1 Spokój, max +2",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Masz grupę ziomków, którzy ci pomogą",
+            "Wybierz dwa okultystyczne tematy (dziwna nauka, duchy, kosmici, zaklęcia itp), masz ciągłe +1 do Ploteczek na ich temat",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new playbook",
-            "Create a second hunter to play in addition to this one",
-            "Mark two of the basic moves as advanced",
-            "Mark another two of the basic moves as advanced",
-            "Retire this hunter to safety",
-            "Retire this hunter to increased fame",
-            "Erase one used Luck mark from your playbook",
-            "Your fame skyrockets, bringing you lots of new benefits and obligations to match",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp tego łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Przejdź na emeryturę w blasku sławy i stań się pawdziwą SUPER GWIAZDĄ.",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Światowy format, masz wiele nowych korzyści i obowiązków.",
         ],
         "gear": [
             {"type": "transport", "name": "Bus turystyczny z malowaną karoserią", "group": "Pojazd"},
@@ -640,12 +640,12 @@ const playbooks = [
             {"type": "transport", "name": "Limuzyna z kierowcą", "group": "Pojazd"},
             {"type": "transport", "name": "Bryka Klasyk", "group": "Pojazd"},
             {"type": "transport", "name": "Podkręcony Motocykl", "group": "Pojazd"},
-            {"type": "weapon", "name": "Revolwer .38", "group": "Broń", "tags": ["2-harm", "close", "reload", "loud"]},
-            {"type": "weapon", "name": "Strzelba", "group": "Broń", "tags": ["3-harm", "close", "messy"]},
-            {"type": "weapon", "name": "Karabin Myśliwski", "group": "Broń", "tags": ["2-harm", "far", "loud"]},
-            {"type": "weapon", "name": "Pistolet 9mm", "group": "Broń", "tags": ["2-harm", "close", "loud"]},
-            {"type": "weapon", "name": "Nożysko", "group": "Broń", "tags": ["1-harm", "hand"]},
-            {"type": "weapon", "name": "Piła łańcuchowa", "group": "Broń", "tags": ["2-harm", "hand", "heavy", "messy", "loud"]},
+            {"type": "weapon", "name": "Revolwer .38", "group": "Broń", "tags": ["2-ran", "bliski", "magazynki", "głośny"]},
+            {"type": "weapon", "name": "Strzelba", "group": "Broń", "tags": ["3-ran", "bliski", "niezdarne"]},
+            {"type": "weapon", "name": "Karabin Myśliwski", "group": "Broń", "tags": ["2-ran", "daleki", "głośny"]},
+            {"type": "weapon", "name": "Pistolet 9mm", "group": "Broń", "tags": ["2-ran", "bliski", "głośny"]},
+            {"type": "weapon", "name": "Nożysko", "group": "Broń", "tags": ["1-ran", "na dłoń"]},
+            {"type": "weapon", "name": "Piła łańcuchowa", "group": "Broń", "tags": ["2-ran", "na dłoń", "ciężki", "niezdarne", "głośny"]},
         ],
         "group_desc": {
             "Broń": "Wybierz 2",
@@ -680,16 +680,16 @@ const playbooks = [
             {
                 "name": "Siła Natury",
                 "rollType": "weird",
-                "desc": "Masz nadprzyrodzony atak z twojego dziedzictwa. Wybierz jego rodzaj: błyskawice, roje owadów, magiczne ostrza lub coś innego. Kiedy uwalniasz swoją moc, rzuć +Weird",
-                "success": "Przyzywasz Broń z tagami (1-harm close) na krótki czas, wybierz dodatkowe 2 z listy",
-                "patrial": "Przyzywasz Broń z tagami (1-harm close) na krótki czas, wybierz dodatkowy 1 z listy",
+                "desc": "Masz nadprzyrodzony atak z twojego dziedzictwa. Wybierz jego rodzaj: błyskawice, roje owadów, magicznezne ostrza lub coś innego. Kiedy uwalniasz swoją moc, rzuć +Dziw",
+                "success": "Przyzywasz Broń z tagami (1-ran bliski) na krótki czas, wybierz dodatkowe 2 z listy",
+                "patrial": "Przyzywasz Broń z tagami (1-ran bliski) na krótki czas, wybierz dodatkowy 1 z listy",
                 "failure": "Obraca się to przeciwko tobie",
-                "choices": ["+1 harm", "hand", "far", "autonomous", "distracting", "ignore-armour", "area", "grab", "blind", "stun"]
+                "choices": ["+1 harm", "na dłoń", "daleki", "autonomiczny", "distracting", "ignoruje pancerz", "obszarowe", "chwyt", "blind", "ogłuszający"]
             },
             {
                 "name": "Blokada",
                 "rollType": "weird",
-                "desc": "Możesz ogłuszyć ludzi mocą taką jak przerażające spojrzenie, przytłaczające iluzje lub oszałamiające ćmy. Kiedy kogoś unieruchamiasz, rzuć +Weird",
+                "desc": "Możesz ogłuszyć ludzi mocą taką jak przerażające spojrzenie, przytłaczające iluzje lub oszałamiające ćmy. Kiedy kogoś unieruchamiasz, rzuć +Dziw",
                 "success": "cel zostaje unieruchomiony na kilka minut lub do momentu, aż coś go z tego stanu wyrwie.",
                 "patrial": "cel pozostaje unieruchomiony tak długo, jak długo skupiasz na nim uwagę, albo dopóki coś go z tego nie wyrwie",
                 "failure": "magia obraca się przeciw tobie"
@@ -697,7 +697,7 @@ const playbooks = [
             {
                 "name": "Wróżkowe Ploteczki",
                 "rollType": "sharp",
-                "desc": "Możesz komunikować się z lokalnymi duchami i mistycznymi stworzeniami. Gedy Badajasz Tajemnicę, zadając tym istotom pytania, rzuć +Sharp.",
+                "desc": "Możesz komunikować się z lokalnymi duchami i mistycznymi stworzeniami. Gedy Badajasz Tajemnicę, zadając tym istotom pytania, rzuć +Spryt.",
                 "success": "zatrzymaj 2",
                 "patrial": "zatrzymaj 1",
                 "failure": "ujawniasz jakąś informację Potworowi lub temu, z kim rozmawiasz. Strażnik może zadać ci jakieś pytania i musisz na nie odpowiedzieć.",
@@ -721,7 +721,7 @@ const playbooks = [
             {
                 "name": "Dziwne ścieżki",
                 "rollType": "weird",
-                "desc": "Możesz poruszać się pieszo (lub samochodem) między światami. Nie znasz jednak drogi zbyt dobrze. Kiedy korzystasz ze skrótu do innego świata, rzuć +Weird",
+                "desc": "Możesz poruszać się pieszo (lub samochodem) między światami. Nie znasz jednak drogi zbyt dobrze. Kiedy korzystasz ze skrótu do innego świata, rzuć +Dziw",
                 "success": "dotrzesz na miejsce szybciej, niż byłoby to możliwe w inny sposób",
                 "patrial": "napotykasz problemy po drodze. Być może dotrzesz tylko do części drogi, spotkasz miejscowych albo zaoszczędzisz tylko trochę czasu",
                 "failure": "przyjeżdżasz odrobinę za późno lub musisz radzić sobie z czymś blokującym drogę"
@@ -736,13 +736,13 @@ const playbooks = [
             {"type": "transport", "name": "Van", "group": "Pojazd"},
             {"type": "transport", "name": "Dość nowy samochód w dobrym stanie", "group": "Pojazd"},
             {"type": "transport", "name": "Klasyczny wóz w kiepskim stanie", "group": "Pojazd"},
-            {"type": "weapon", "name": "Baseball", "group": "Broń", "tags": ["2-harm","hand","innocuous","messy"]},
-            {"type": "weapon", "name": "Scyzoryk", "group": "Broń", "tags": ["1-harm","hand","useful","small"]},
-            {"type": "weapon", "name": "Pistolet", "group": "Broń", "tags": ["2-harm","close","loud"]},
-            {"type": "weapon", "name": "Karabin Myśliwski", "group": "Broń", "tags": ["3-harm","far","loud","reload"]},
-            {"type": "weapon", "name": "Młot", "group": "Broń", "tags": ["2-harm","hand","messy","slow"]},
-            {"type": "weapon", "name": "Topór strażacki", "group": "Broń", "tags": ["2-harm","hand","messy","heavy"]},
-            {"type": "weapon", "name": "Talizman / artefakt", "group": "Broń", "tags": ["1-harm","close","magic","ignore-armour"]},
+            {"type": "weapon", "name": "Baseball", "group": "Broń", "tags": ["2-ran","na dłoń","nieszkodliwy","niezdarne"]},
+            {"type": "weapon", "name": "Scyzoryk", "group": "Broń", "tags": ["1-ran","na dłoń","użyteczzne","mały"]},
+            {"type": "weapon", "name": "Pistolet", "group": "Broń", "tags": ["2-ran","bliski","głośny"]},
+            {"type": "weapon", "name": "Karabin Myśliwski", "group": "Broń", "tags": ["3-ran","daleki","głośny","magazynki"]},
+            {"type": "weapon", "name": "Młot", "group": "Broń", "tags": ["2-ran","na dłoń","niezdarne","powolne"]},
+            {"type": "weapon", "name": "Topór strażacki", "group": "Broń", "tags": ["2-ran","na dłoń","niezdarne","ciężki"]},
+            {"type": "weapon", "name": "Talizman / artefakt", "group": "Broń", "tags": ["1-ran","bliski","magiczne","ignoruje pancerz"]},
             {"type": "gear", "name": "Dziecięca zabawka", "group": "pamiątki"},
             {"type": "gear", "name": "Laptop", "group": "pamiątki"},
             {"type": "gear", "name": "Torba", "group": "pamiątki"},
@@ -767,30 +767,30 @@ const playbooks = [
             {"charm": 2, "cool": 1, "sharp": 1, "tough": -1, "weird": 0},
         ],
         "advance": [
-            "Get +1 Weird, max +3",
-            "Get +1 Cool, max +2",
-            "Get +1 Sharp, max +2",
-            "Get +1 Charm, max +2",
-            "Take another Changeling move",
-            "Take another Changeling move",
-            "Gain an ally, associated with either the mortal or super natural worlds",
-            "Mark use magic (or your alternate Weird move) as advanced",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Dziw, max +3",
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Spryt, max +2",
+            "Weź +1 Urok, max +2",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Zyskujesz sojusznika związanego z którymś z dwóch światów, do których należysz.",
+            "Rozszerz ruch Użyj Magii lub weź Dziwny Ruch.",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ], 
         "exp_advance": [
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new playbook",
-            "Create a second hunter to play in addition to this one",
-            "Mark two of the basic moves as advanced",
-            "Mark another two of the basic moves as advanced",
-            "Retire this hunter to safety",
-            "Erase one used Luck mark from your playbook",
-            "Remove one Unknown Heritage tag. You’ve now integrated well enough to avoid issues.",
-            "Your character retires to a position of supernatural responsibility, preventing their involvement in mortal matters",
-            "You find a home. A human group that has accepted you for what you are. Create as the Professional’s Agency, with one resource and one red tape.",
-            "You find a home. You’ve been welcomed into a group of your supernatural heritage. Create as the Initiate’s Sect, with one good tradition and one bad tradition.",
-            "You find a home. You’ve claimed a supernatural realm. Create as the Expert’s haven, with two options. You may use magic to access this realm from any location.",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp tego łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Zaaklimatyzowałeś się na tyle, by usunąć jedno ze swoich Nieznanych Pochodzeń.",
+            "Przechodzisz an emeryturę stając się kimś ważnym w nadprzyrodzonej społeczności.",
+            "Znajdujesz dom. Grupę ludzi, którzy akceptują cię takim, jakim jesteś. Weź Agencję od Zawodowca z jednym zasobem i jedną biurokracją.",
+            "Znajdujesz dom. Zostałeś przyjęty do tajnego stowarzyszesnia. Weź Sektę od Kultysty z jedną dobrą i złą tradycją.",
+            "Znajdujesz dom w wymiarze kieszonkowym. Weź Azyl od Eksperta z dwiema opcjami. Użyj Magii, by się tam dostać.",
         ],
         "story": [
             "Odkrył, że nie jesteś człowiekiem. Jak się o tym dowiedział? Jak (jeśli?) ci to powiedzieli?",
@@ -820,14 +820,14 @@ const playbooks = [
                 "isActive": true,
                 "group": "Przepowiednie",
                 "desc": "Ty decydujesz jaki los jest ci pisany. Skąd znasz twoje przeznaczenie:<ul><li>z koszmarów i wizji</li><li>powiedziała ci to jakaś dziwaczka</li><li>odnalazł cię pradawny kult</li><li>twoja nemezis cię szukała</li><li>zaatakowały cię potwory</li><li>szkolono cię od dziecka</li><li>odkryłeś przepowiednię</li></ul>Następnie wybierz po dwie cechy pomyślności i cechy fatum z list poniżej. One określają, jak rozwinie się twoje przeznaczenie. Możesz wybierać sprzeczne opcje: wtedy przeznaczenie ciągnie cię w obie strony. Gdy zakreślasz Fuksa, Strażnik wprowadzi element związany z twoim przeznaczeniem.",
-                "choices": "<p>Pomyślonść</p><ul><li>poświęcenie</li><li>jesteś czempionem</li><li>wizje</li><li>tajny trening</li><li>magiczne moce</li><li>mistyczne dziedzictwo</li><li>zwykłe życie</li><li>prawdziwa miłość</li><li>możesz ocalić świat</li><li>ukryci sojusznicy</li><li>koniec potworów</li><li>oska pomoc</li></ul><p>Fatum</p><ul><li>śmierć</li><li>nie możesz ocalić wszystkich</li><li>miłość bez szans</li><li>porażka</li><li>nemezis</li><li>bez zwykłego życia</li><li>utrata ukochanych</li><li>zdrada</li><li>wątpliwości</li><li>sympatia do wroga</li><li>potępienie</li><li>tłumy potworów</li><li>koniec świata</li><li>źródło Zła</li></ul>"
+                "choices": "<p>Pomyślonść</p><ul><li>poświęcenie</li><li>jesteś czempionem</li><li>wizje</li><li>tajny trening</li><li>magicznezne moce</li><li>mistyczne dziedzictwo</li><li>zwykłe życie</li><li>prawdziwa miłość</li><li>możesz ocalić świat</li><li>ukryci sojusznicy</li><li>koniec potworów</li><li>Boska pomoc</li></ul><p>Fatum</p><ul><li>śmierć</li><li>nie możesz ocalić wszystkich</li><li>miłość bez szans</li><li>porażka</li><li>nemezis</li><li>bez zwykłego życia</li><li>utrata ukochanych</li><li>zdrada</li><li>wątpliwości</li><li>sympatia do wroga</li><li>potępienie</li><li>tłumy potworów</li><li>koniec świata</li><li>źródło Zła</li></ul>"
             },
             {
                 "name": "Zabawka Przeznaczenia",
                 "isActive": true,
                 "group": "Przepowiednie",
                 "rollType": "weird",
-                "desc": "Na początku każdej tajemnicy rzuć +Weird, aby zobaczyć, co zostanie ujawnione na temat twojej najbliższej przyszłości.",
+                "desc": "Na początku każdej tajemnicy rzuć +Dziw, aby zobaczyć, co zostanie ujawnione na temat twojej najbliższej przyszłości.",
                 "success": "Strażnik ujawni przydatny szczegół dotyczący nadchodzącej tajemnicy.",
                 "patrial": "otrzymasz mglistą wskazówkę.",
                 "failure": "stanie ci się coś złego."
@@ -864,17 +864,17 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "laska", "group": "forma", "tags": ["1-harm", "hand/close"]},
-            {"type": "weapon", "name": "trzonek", "group": "forma", "tags": ["2-harm", "hand", "heavy"]},
-            {"type": "weapon", "name": "rękojeść", "group": "forma", "tags": ["1-harm", "hand", "balanced"]},
-            {"type": "weapon", "name": "łańcuch", "group": "forma", "tags": ["1-harm", "hand", "area"]},
-            {"type": "weapon", "name": "artefakt", "group": "końcówka", "tags": ["magic"]},
-            {"type": "weapon", "name": "kolce", "group": "końcówka", "tags": ["1-harm", "messy"]},
-            {"type": "weapon", "name": "ostrze", "group": "końcówka", "tags": ["1-harm"]},
-            {"type": "weapon", "name": "ciężka", "group": "końcówka", "tags": ["1-harm"]},
-            {"type": "weapon", "name": "długa", "group": "końcówka", "tags": ["close"]},
-            {"type": "weapon", "name": "rzucana", "group": "końcówka", "tags": ["close"]},
-            {"type": "weapon", "name": "łańcuchowa", "group": "końcówka", "tags": ["area"]},
+            {"type": "weapon", "name": "laska", "group": "forma", "tags": ["1-ran", "na dłoń/bliski"]},
+            {"type": "weapon", "name": "trzonek", "group": "forma", "tags": ["2-ran", "na dłoń", "ciężki"]},
+            {"type": "weapon", "name": "rękojeść", "group": "forma", "tags": ["1-ran", "na dłoń", "wyważona"]},
+            {"type": "weapon", "name": "łańcuch", "group": "forma", "tags": ["1-ran", "na dłoń", "obszarowe"]},
+            {"type": "weapon", "name": "artefakt", "group": "końcówka", "tags": ["magiczne"]},
+            {"type": "weapon", "name": "kolce", "group": "końcówka", "tags": ["1-ran", "niezdarne"]},
+            {"type": "weapon", "name": "ostrze", "group": "końcówka", "tags": ["1-ran"]},
+            {"type": "weapon", "name": "ciężka", "group": "końcówka", "tags": ["1-ran"]},
+            {"type": "weapon", "name": "długa", "group": "końcówka", "tags": ["bliski"]},
+            {"type": "weapon", "name": "rzucana", "group": "końcówka", "tags": ["bliski"]},
+            {"type": "weapon", "name": "łańcuchowa", "group": "końcówka", "tags": ["obszarowe"]},
             {"type": "weapon", "name": "stal", "group": "materiał"},
             {"type": "weapon", "name": "zimne żelazo", "group": "materiał"},
             {"type": "weapon", "name": "srebro", "group": "materiał"},
@@ -892,26 +892,26 @@ const playbooks = [
             {"charm": 1, "cool": 2, "sharp": -1, "tough": 2, "weird": 2},
         ],
         "advance": [
-            "Get +1 Charm, max +3",
-            "Get +1 Cool, max +3",
-            "Get +1 Sharp, max +3",
-            "Get +1 Tough, max +3",
-            "Get +1 Weird, max +3",
-            "Take another Chosen move",
-            "Take another Chosen move",
-            "Gain an ally",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Urok, max +3",
+            "Weź +1 Spokój, max +3",
+            "Weź +1 Spryt, max +3",
+            "Weź +1 Hart, max +3",
+            "Weź +1 Dziw, max +3",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Zyskaj sojusznika",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3.",
-            "Get back one used Luck point.",
-            "Change this hunter to a new type.",
-            "Create a second hunter to play as well as this one.",
-            "Mark two of the basic moves as advanced.",
-            "Mark another two of the basic moves as advanced.",
-            "Retire this hunter to safety.",
-            "Delete one of your Doom tags, and (optionally) one of your Heroic tags. You have changed that aspect of your destiny.",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Zmień archetyp łowcy.",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Zmień swoje Przeznaczenie. Usuń jedeno Fatum oraz Pomyślność - te drugie nieobowiązkowo."
         ],
         "look": [
             "Dzieciak, nastolatek, młody, wypalony.",
@@ -936,9 +936,9 @@ const playbooks = [
             "Uratowałeś mu życie, gdy jeszcze nie wiedział, że potwory są prawdziwe. Co to była za sytuacja?",
         ]
     },
-    // Sojusznik 
+    // Sprzymierzony 
     {
-        "name": "Sojusznik",
+        "name": "Sprzymierzony",
         "desc": "Więź z tym jest silniejsza niż więzi gatunkowe.",
         "luck": "Kiedy wydasz Fuksa, twój sojusznik potrzebuje twojej pomocy lub chce, abyś spędził z nim trochę czasu.",
         "moves": [
@@ -949,14 +949,14 @@ const playbooks = [
             {
                 "name": "Niecodzienne sojusze",
                 "rollType": "charm",
-                "desc": "Kiedy spotykasz nową istotę i spędzasz czas na zaprzyjaźnianiu się z nią, rzuć +Charm. Możesz zyskać tylko jednego stałego sojusznika na jedną tajemnicę.",
+                "desc": "Kiedy spotykasz nową istotę i spędzasz czas na zaprzyjaźnianiu się z nią, rzuć +Urok. Możesz zyskać tylko jednego stałego sojusznika na jedną tajemnicę.",
                 "success": "staje sie twoim sprzymierzeńcem",
                 "patrial": "staje sie twoim sprzymierzeńcem do końca tajemnicy",
                 "failure": "obrażasz go/to"
             },
             {
                 "name": "Twarde Cięcie",
-                "desc": "Raz na tajemnicę, gdy ujawnisz, że poprosiłeś sojusznika o zrobienie czegoś dla ciebie, opisz zadanie jako retrospekcja i rzut +Cool.",
+                "desc": "Raz na tajemnicę, gdy ujawnisz, że poprosiłeś sojusznika o zrobienie czegoś dla ciebie, opisz zadanie jako retrospekcja i rzut +Spokój.",
                 "rollType": "cool",
                 "success": "Poszło gładko.",
                 "patrial": "było to albo bardziej niebezpieczne, albo mniej skuteczne, niż się spodziewałeś.",
@@ -964,7 +964,7 @@ const playbooks = [
             },
             {
                 "name": "Geek przy stole",
-                "desc": "Twoi sprzymierzeńcy działają po za kadrem. Możesz wydać 1 punkt z Ogarnij Problem, by ostrzec kogoś przed zagrożeniem (2-harm). Dostajesz +1 do Ogarnij Problem kiedy rzucasz pierwzsy raz w nowej lokacji."
+                "desc": "Twoi sprzymierzeńcy działają po za kadrem. Możesz wydać 1 punkt z Ogarnij Problem, by ostrzec kogoś przed zagrożeniem (2-ran). Dostajesz +1 do Ogarnij Problem kiedy rzucasz pierwzsy raz w nowej lokacji."
             },
             {
                 "name": "Akolita",
@@ -990,15 +990,15 @@ const playbooks = [
             {"type": "gear", "name": "kolega z pracy", "group": "opis przyjaciela"},
             {"type": "gear", "name": "lojalny emeryt", "group": "opis przyjaciela"},
             {"type": "gear", "name": "wspólnie przeklęty", "group": "opis przyjaciela"},
-            {"type": "weapon", "name": "Ciężkie Narzędzie","tags": [ "2-harm", "hand", "utility", "innocuous" ],"group": "Broń"},
-            {"type": "weapon", "name": "Przyzwaniec","tags": [ "2-harm", "close", "autonomous", "messy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pistolet","tags": [ "2-harm", "close", "reload", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Torba przekleństw","tags": [ "1-harm", "close", "magic", "ignore", "armour"],"group": "Broń"},
-            {"type": "weapon", "name": "Strzelba","tags": [ "3-harm", "close", "messy", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-harm", "far", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Miecz","tags": [ "2-harm", "hand", "magic" ],"group": "Broń"},
+            {"type": "weapon", "name": "Ciężkie Narzędzie","tags": [ "2-ran", "na dłoń", "użytkowe", "nieszkodliwy" ],"group": "Broń"},
+            {"type": "weapon", "name": "Przyzwaniec","tags": [ "2-ran", "bliski", "autonomiczny", "niezdarne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pistolet","tags": [ "2-ran", "bliski", "magazynki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Torba przekleństw","tags": [ "1-ran", "bliski", "magiczne", "przebicie pancerza"],"group": "Broń"},
+            {"type": "weapon", "name": "Strzelba","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-ran", "daleki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Miecz","tags": [ "2-ran", "na dłoń", "magiczne" ],"group": "Broń"},
             {"type": "armour", "name": "Zestaw strojów na każdą okazję","group": "przedmiot użytkowy"},
-            {"type": "armour", "name": "Kamizekla kevlarowa","tags": [ "1-armour" ],"group": "przedmiot użytkowy"},
+            {"type": "armour", "name": "Kamizekla kevlarowa","tags": [ "1-pancerz" ],"group": "przedmiot użytkowy"},
             {"type": "gear", "name": "Topowy laptop","group": "przedmiot użytkowy"},
             {"type": "gear", "name": "Sprzęt spirytualistyczzny","group": "przedmiot użytkowy"},
             {"type": "gear", "name": "Przepastna kolekcja narzędzi","group": "przedmiot użytkowy"},
@@ -1056,27 +1056,27 @@ const playbooks = [
             "Podzielił się swoją traumą z tobą i twoim sojusznikiem. Jaką pomoc otrzymał?",
         ],
         "advance": [
-            "Get +1 Cool, max +2",
-            "Get +1 Weird, max +2",
-            "Get +1 Charm, max +3",
-            "Get +1 Sharp, max +2",
-            "Get +1 Tough, max +2",
-            "Take another Covenant move",
-            "Take another Covenant move",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
-            "You gain a second ally. Pick a different style for them.",
-            "Gain one type of contact as if from the Gumshoe’s naked city move (Tome of Mysteries, page 34)"
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Dziw, max +2",
+            "Weź +1 Urok, max +3",
+            "Weź +1 Spryt, max +2",
+            "Weź +1 Hart, max +2",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
+            "Zdobywasz innego Sojusznika, ustal jak się wyróżnia ",
+            "Weź Nagie Miasto od Śledczego z jednym kontaktem."
             ],
         "exp_advance": [
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new playbook",
-            "Create a second hunter to play in addition to this one",
-            "Retire this hunter to safety",
-            "Mark two basic moves as advanced",
-            "Mark another two basic moves as advanced",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp tego łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Bezpiecznie udaj się na emeryturę",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
             "Your Covenant now works twice per session",
-            "Create a hunter based on one of your allies to play in addition to this one. If you die, they have +1 ongoing on tasks leading toward avenging or resurrecting the Covenant."
+            "Stwórz łowcę, który będzie twoim sojusznikiem podczas gry. Jeżeli umrzesz, graj stworzonym łowcą, ktory otrzymuje ciągłe +1 do pomszczenia lub wskrzeszenia tej postaci."
         ],
         "look": [
             "Budowa wojownika, budzący zaufanie wygląd, mistyczne tatuaże, wszędzie tłuste plamy.",
@@ -1125,13 +1125,13 @@ const playbooks = [
             {
                 "name": "Chuligan",
                 "group": "Przeszłość",
-                "desc": "możesz rzucać na +Tough zamiast +Charm, gdy Manipulujesz kimś, grożąc przemocą."
+                "desc": "możesz rzucać na +Hart zamiast +Urok, gdy Manipulujesz kimś, grożąc przemocą."
             },
             {
                 "name": "Włamywacz",
                 "group": "Przeszłość",
                 "rollType": "sharp",
-                "desc": "gdy włamujesz się do zabezpieczonego miejsca, rzuć +Sharp",
+                "desc": "gdy włamujesz się do zabezpieczonego miejsca, rzuć +Spryt",
                 "success": "Wybierz 3",
                 "patrial": "Wybierz 2",
                 "failure": "wpadłeś",
@@ -1151,7 +1151,7 @@ const playbooks = [
                 "name": "Pośrednik",
                 "group": "Przeszłość",
                 "rollType": "charm",
-                "desc": "gdy potrzebujesz coś kupić lub sprzedać albo kogoś wynająć, rzuć +Charm",
+                "desc": "gdy potrzebujesz coś kupić lub sprzedać albo kogoś wynająć, rzuć +Urok",
                 "success": "znasz kogoś, kto będzie zainteresowany.",
                 "patrial": "znasz jedyną osobę, która może to zrobić, ale jest problem. Wybierz jedną z opcji: jesteś jej dłużna; oszukała cię; oszukałeś ją",
                 "failure": "jedyna osoba, która może pomóc, nienawidzi cię"
@@ -1159,13 +1159,13 @@ const playbooks = [
             {
                 "name": "Zabójca",
                 "group": "Przeszłość",
-                "desc": "gdy wykonujesz pierwszy strzał w z zaskoczenia, zadajesz +2-harm."
+                "desc": "gdy wykonujesz pierwszy strzał w z zaskoczenia, zadajesz +2-ran."
             },
             {
                 "name": "Szarlatan",
                 "group": "Przeszłość",
                 "rollType": "cool",
-                "desc": "gdy chcesz, by ludzie myśleli, że używasz magii, rzuć +Cool. Możesz też Manipulować kimś przy pomocy przepowiadania przyszłości. Gdy to robisz, dodatkowo spytaj, na co ma teraz nadzieję (nawet przy porażce).",
+                "desc": "gdy chcesz, by ludzie myśleli, że używasz magii, rzuć +Spokój. Możesz też Manipulować kimś przy pomocy przepowiadania przyszłości. Gdy to robisz, dodatkowo spytaj, na co ma teraz nadzieję (nawet przy porażce).",
                 "success": "widownia jest zdumiona i oszukana twoją iluzją",
                 "patrial": "kilka razy coś pokręciłeś, może ktoś zauważy",
                 "failure": "robisz z siebie błazna, a osoby znające się na magii zdecydowanie to widzą"
@@ -1174,19 +1174,19 @@ const playbooks = [
                 "name": "Kieszonkowiec",
                 "group": "Przeszłość",
                 "rollType": "charm",
-                "desc": "gdy kradniesz coś drobnego, rzuć +Charm",
+                "desc": "gdy kradniesz coś drobnego, rzuć +Urok",
                 "success": "masz to i okradana osoba nie zauważyła, że to zabierasz",
                 "patrial": "wybierz: nie kradniesz tego, kradniesz coś innego lub ofiara potem cię pamięta",
                 "failure": "wpadłeś na gorącym uczynku"
             },
             {
                 "name": "Artefakt",
-                "desc": "'znalazłaś' i zatrzymałaś sobie magiczny artefakt. Wybierz czym jest",
+                "desc": "'znalazłaś' i zatrzymałaś sobie magicznezny artefakt. Wybierz czym jest",
                 "choices": [
-                    "ochronny amulet (1 pancerz magiczny ładowany)",
+                    "ochronny amulet (1 pancerz magicznezny ładowany)",
                     "szczęśliwy talizman (działa jak Fuksa jednorazowy)",
                     "grymuar (studiowanie go daje jednorazowe +1 do Użycia magii)",
-                    "uniwersalny klucz (otwiera wszystkie magiczne zamki)",
+                    "uniwersalny klucz (otwiera wszystkie magicznezne zamki)",
                     "kamień impa (pomniejszy demon jest zmuszony, by służyć posiadaczowi; trzeba go przyzwać Użyciem magii)",
                 ]
             },
@@ -1227,18 +1227,18 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": ".22 Revolwer","tags": [ "1-harm", "close", "reload", "small" ],"group": "Broń"},
-            {"type": "weapon", "name": "Revolwer .38","tags": [ "2-harm", "close", "reload", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pistolet 9mm","tags": [ "2-harm", "close", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Strzelba","tags": [ "3-harm", "close", "messy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-harm", "far", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Nożysko","tags": [ "1-harm", "hand" ],"group": "Broń"},
-            {"type": "weapon", "name": "Baseball","tags": [ "1-harm", "hand" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pistolet Maszynowy","tags": [ "2-harm", "close", "reload", "area" ],"group": "Broń"},
-            {"type": "weapon", "name": "Karabin","tags": [ "3-harm", "close/far", "area" ],"group": "Broń"}
+            {"type": "weapon", "name": ".22 Revolwer","tags": [ "1-ran", "bliski", "magazynki", "mały" ],"group": "Broń"},
+            {"type": "weapon", "name": "Revolwer .38","tags": [ "2-ran", "bliski", "magazynki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pistolet 9mm","tags": [ "2-ran", "bliski", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Strzelba","tags": [ "3-ran", "bliski", "niezdarne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-ran", "daleki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Nożysko","tags": [ "1-ran", "na dłoń" ],"group": "Broń"},
+            {"type": "weapon", "name": "Baseball","tags": [ "1-ran", "na dłoń" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pistolet Maszynowy","tags": [ "2-ran", "bliski", "magazynki", "obszarowe" ],"group": "Broń"},
+            {"type": "weapon", "name": "Karabin","tags": [ "3-ran", "bliski/daleki", "obszarowe" ],"group": "Broń"}
         ],
-        "advance": [ "Get +1 Sharp, max +3", "Get +1 Tough, max +2", "Get +1 Cool, max +2", "Get +1 Charm, max +2", "Take another Crooked move", "Take another Crooked move", "Gain an ally: one of your old crew.", "Recover a stash of money from the old days, enough to live without care... for a year or two.", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Erase one used luck mark from your playbook." ],
+        "advance": [ "Weź +1 Spryt, max +3", "Weź +1 Hart, max +2", "Weź +1 Spokój, max +2", "Weź +1 Urok, max +2", "Weź ruch tego archetypu", "Weź ruch tego archetypu", "Zyskaj sojusznika: ktoś ze starej ekipy.", "'Odzyskałeś swoją kasę', pozwoli ci ona godnie żyć, przez rok czy dwa", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa." ],
         "story": [
             "Wie o twojej kryminalnej przeszłości. Powiedz im jakie przestępstwa popełniłeś, byli ich świadkami.",
             "Był przy tobie, kiedy zacząłeś polować na potwory. Ustalcie co zmieniło Twoje życie.",
@@ -1297,9 +1297,9 @@ const playbooks = [
             "moves": "Wybierz 2"
         }
     },
-    // Klątwożer
+    // Klątwożerca
     {
-        "name": "Klątwożer",
+        "name": "Klątwożerca",
         "desc": "Nie zawsze można zabijać. Czasami potwór to choroba, którą trzeba wyleczyć, a nie zagrożenie, które trzeba zniszczyć",
         "luck": "Za każdym razem, gdy wydasz Fuksa, na twoim ciele pojawia się trwały znak związany z jedną z pożartych przez ciebie magii.",
         "group_desc": {
@@ -1359,21 +1359,21 @@ const playbooks = [
             {
                 "name": "Więzy Losu",
                 "rollType": "cool",
-                "desc": "Możesz magicznie unieruchomić przeklętą istotę lub obiekt w twoim bliskim otoczenu. Rzuć +Cool",
+                "desc": "Możesz magiczneznie unieruchomić przeklętą istotę lub obiekt w twoim bliskim otoczenu. Rzuć +Spokój",
                 "success": "unieruchomienie trwa conajmniej godzinę",
-                "patrial": "unieruchamiasz, ale wybierz jeden: nie trwa zbyt długo, otrzymujesz 1-harm, musisz natychmiast Uwolnić Spaczenie.",
+                "patrial": "unieruchamiasz, ale wybierz jeden: nie trwa zbyt długo, otrzymujesz 1-ran, musisz natychmiast Uwolnić Spaczenie.",
                 "failure": "to niedziała i jest wściekłe."
             },
             {
                 "name": "Poczuć Ogień",
-                "desc": "Kiedy Uwalniasz Spaczenie możesz pozbyć się dodatkwoego zaznaczenia toru spaczenia, jednak otrzymujesz 2-harm, których nie da się redukować."
+                "desc": "Kiedy Uwalniasz Spaczenie możesz pozbyć się dodatkwoego zaznaczenia toru spaczenia, jednak otrzymujesz 2-ran, których nie da się redukować."
             },
             {
                 "name": "Głupiec Fortuny",
                 "desc": "Zaznacz trzy punkty spaczenia, aby uzyskać efekt wydania jednego punktu Fuksa. Nie dopisujesz nic w pożartej magii."
             },
             {
-                "name": "Puść TO",
+                "name": "Uwolnij TO",
                 "desc": "Gdy masz zaznaczone trzy lub więcej pożartej magii, możesz wykorzystać całą zużytą magię zamiast wszystkich wymagań dotyczących Użycia Magii. W przypadku Wielkiej Magii Strażnik powie ci, ile zużytej magii możesz stracić zamiast każdego wymagania. Zachowaj Spaczenie."
             }
         ],
@@ -1419,18 +1419,18 @@ const playbooks = [
             {"type": "transport", "name": "Stara bryka", "group": "Pojazd"},
             {"type": "transport", "name": "Terenówka Pick-up", "group": "Pojazd"},
             {"type": "transport", "name": "Ciągnik Siodłowy", "group": "Pojazd"},
-            {"type": "weapon", "name": "Baseball", "tags": [ "1-harm", "hand", "innocuous" ], "group": "Broń"},
-            {"type": "weapon", "name": "Pałka teleskopowa", "tags": [ "1-harm", "hand", "small" ], "group": "Broń"},
-            {"type": "weapon", "name": "Taser", "tags": [ "2-harm", "hand/close", "stun", "electric" ], "group": "Broń"},
-            {"type": "weapon", "name": "Karabin Usypiajacy", "tags": [ "3-harm", "close", "sedating" ], "group": "Broń"},
-            {"type": "weapon", "name": "Pistolet", "tags": [ "2-harm", "close", "loud" ], "group": "Broń"},
+            {"type": "weapon", "name": "Baseball", "tags": [ "1-ran", "na dłoń", "nieszkodliwy" ], "group": "Broń"},
+            {"type": "weapon", "name": "Pałka teleskopowa", "tags": [ "1-ran", "na dłoń", "mały" ], "group": "Broń"},
+            {"type": "weapon", "name": "Taser", "tags": [ "2-ran", "na dłoń/bliski", "ogłuszający", "elektryczny" ], "group": "Broń"},
+            {"type": "weapon", "name": "Karabin Usypiajacy", "tags": [ "3-ran", "bliski", "usypiający" ], "group": "Broń"},
+            {"type": "weapon", "name": "Pistolet", "tags": [ "2-ran", "bliski", "głośny" ], "group": "Broń"},
             {"type": "gear", "name": "Talizman do Pożerania Klątw", "group": "Przydatny Sprzęt"},
-            {"type": "weapon", "name": "Scyzoryk szwajcarski", "tags": [ "1-harm", "hand", "useful", "small" ], "group": "Przydatny Sprzęt"},
+            {"type": "weapon", "name": "Scyzoryk szwajcarski", "tags": [ "1-ran", "na dłoń", "użyteczzne", "mały" ], "group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Torba pełna okultystycznych składników i odczynników do zaklęć", "group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Kajdanki i łańcuchy", "group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Lina i opaski zaciskowe", "group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Insygnia Pożeraczy Kątw", "group": "Przydatny Sprzęt"},
-            {"type": "armour", "name": "Improwizowany sprzęt ochronny","tags": [ "1-armour" ],"group": "Przydatny Sprzęt"},
+            {"type": "armour", "name": "Improwizowany sprzęt ochronny","tags": [ "1-pancerz" ],"group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Duża Sieć","group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Grymuar o zabezpieczeniach i obronach", "group": "Przydatny Sprzęt"},
             {"type": "gear", "name": "Różdżki i wahadełka", "group": "Przydatny Sprzęt"}
@@ -1450,8 +1450,8 @@ const playbooks = [
             "Podczas waszego pierwszego wspólnego polowania uwolniłeś skonsumowaną magię i naraziłeś go na wielkie niebezpieczeństwo. Co się stało i co teraz o tym myślą?",
             "Powiedział/a ci, że jesteś skazany na pochłonięcie klątwy, która zagraża światu. Czy wiedzą coś więcej o tym, co nadchodzi.",
         ],
-        "advance": [ "Get +1 Sharp, max +3.", "Get +1 Weird, max +2.", "Get +1 Tough, max +2.", "Get +1 Charm, max +2.", "Take another Curse-eater move.", "Take another Curse-eater move.", "Make a consumed magic into a permanent custom move (with the group’s agreement), then clear it.", "Clear all corruption, without clearing consumed magics. Don’t erase the excess magics now, but you can’t gain more until you release some of them.", "Take a move from another playbook.", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Erase one used Luck mark from your playbook.", "Make a consumed magic into a permanent custom move (with the group’s agreement), then clear it.", "Clear all corruption, without clearing consumed magics. Don’t erase the excess magics now, but you can’t gain more until you release some of them." ],
+        "advance": [ "Weź +1 Spryt, max +3.", "Weź +1 Dziw, max +2.", "Weź +1 Hart, max +2.", "Weź +1 Urok, max +2.", "Weź ruch tego archetypu.", "Weź ruch tego archetypu.", "Przemień Pożartą Magię na ruch Klątwożercy.", "Wymaż tor spaczenia, nadal pozostaje pożarta magia, ale nie możesz jej uwolnić do momentu odzyskania spaczenia", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa.", "Przemień Pożartą Magię na ruch Klątwożercy.", "ymaż tor spaczenia, nadal pozostaje pożarta magia, ale nie możesz jej uwolnić do momentu odzyskania spaczenia" ],
         "trackers": [
             {
                 "label": "Spaczenie",
@@ -1495,7 +1495,7 @@ const playbooks = [
             {
                 "name": "Szef z Góry",
                 "rollType": "weird",
-                "desc": "Na początku Tajemnicy rzuć+Weird, ",
+                "desc": "Na początku Tajemnicy rzuć+Dziw, ",
                 "success": "Zlecają ci zrobienie czegoś prostego, ale możesz zadać jedno pytanie.",
                 "patrial": "Zlecają coś skomplikowanego lub wymagającego, ale możesz zadać jedno pytanie.",
                 "failure": "Wymagają od ciebie zrobienia czegoś okropnego.",
@@ -1512,19 +1512,19 @@ const playbooks = [
             {
                 "name": "Skrzydła Anioła",
                 "rollType": "weird",
-                "desc": "Możesz natychmiast udać się w dowolne miejsce, w którym jesteś odwiedziłeś wcześniej lub osobę, którą dobrze znasz. Kiedy zabierasz ze sobą jedną lub dwie osoby, rzuć +Weird.",
+                "desc": "Możesz natychmiast udać się w dowolne miejsce, w którym jesteś odwiedziłeś wcześniej lub osobę, którą dobrze znasz. Kiedy zabierasz ze sobą jedną lub dwie osoby, rzuć +Dziw.",
                 "success": "Trafiliście tam gdzie chcieliście.",
                 "patrial": "Trafiliście rozdzieleni, albo pojawiacie się w niewłaściwym miejscu.",
                 "failure": "Coś blokuje twoją moc."
             },
             {
                 "name": "Magiczna kieszeń",
-                "desc": "Możesz przechować dowolny mały przedmiot w magicznej przestrzeni, do której nikt inny nie jest w stanie się dostać. Możesz odzyskać cokolwiek, co schowałaś, w dowolnym momencie – pojawia się to w twojej dłoni."
+                "desc": "Możesz przechować dowolny mały przedmiot w magiczneznej przestrzeni, do której nikt inny nie jest w stanie się dostać. Możesz odzyskać cokolwiek, co schowałaś, w dowolnym momencie – pojawia się to w twojej dłoni."
             },
             {
                 "name": "Wygnanie Zła",
                 "rollType": "tough",
-                "desc": "Możesz wygnać nienaturalne stworzenie ze swojego otoczenia. Rzuć +Tough. Przy jakimkolwiek sukcesie, wygnane stworzenie pozostaje nietknięte, a ty nie masz kontroli nad tym, dokąd pójdzie. Ten ruch można zastosować na nienaturalnych łowcach.",
+                "desc": "Możesz wygnać nienaturalne stworzenie ze swojego otoczenia. Rzuć +Hart. Przy jakimkolwiek sukcesie, wygnane stworzenie pozostaje nietknięte, a ty nie masz kontroli nad tym, dokąd pójdzie. Ten ruch można zastosować na nienaturalnych łowcach.",
                 "success": "zostaje ono wygnane",
                 "patrial": "wygnanie trwa chwilę – stworzenie ma czas na wykonanie jednej lub dwóch akcji",
                 "failure": "Coś blokuje twoją moc."
@@ -1537,8 +1537,8 @@ const playbooks = [
                 "name": "Ręce, które leczą",
                 "rollType": "cool",
                 "desc": "Twój dotyk może uleczyć rany i choroby. Kiedy nakładasz ręce na kogoś rannego, rzuć +Coll",
-                "success": "leczysz 2-harm lub chorobę oraz stabilizujesz stan pacjenta",
-                "patrial": "przenosisz na siebie 2-harm lub chorobę na siebie",
+                "success": "leczysz 2-ran lub chorobę oraz stabilizujesz stan pacjenta",
+                "patrial": "przenosisz na siebie 2-ran lub chorobę na siebie",
                 "failure": "tylko pogarszasz efekty"
             },
             {
@@ -1547,12 +1547,12 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Świety pancerz", "group": "Pancerz", "tags": ["1-armour", "święty"]},
-            {"type": "weapon", "name": "Gorejący Miecz","tags": [ "3-harm", "hand", "fire", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pioruno-młot","tags": [ "3-harm", "hand", "stun", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Biczo-ostrze","tags": [ "3-harm", "hand", "area", "messy", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Torba Pięciu Demonów","tags": [ "3-harm", "close", "magic", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Srebrny Trójząb","tags": [ "3-harm", "hand", "silver", "holy" ],"group": "Broń"}
+            {"type": "weapon", "name": "Świety pancerz", "group": "Pancerz", "tags": ["1-pancerz", "święty"]},
+            {"type": "weapon", "name": "Gorejący Miecz","tags": [ "3-ran", "na dłoń", "ogień", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pioruno-młot","tags": [ "3-ran", "na dłoń", "ogłuszający", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Biczo-ostrze","tags": [ "3-ran", "na dłoń", "obszarowe", "niezdarne", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Torba Pięciu Demonów","tags": [ "3-ran", "bliski", "magiczne", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Srebrny Trójząb","tags": [ "3-ran", "na dłoń", "srebrne", "święta" ],"group": "Broń"}
         ],
         "stats": [
             {"charm": "1","cool": "1","sharp": "-1","tough": "2","weird": "0"},
@@ -1576,8 +1576,8 @@ const playbooks = [
             "Płonące oczy, przerażające oczy, spokojne oczy, iskrzące oczy, przenikliwe oczy, gwiaździste oczy, świecące oczy",
             "Brudne ubrania, idealny garnitur, pognieciony garnitur, ubrania codzienne, ubrania praktyczne"
         ],
-        "advance": [ "Get +1 Tough, max +3", "Get +1 Cool, max +2", "Get +1 Charm, max +2", "Get +1 Sharp, max +2", "Get +1 Weird, max +2", "Take another Divine move", "Take another Divine move", "Gain a lesser divine being as an ally, sent from above to help with your failureion", "Take a move from another playbook", "Take a move from another playbook"],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Erase one used Luck mark from your playbook.", "Change your failureion. Select a different failureion from the normal options, or (with the Keeper’s agreement) a new failureion of your creation."]
+        "advance": [ "Weź +1 Hart, max +3", "Weź +1 Spokój, max +2", "Weź +1 Urok, max +2", "Weź +1 Spryt, max +2", "Weź +1 Dziw, max +2", "Weź ruch tego archetypu", "Weź ruch tego archetypu", "Otrzymaj sprzymierzeńca - boskiego posłańca, który pomoże ci z Misją", "Weź ruch innego archetypu", "Weź ruch innego archetypu"],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Zmień swoją Misje, nowy cel może być usalony ze Strażnikiem lub standardowy."]
     },
     // Emisariusz
     {
@@ -1596,7 +1596,7 @@ const playbooks = [
                 "name": "Nadzorca",
                 "isActive": true,
                 "group": "Posługa",
-                "desc": "<p>Zostałeś wysłany lub otrzymałeś zadanie od sły wyższej. Opisz swoich Nadzorców zgodnie z ich Wartościami (dwie).</p><ul><li>Porządek</li><li>Wolność</li><li>Bezpieczeństwo</li><li>Współczucie</li><li>Prywatność</li><li>Wiedza</li><li>Uczciwość</li><li>Moc</li><li>Rozwój</li><li>Prawda</li></ul><p>Twoimi Obawami (jedna)</p><ul><li>Wewnętrzna polityka</li><li>Niejasna komunikacja</li><li>Surowe zasady</li><li>Obca perspektywa</li><li>Dystans</li><li>Tajne ukryte motywy</li><li>Czystość</li><li>Po trupach do celu</li><li>Większy Obrazek</li></ul>"
+                "desc": "<p>Zostałeś wysłany lub otrzymałeś zadanie od sły wyższej. Opisz swoich Nadzorców zgodnie z ich Wartościami (dwie).</p><ul><li>Porządek</li><li>Wolność</li><li>Bezpieczeństwo</li><li>Współczucie</li><li>Prywatność</li><li>Wiedza</li><li>Uczciwość</li><li>Moc</li><li>Rozwój</li><li>Prawda</li></ul><p>Obawy (jedna)</p><ul><li>Wewnętrzna polityka</li><li>Niejasna komunikacja</li><li>Surowe zasady</li><li>Obca perspektywa</li><li>Dystans</li><li>Tajne ukryte motywy</li><li>Czystość</li><li>Po trupach do celu</li><li>Większy Obrazek</li></ul>"
             },
             {
                 "name": "Zadanie",
@@ -1615,7 +1615,7 @@ const playbooks = [
                 "group": "Posługa",
                 "isActive": true,
                 "rollType": "cool",
-                "desc": "Otrzymałeś wgląd do swojego zadania. Na początku każdej sesji, rzuć +Cool",
+                "desc": "Otrzymałeś wgląd do swojego zadania. Na początku każdej sesji, rzuć +Spokój",
                 "success": "zatrzymaj 2",
                 "patrial": "zatrzymaj 1",
                 "failure": "zatrzymaj 1, ale Strażnik przedstawi ci okrutny wybór, albo straszną prawdę związaną z twoim Zadaniem.",
@@ -1635,7 +1635,7 @@ const playbooks = [
             {
                 "name": "Dziwnie normalne",
                 "rollType": "charm",
-                "desc": "Kiedy zachowujesz się z pewną dozą pewności siebie, mimo że robisz coś dziwnego, rzuć +Charm.",
+                "desc": "Kiedy zachowujesz się z pewną dozą pewności siebie, mimo że robisz coś dziwnego, rzuć +Urok.",
                 "success": "Twoje nietypowe zachowanie jest akceptowane i daje Ci okazję do przełamania lodów, jeśli chcesz rozpocząć dłuższą rozmowę.",
                 "patrial": "ktoś zaczyna podejrzewać, że coś jest nie tak",
                 "failure": "kotś bierze to jako obelgę"
@@ -1660,11 +1660,11 @@ const playbooks = [
             },
             {
                 "name": "Sługa Tajemniczego Ognia",
-                "desc": "Kiedy pomagasz innemu łowcy, używając nadprzyrodzonych lub dziwnych środków, zyskujesz również +1 do nast. rzutu. Raz na sesję możesz użyć podstawowego ruchu Weird, do którego normalnie nie masz dostępu. Jeśli nie grasz z alternatywnymi ruchami Weird, możesz zamiast tego użyć magii, tak jakbyś wyrzucił 10+."
+                "desc": "Kiedy pomagasz innemu łowcy, używając nadprzyrodzonych lub dziwnych środków, zyskujesz również +1 do nast. rzutu. Raz na sesję możesz użyć podstawowego ruchu Dziw, do którego normalnie nie masz dostępu. Jeśli nie grasz z alternatywnymi ruchami Dziw, możesz zamiast tego użyć magii, tak jakbyś wyrzucił 10+."
             },
             {
                 "name": "Z drugiej strony",
-                "desc": "Twój styl współpracy może wydawać się nieuczciwy. Kiedy Manipulujesz swoimi Nadzorcami lub sojusznikami za pomocą podstępu, rzuć +Cool.",
+                "desc": "Twój styl współpracy może wydawać się nieuczciwy. Kiedy Manipulujesz swoimi Nadzorcami lub sojusznikami za pomocą podstępu, rzuć +Spokój.",
                 "rollType": "cool",
                 "success": "Wszystko poszło gładko",
                 "patrial": "są jakieś skutki uboczne, których się nie spodziewałeś. Czy uważasz, że sukces jest wart swojej ceny?",
@@ -1676,17 +1676,17 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "gear", "name": "Tajemnicze finansowe wsparcie","group": "Zasoby"},
+            {"type": "gear", "name": "Tajemnicze finansowanie","group": "Zasoby"},
             {"type": "gear", "name": "Strefa VIP","group": "Zasoby"},
             {"type": "gear", "name": "Komunikator","group": "Zasoby"},
             {"type": "gear", "name": "Koneksje Polityczne","group": "Zasoby"},
-            {"type": "weapon", "name": "Talizman Obronny","tags": [ "1-harm", "close", "magic", "1-armour" ],"group": "Broń"},
-            {"type": "weapon", "name": "Ukryty Pistolet","tags": [ "2-harm", "close", "small" ],"group": "Broń"},
-            {"type": "weapon", "name": "Gromiący dotyk","tags": [ "1-harm", "hand", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Szepczące objawienie","tags": [ "0-harm", "intimate", "stun" ],"group": "Broń"},
+            {"type": "weapon", "name": "Talizman Obronny","tags": [ "1-ran", "bliski", "magiczne", "1-pancerz" ],"group": "Broń"},
+            {"type": "weapon", "name": "Ukryty Pistolet","tags": [ "2-ran", "bliski", "mały" ],"group": "Broń"},
+            {"type": "weapon", "name": "Gromiący dotyk","tags": [ "1-ran", "na dłoń", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Szepczące objawienie","tags": [ "0-ran", "intymny", "ogłuszający" ],"group": "Broń"},
         ],
         "story": [
-            "Pierwsza osoba, którą spotkałeś po otrzymaniu swojego Zadania. Byli tego śwaidkami? Jak zareagowali?",
+            "Pierwsza osoba, którą spotkałeś po otrzymaniu swojego Zadania. Byli tego śwaidkami? Jak zobszarowegowali?",
             "Członek rodziny. Co go najbardziej zaskoczyło po twojej przemianie?",
             "Jest integralną częścią twojego Zadania. Dlaczego Nadzorcy się zainteresowali tą osobą?",
             "Nadzorcy ostrzegali cię przed tym Łowcą. Jakie to było ostrzeżenie? Wyjawiłeś to?",
@@ -1696,27 +1696,27 @@ const playbooks = [
             "Dobrze ze sobą działacie, ale sprawiacie wrażenie jakbyście się nie lubili, dlaczego to tak wygląda?"
         ],
         "advance": [
-            "Get +1 Cool, max+3",
-            "Get +1 Weird, max+2",
-            "Get +1 Charm, max+2",
-            "Get +1 Sharp, max+2",
-            "Take another Envoy move",
-            "Take another Envoy move",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
-            "Pick a second resource item from the Envoy’s gear options",
-            "Your Overseers provide bodyguards. You gain an ally or ally team. Choose their 'type': mortal operatives, invisible spirits, high-tech drones, or something"
+            "Weź +1 Spokój, max+3",
+            "Weź +1 Dziw, max+2",
+            "Weź +1 Urok, max+2",
+            "Weź +1 Spryt, max+2",
+            "Weź ruch tego archetypu",
+            "Weź ruch tego archetypu",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
+            "Weź kolejny zasób ze swoje sprzętu.",
+            "Nadzorcy wysłali ochroniarza. Zyskujesz sojusznika. Jakiego są typu:  agenci, duchy, drony..."
         ],
         "exp_advance": [
-            "Get +1 to any rating, max+3",
-            "Change this hunter to a new playbook",
-            "Create a second hunter to play in addition to this one",
-            "Retire this hunter to safety",
-            "Mark two basic moves as advanced",
-            "Mark another two basic moves as advanced",
-            "Pick a secondary Task as well as your first",
-            "Erase one used Luck point from your playbook",
-            "Change any or all of the Overseers’ Values and Concerns. What’s changed?"
+            "Weź +1 dla dowolnej cechy, max+3",
+            "Zmień archetyp tego łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Bezpiecznie udaj się na emeryturę",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Wybierz swoje kolejne Zadanie",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Zmień Wartości i Obawy Nadzorcy, co się zmieniło?"
         ],
         "look": [
             "Szczupły i o śniadej sylwetce, wysoki i imponujący, pulchny i ​​przyjemny, szorstki i siwy, o obcych proporcjach, wiecznie młody.",
@@ -1762,7 +1762,7 @@ const playbooks = [
                 "name": "Zbrojownia",
                 "group": "Azyl",
                 "rollType": "weird",
-                "desc": "Masz zapas mistycznej rzadkiej broni i przedmiotów do ubijania potworów. Jeśli potrzebujesz czegoś specjalnego, rzuć +Weird",
+                "desc": "Masz zapas mistycznej rzadkiej broni i przedmiotów do ubijania potworów. Jeśli potrzebujesz czegoś specjalnego, rzuć +Dziw",
                 "success": "masz ją (i mnóstwo, jeśli to ma znaczenie)",
                 "patrial": "masz ją, ale tylko w minimalnym zakresie",
                 "failure": "masz niewłaściwą rzecz"
@@ -1794,7 +1794,7 @@ const playbooks = [
             },
             {
                 "name": "Czytałem o tym",
-                "desc": "Możesz Działać pod Presją na +Sharp, a nie na +Cool"
+                "desc": "Możesz Działać pod Presją na +Spryt, a nie na +Spokój"
             },
             {
                 "name": "Żadko omylny",
@@ -1803,7 +1803,7 @@ const playbooks = [
             {
                 "name": "Przygotowany",
                 "rollType": "sharp" ,
-                "desc": "Kiedy potrzebujesz czegoś niezywkłego lub rzadkiego, rzuć +Sharp.",
+                "desc": "Kiedy potrzebujesz czegoś niezywkłego lub rzadkiego, rzuć +Spryt.",
                 "success": "masz i to tu i to teraz",
                 "patrial": "masz to, ale nie tutaj: zdobycie tego zajmie trochę czasu",
                 "failure": "wiesz gdzie to jest, ale zdobycie tego będzie ciężkie i niebezpieczne"
@@ -1811,23 +1811,23 @@ const playbooks = [
             {
                 "name": "Bywało gorzej",
                 "rollType": "cool",
-                "desc": "Raz na tajemnicę, kiedy działasz mimo swoich ran, rzuć +Cool",
-                "success": "leczysz 2-harm i stabilizujesz swój stan",
-                "patrial": "możesz albo wyleczyć 1-harm, ale ustabilizować swój stan",
-                "failure": "Jednak jest gorzej niż wygląda, Strażnik wybiera: zadajesz sobie 1-harm albo twoje rany stają się niestabilne."
+                "desc": "Raz na tajemnicę, kiedy działasz mimo swoich ran, rzuć +Spokój",
+                "success": "leczysz 2-ran i stabilizujesz swój stan",
+                "patrial": "możesz albo wyleczyć 1-ran, ale ustabilizować swój stan",
+                "failure": "Jednak jest gorzej niż wygląda, Strażnik wybiera: zadajesz sobie 1-ran albo twoje rany stają się niestabilne."
             },
             {
                 "name": "Precyzyjne Uderzenie",
                 "rollType": "tough",
-                "desc": "Kiedy zadajesz obrażenia potworowi celując w jego słaby punkt, rzuć +Tough",
-                "success": "Zadajesz 2-harm więcej.",
-                "patrial": "Zadajesz 1-harm więcej.",
+                "desc": "Kiedy zadajesz obrażenia potworowi celując w jego słaby punkt, rzuć +Hart",
+                "success": "Zadajesz 2-ran więcej.",
+                "patrial": "Zadajesz 1-ran więcej.",
                 "failure": "Potwór zyskuje przewagę."
             },
             {
                 "name": "Mam sprytny plan",
                 "rollType": "sharp",
-                "desc": "Na początku tajemnicy, rzuć +Sharp. Wydaj Zatrzymania kiedy potrzebujesz być przygotowany i gotowy do akcji.",
+                "desc": "Na początku tajemnicy, rzuć +Spryt. Wydaj Zatrzymania kiedy potrzebujesz być przygotowany i gotowy do akcji.",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
                 "failure": "Będziesz nieprzygotowany w najgorszym momencie."
@@ -1835,7 +1835,7 @@ const playbooks = [
             {
                 "name": "Mroczna Przeszłość",
                 "rollType": "weird",
-                "desc": "Kiedy wertujesz swoje wspomnieniaw w poszukiwaniu czegoś istotnego, rzuć +Weird",
+                "desc": "Kiedy wertujesz swoje wspomnieniaw w poszukiwaniu czegoś istotnego, rzuć +Dziw",
                 "success": "Zadaj 2 pytania",
                 "patrial": "Zadaj 1 pytanie",
                 "failure": "Możesz zadać pytanie, ale to oznaczałoby, że osobiście przyczyniłeś się do stworzenia sytuacji, z którą teraz się mierzysz.",
@@ -1848,15 +1848,15 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Młotek i drewniane kołki","tags": [ "3-harm", "intimate", "slow", "wooden" ],"group": "Broń"},
-            {"type": "weapon", "name": "Srebrny Miecz","tags": [ "2-harm", "hand", "messy", "silver" ],"group": "Broń"},
-            {"type": "weapon", "name": "Stalowy Miecz","tags": [ "2-harm", "hand", "messy", "iron" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pobłogosławione ostrze","tags": [ "2-harm", "hand", "holy" ],"group": "Broń"},
-            {"type": "weapon", "name": "Magiczny sztylet","tags": [ "2-harm", "hand", "magic" ],"group": "Broń"},
-            {"type": "weapon", "name": "Juju bag","tags": [ "1-harm", "far", "magic" ],"group": "Broń"},
-            {"type": "weapon", "name": "Miotacz Ognia","tags": [ "3-harm", "close", "fire", "heavy", "volatile" ],"group": "Broń"},
-            {"type": "weapon", "name": "Magnum","tags": [ "3-harm", "close", "reload", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Strzelba","tags": [ "3-harm", "close", "messy", "loud" ],"group": "Broń"}
+            {"type": "weapon", "name": "Młotek i drewniane kołki","tags": [ "3-ran", "intymny", "powolne", "drewniane" ],"group": "Broń"},
+            {"type": "weapon", "name": "Srebrny Miecz","tags": [ "2-ran", "na dłoń", "niezdarne", "srebrne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Stalowy Miecz","tags": [ "2-ran", "na dłoń", "niezdarne", "żelazo" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pobłogosławione ostrze","tags": [ "2-ran", "na dłoń", "święta" ],"group": "Broń"},
+            {"type": "weapon", "name": "Magiczny sztylet","tags": [ "2-ran", "na dłoń", "magiczne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Juju bag","tags": [ "1-ran", "daleki", "magiczne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Miotacz Ognia","tags": [ "3-ran", "bliski", "ogień", "ciężki", "niestabilne" ],"group": "Broń"},
+            {"type": "weapon", "name": "Magnum","tags": [ "3-ran", "bliski", "magazynki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Strzelba","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ],"group": "Broń"}
         ],
         "stats": [
             {"charm": "-1","cool": "1","sharp": "2","tough": "1","weird": "0"},
@@ -1879,8 +1879,8 @@ const playbooks = [
             "zamyślona, pomarszczona, bliznowata, kontemplacyjna, surowa, wojskowa, doświadczona, starożytna twarz",
             "Starodawne ubrania, codzienne ubrania, ubrania użytkowe, ubrania szyte na miarę, odzież na zewnątrz",
         ],
-        "advance": [ "Get +1 Sharp, max +3", "Get +1 Charm, max +2", "Get +1 Cool, max +2", "Get +1 Weird, max +2", "Take another Expert move", "Take another Expert move", "Add an option to your haven", "Add an option to your haven", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Get back one used Luck point.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety." ]
+        "advance": [ "Weź +1 Spryt, max +3", "Weź +1 Urok, max +2", "Weź +1 Spokój, max +2", "Weź +1 Dziw, max +2", "Weź ruch tego archetypu", "Weź ruch tego archetypu", "Wybierz kolejną opcję dla Azylu", "Wybierz kolejną opcję dla Azylu", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Odzyskaj 1 punkt na torze Fuksa", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę" ]
     },
     // Foliarz
     {
@@ -1897,7 +1897,7 @@ const playbooks = [
                 "name": "Łączenie Kropek",
                 "type": "move",
                 "rollType": "sharp",
-                "desc": "Na początku tajemnicy poszukaj szerszych wzorców rzutujących na obecne wydarzenia, rzuć +Sharp. Wydaj zatrzymania w trakcie tajemnicy, by zadać jedno z pytań.",
+                "desc": "Na początku tajemnicy poszukaj szerszych wzorców rzutujących na obecne wydarzenia, rzuć +Spryt. Wydaj zatrzymania w trakcie tajemnicy, by zadać jedno z pytań.",
                 "success": "Zatrzymaj 3",
                 "patrial": "Zatrzymaj 1",
                 "failure": "Nic nie przychodzi ci do głowy",
@@ -1905,11 +1905,11 @@ const playbooks = [
             },
             {
                 "name": "Szaleńcze spojrzenie",
-                "desc": "Zwiększ swój Weird o 1 (max +3)"
+                "desc": "Zwiększ swój Dziw o 1 (max +3)"
             },
             {
                 "name": "Tak było, nie zmyślam",
-                "desc": "Podczas Manipulowania Kimś możesz rzucć na Sharp zamiast Charm."
+                "desc": "Podczas Manipulowania Kimś możesz rzucć na Spryt zamiast Urok."
             },
             {
                 "name": "Nieufny Umysł",
@@ -1917,7 +1917,7 @@ const playbooks = [
             },
             {
                 "name": "Zbyt Podjerzliwy",
-                "desc": "Kiedy udajesz Szaleńca, by uniknąć kłopotów, rzuć +Weird.",
+                "desc": "Kiedy udajesz Szaleńca, by uniknąć kłopotów, rzuć +Dziw.",
                 "success": "rozpoznają ciebie jako nieistotnego i nie bedącego zagrożeniem",
                 "patrial": "rozpoznają ciebie jako nieistotnego albo nie bedącego zagrożeniem",
                 "failure": "przyciągasz sporo uwagi",
@@ -1930,7 +1930,7 @@ const playbooks = [
             {
                 "name": "Ziomki z Forum",
                 "type": "move",
-                "desc": "Znasz wiele osób w sieci. Kiedy radzisz się ziomków z formum w sprawie tajemnicy, rzuć +Charm",
+                "desc": "Znasz wiele osób w sieci. Kiedy radzisz się ziomków z formum w sprawie tajemnicy, rzuć +Urok",
                 "rollType": "charm",
                 "success": "Są dostępni i pomocni — mogą naprawić coś, złamać kod, włamać się do komputera lub zdobyć dla ciebie specjalne informacje",
                 "patrial": "Są gotowi pomóc, ale albo zajmie to trochę czasu, albo będziesz musiał zrobić część sam",
@@ -1938,22 +1938,22 @@ const playbooks = [
             },
             {
                 "name": "Skryty",
-                "desc": "Kiedy przeprowadzasz atak z zaskoczenia zadaj +2-harm."
+                "desc": "Kiedy przeprowadzasz atak z zaskoczenia zadaj +2-ran."
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Revolwer .38","tags": [ "2-harm", "close", "reload", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Pistolet 9mm","tags": [ "2-harm", "close", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-harm", "far", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Magnum","tags": [ "3-harm", "close", "reload", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Strzelba","tags": [ "3-harm", "close", "messy", "loud" ],"group": "Broń"},
-            {"type": "weapon", "name": "Nożysko","tags": [ "1-harm", "hand" ],"group": "Broń"},
-            {"type": "weapon", "name": "Noże do rzucania","tags": [ "1-harm", "close", "many" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Ukryty pistolet","tags": [ "2-harm", "close", "loud", "reload" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Garrota","tags": [ "3-harm", "intimate" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Latarka srażnicza","tags": [ "1-harm", "hand" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Obciążone rękawice","tags": [ "1-harm", "hand" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Nóż motylkowy","tags": [ "1-harm", "hand" ],"group": "Ukryta Broń"}
+            {"type": "weapon", "name": "Revolwer .38","tags": [ "2-ran", "bliski", "magazynki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Pistolet 9mm","tags": [ "2-ran", "bliski", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Karabin Myśliwski","tags": [ "2-ran", "daleki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Magnum","tags": [ "3-ran", "bliski", "magazynki", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Strzelba","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ],"group": "Broń"},
+            {"type": "weapon", "name": "Nożysko","tags": [ "1-ran", "na dłoń" ],"group": "Broń"},
+            {"type": "weapon", "name": "Noże do rzucania","tags": [ "1-ran", "bliski", "many" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Ukryty pistolet","tags": [ "2-ran", "bliski", "głośny", "magazynki" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Garrota","tags": [ "3-ran", "intymny" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Latarka srażnicza","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Obciążone rękawice","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Nóż motylkowy","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"}
         ],
         "look": [
             "Dzikie oczy, poruszające się oczy, skupione oczy, poszukujące oczy, podejrzliwe oczy, szeroko otwarte oczy, ostrożne oczy",
@@ -2006,8 +2006,8 @@ const playbooks = [
             "Wszystkie znaki na ziemi mówiły o waszej współpracy. Więc teraz razem pracujecie.",
             "Znacie się poprzez strony o kryptozoologii i teoriach spiskowych."
         ],
-        "advance": [ "Get +1 Sharp, max +3", "Get +1 Charm, max +2", "Get +1 Cool, max +2", "Get +1 Weird, max +2", "Take another Flake move", "Take another Flake move", "Get a haven, like the Expert has, with two options", "Gain another option for your haven", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Get back one used Luck point." ]
+        "advance": [ "Weź +1 Spryt, max +3", "Weź +1 Urok, max +2", "Weź +1 Spokój, max +2", "Weź +1 Dziw, max +2", "Take another Flake move", "Take another Flake move", "Uzyskaj Azyl od Eksperta z dwiema opcjami", "Weź kolejną opcję dla Azylu", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Śledczy
     {
@@ -2094,7 +2094,7 @@ const playbooks = [
             {
                 "name": "Wejście Jessici Jones",
                 "rollType": "charm",
-                "desc": "Kiedy wpraszasz się do czyjegoś domu lub innej przestrzeni osobistej za pomocą pustosłowia, rzuć +Charm",
+                "desc": "Kiedy wpraszasz się do czyjegoś domu lub innej przestrzeni osobistej za pomocą pustosłowia, rzuć +Urok",
                 "success": "Wybierz 3",
                 "patrial": "Wybierz 2",
                 "failure": "Wybierz 1",
@@ -2112,12 +2112,12 @@ const playbooks = [
             },
             {
                 "name": "Betonowa Dżungla",
-                "desc": "Leczysz się szybciej niż normalni ludzie. Za każdym razem, gdy się leczysz, leczysz o jedno więcej. Jesteś odporny na wszystkie efekty ruchów szkodzących w kategorii 0-harm i 1-harm."
+                "desc": "Leczysz się szybciej niż normalni ludzie. Za każdym razem, gdy się leczysz, leczysz o jedno więcej. Jesteś odporny na wszystkie efekty ruchów szkodzących w kategorii 0-ran i 1-ran."
             },
             {
                 "name": "Haker ze Smoczym Tatuarzem",
                 "rollType": "sharp",
-                "desc": "Kiedy robisz włam do komputera, rzuć +Sharp.",
+                "desc": "Kiedy robisz włam do komputera, rzuć +Spryt.",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
                 "failure": "Zawieszasz system.",
@@ -2131,7 +2131,7 @@ const playbooks = [
             {
                 "name": "O! Jeszcze jedno...",
                 "rollType": "charm",
-                "desc": "Kiedy zadajesz podejrzanemu sugestywne pytania, rzuć +Charm",
+                "desc": "Kiedy zadajesz podejrzanemu sugestywne pytania, rzuć +Urok",
                 "success": "Zadaj 2 pytania",
                 "patrial": "Zadaj 1 pytanie",
                 "failure": "Zadaj 1 pytanie, ale dzieje się coś złego.",
@@ -2171,12 +2171,12 @@ const playbooks = [
             {"type": "gear", "name": "Dron z kamerą sterowaną zdalnie","group": "Urządzenie do nagrywania"},
             {"type": "gear", "name": "Mikrofon laserowy","group": "Urządzenie do nagrywania"},
             {"type": "gear", "name": "Aparat fotograficzny typu SLR","group": "Urządzenie do nagrywania"},
-            {"type": "weapon","name": "Kastet","group": "Broń","tags": [ "1-harm", "hand", "small" ]},
-            {"type": "weapon","name": "Revolwer .38","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon","name": "Pistolet 9mm","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon","name": "Magnum","group": "Broń","tags": [ "3-harm", "close", "reload", "loud" ]},
-            {"type": "weapon","name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy", "loud" ]},
-            {"type": "weapon","name": "Nóż sprężynowy","group": "Broń","tags": [ "1-harm", "hand", "small" ]}
+            {"type": "weapon","name": "Kastet","group": "Broń","tags": [ "1-ran", "na dłoń", "mały" ]},
+            {"type": "weapon","name": "Revolwer .38","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon","name": "Pistolet 9mm","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon","name": "Magnum","group": "Broń","tags": [ "3-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon","name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ]},
+            {"type": "weapon","name": "Nóż sprężynowy","group": "Broń","tags": [ "1-ran", "na dłoń", "mały" ]}
         ],
         "story": [
             "Jesteście w tej samej drużynie kręglarskiej (lub rywalizujących drużynach). Jaka nieporozumienie związane z kręglami wyprowadziło jendo z was z równowagi?",
@@ -2188,13 +2188,13 @@ const playbooks = [
             "Zatrudnił ciebie do zadania, ale byłeś zbyt pijany lub naćpany, aby je przyjąć. Czego chcieli? Jak ich zbyłeś?",
             "Po raz pierwszy spotkaliście się na stronie o nierozwiązanych przestępstwach. Ustalcie razem, jakie słynne przestępstwo was oboje fascynuje.",
         ],
-        "advance": [ "Get +1 Charm, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +3", "Get +1 Tough, max +2", "Take another Gumshoe move.", "Take another Gumshoe move.", "Add another harm box to your track, before Dying.", "Get a haven (your office, perhaps), like the Expert has, with two options.", "Add four additional or new contacts for your Naked City move." ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Make up a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Turn one of your contacts into an ally.", "Retire this hunter to safety.", "Erase one used Luck mark from your playbook." ]
+        "advance": [ "Weź +1 Urok, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +3", "Weź +1 Hart, max +2", "Weź ruch tego archetypu", "Weź ruch tego archetypu", "Zwiększ tor Ran o jeden", "Uzyskaj Azyl od Eksperta z dwiema opcjami", "Dodaj dodatkowe 4 kontakty do Nagiego Miasta" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Zmień jednen ze swoich kontaktów w sojusznika", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa." ]
     },
     // Wiedźma
     {
         "name": "Wiedźma",
-        "desc": "To nie dar magiczny, który spadł mi z nieba. To nie błogosławnieństwo, nie jestem jednym z tych przerażających dzieci — po prostu jestem dziewczyną, która znalazła sposób, by dać sobie siłę do walki w tej wojnie. Jest to ryzyko na które jestem gotów.",
+        "desc": "To nie dar magicznezny, który spadł mi z nieba. To nie błogosławnieństwo, nie jestem jednym z tych przerażających dzieci — po prostu jestem dziewczyną, która znalazła sposób, by dać sobie siłę do walki w tej wojnie. Jest to ryzyko na które jestem gotów.",
         "luck": "Kiedy wydajesz Fuksa, aż do końca tajemnicy, reakcja zwrotna na Twoje zaklęcia będzie wyjątkowo nieprzyjemna.",
         "group_desc": {
             "Pokusa": "Wybierz 1",
@@ -2240,20 +2240,20 @@ const playbooks = [
             {
                 "name": "Zły Omen",
                 "isActive": true,
-                "desc": "Porażka podczas Używania Magii powoduje magiczny rykoszet, który nigdy nie dotyka cię bezpośrednio, jeśli w pobliżu jest ktoś, kogo można trafić. Uderzy sojuszników, innych łowców i niewinnych statystów, albo twoich przeciwników."
+                "desc": "Porażka podczas Używania Magii powoduje magicznezny rykoszet, który nigdy nie dotyka cię bezpośrednio, jeśli w pobliżu jest ktoś, kogo można trafić. Uderzy sojuszników, innych łowców i niewinnych statystów, albo twoich przeciwników."
             },
             {
                 "name": "Spalić Wszystko",
                 "desc": "Kiedy używasz magii, aby zadać obrażenia, możesz wybrać.",
                 "choices": [
-                    "3-harm, obszarowe, widoczne",
-                    "3-harm, przebijające pancerz, widoczne"
+                    "3-ran, obszarowe, widoczne",
+                    "3-ran, przebijające pancerz, widoczne"
                 ]
             },
             {
                 "name": "Wróżba z kości",
                 "rollType": "sharp",
-                "desc": "Raz na tajemnicę możesz wykonać jakiegoś rodzaju wróżbę (tarot, rzucanie runami, czytanie wnętrzności lub coś w tym stylu), aby uzyskać informacje o przyszłości. Kiedy szukasz wskazówek poprzez wróżbę, rzuć +Sharp.",
+                "desc": "Raz na tajemnicę możesz wykonać jakiegoś rodzaju wróżbę (tarot, rzucanie runami, czytanie wnętrzności lub coś w tym stylu), aby uzyskać informacje o przyszłości. Kiedy szukasz wskazówek poprzez wróżbę, rzuć +Spryt.",
                 "success": "Zadaj 2 pytania",
                 "patrial": "Zadaj 1 pytanie",
                 "failure": "Otrzymujesz pewne informacje, ale nie są one tym, co chcesz usłyszeć.",
@@ -2272,7 +2272,7 @@ const playbooks = [
             {
                 "name": "Siła Woli",
                 "rollType": "weird",
-                "desc": "Kiedy używasz swojej woli, aby rozproszyć efekt magiczny, zablokować zaklęcie lub osłabić jakiś paranormalne zjawisko, rzuć +Weird",
+                "desc": "Kiedy używasz swojej woli, aby rozproszyć efekt magicznezny, zablokować zaklęcie lub osłabić jakiś paranormalne zjawisko, rzuć +Dziw",
                 "success": "Tymczasowe czary są całkowicie anulowane, a długotrwałe zaklęcia i efekty są zawieszone na pewien czas. Możesz także użyć Fuksa, aby natychmiast zgasić potężne zaklęcie lub dziwny efekt",
                 "patrial": "Tymczasowe czary są całkowicie anulowane, a długotrwałe zaklęcia i efekty są zawieszone na pewien czas.",
                 "failure": "Twoja magia tylko wzmacnia to."
@@ -2297,7 +2297,7 @@ const playbooks = [
                 "name": "Apozsteza",
                 "rollType": "cool",
                 "group": "Zaawansowane ruchy Wiedźmy",
-                "desc": "Raz na tajemnicę, kiedy poniesiesz stratę lub otrzymasz obrażenie - możesz wejść w stan, w którym masz zarówno ogromną moc, jak i zerowe zainteresowanie dobrem innych ludzi. Będąc w tym stanie, możesz latać, używać +Weird, by Dwać Wyciks zamiast +Tought (korzystając z wrodzonej magii jako broni zadającej 3-harm o dowolnych właściwościach, jakie wybierzesz), ignorować koszty komponentów swoich rytuałów, ignorować jeden wymóg każdego zaklęcia, które rzucasz za pomocą użycia magii, i masz +1 stałe do robienia wszystkiego. Z drugiej strony, całkowicie nie możesz chronić innych, masz wszystkie Pokusy i musisz im ulegać, gdy tylko nadarzy się dobra okazja. Kiedy starasz się oprzeć swoim Pokusą rzuć +Cool",
+                "desc": "Raz na tajemnicę, kiedy poniesiesz stratę lub otrzymasz obrażenie - możesz wejść w stan, w którym masz zarówno ogromną moc, jak i zerowe zainteresowanie dobrem innych ludzi. Będąc w tym stanie, możesz latać, używać +Dziw, by Dwać Wyciks zamiast +Hartt (korzystając z wrodzonej magii jako broni zadającej 3-ran o dowolnych właściwościach, jakie wybierzesz), ignorować koszty komponentów swoich rytuałów, ignorować jeden wymóg każdego zaklęcia, które rzucasz za pomocą użycia magii, i masz +1 stałe do robienia wszystkiego. Z drugiej strony, całkowicie nie możesz chronić innych, masz wszystkie Pokusy i musisz im ulegać, gdy tylko nadarzy się dobra okazja. Kiedy starasz się oprzeć swoim Pokusą rzuć +Spokój",
                 "success": "Twoja apoteoza się kończy",
                 "patrial": "Kończy się to na tym, że robisz coś niebezpiecznego lub okrutnego",
                 "failure": "Kończy się dopiero po tym, jak skrzywdzisz kogoś (lub coś), kogo kochasz"
@@ -2350,12 +2350,12 @@ const playbooks = [
             "Retro ubrania, ubrania hippisowskie, modne ubrania, zbyt formalne ubrania, źle dopasowane ubrania, anachroniczne ubrania",
         ],
         "gear": [
-            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy", "loud" ]},
-            {"type": "weapon", "name": "Nóż rytaualny","group": "Broń","tags": [ "2-harm", "hand", "magic", "silver" ]},
-            {"type": "weapon", "name": "Pałka","group": "Broń","tags": [ "1-harm", "hand", "balanced" ]},
-            {"type": "weapon", "name": "Kusza","group": "Broń","tags": [ "2-harm", "close", "slow" ]},
-            {"type": "weapon", "name": "Kostur","group": "Broń","tags": [ "1-harm", "hand", "balanced", "large" ]}
+            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ]},
+            {"type": "weapon", "name": "Nóż rytaualny","group": "Broń","tags": [ "2-ran", "na dłoń", "magiczne", "srebrne" ]},
+            {"type": "weapon", "name": "Pałka","group": "Broń","tags": [ "1-ran", "na dłoń", "wyważona" ]},
+            {"type": "weapon", "name": "Kusza","group": "Broń","tags": [ "2-ran", "bliski", "powolne" ]},
+            {"type": "weapon", "name": "Kostur","group": "Broń","tags": [ "1-ran", "na dłoń", "wyważona", "wielkie" ]}
         ],
         "story": [
             "Przekląłeś tego Łowcę. Dlaczego? Jak to się skończyło?",
@@ -2368,28 +2368,28 @@ const playbooks = [
             "Pomogli ci, gdy zaklęcie poszło nie tak. Czym było zaklęcie i Jak ci pomogli.",
         ],
         "advance": [
-            "Get +1 Weird, max +3.",
-            "Get +1 Cool, max +2.",
-            "Get +1 Charm, max +2.",
-            "Get +1 Sharp, max +2.",
-            "Take another Rote.",
-            "Take another Rote.",
-            "Take another Rote.",
-            "Take another Hex move, or an additional Rote.",
-            "Take another Hex move, or an additional Rote.",
-            "Take a Haven, like the Expert has, with two options.",
-            "Take a move from another playbook."
+            "Weź +1 Dziw, max +3.",
+            "Weź +1 Spokój, max +2.",
+            "Weź +1 Urok, max +2.",
+            "Weź +1 Spryt, max +2.",
+            "Stwórz kolejną Rotę",
+            "Stwórz kolejną Rotę",
+            "Stwórz kolejną Rotę",
+            "Weź kolejny ruch tego archetypu lub stwórz kolejną Rotę",
+            "Weź kolejny ruch tego archetypu lub stwórz kolejną Rotę",
+            "Uzyskaj Azyl od Eksperta z dwiema opcjami",
+            "Weź ruch innego archetypu"
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3.",
-            "Change this hunter to a new type.",
-            "Make up a second hunter to play as well as this one.",
-            "Mark two of the basic moves as advanced.",
-            "Mark another two of the basic moves as advanced.",
-            "Retire this hunter to safety.",
-            "Erase one used Luck mark from your playbook.",
-            "Gain another two Rotes.",
-            "Choose one advanced Hex move."
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp łowcy.",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Odzyskaj 1 punkt na torze Fuksa.",
+            "Stwórz kolejne dwie Roty",
+            "Weź jeden z rozszerzonych Ruchów."
         ]
     },
     // Nosiciel
@@ -2413,7 +2413,7 @@ const playbooks = [
             },
             {
                 "name": "Wspólne przetrwanie",
-                "desc": "Twój symbiont pomaga ci się leczyć. Otrzymujesz -1-harm, gdy jesteś niestabilny. Za każdym razem, gdy się leczysz, leczysz 1-harm więcej."
+                "desc": "Twój symbiont pomaga ci się leczyć. Otrzymujesz -1-ran, gdy jesteś niestabilny. Za każdym razem, gdy się leczysz, leczysz 1-ran więcej."
             },
             {
                 "name": "Zrównoważony Neurochemicznie",
@@ -2430,7 +2430,7 @@ const playbooks = [
             },
             {
                 "name": "Wilk i Zając",
-                "desc": "Twój symbiont jest zręcznym łowcą. Kiedy podchodzisz do sytuacji skrycie, rzuć +Cool. Wydaj Zatrzymanie, aby ukryć siebie lub kogoś innego.",
+                "desc": "Twój symbiont jest zręcznym łowcą. Kiedy podchodzisz do sytuacji skrycie, rzuć +Spokój. Wydaj Zatrzymanie, aby ukryć siebie lub kogoś innego.",
                 "rollType": "cool",
                 "success": "Zatrzymaj 3",
                 "patrial": "Zatrzymaj 2",
@@ -2442,7 +2442,7 @@ const playbooks = [
             },
             {
                 "name": "Ciężka Separacja",
-                "desc": "Twój symbiont może opuszczać twoje ciało na krótki czas, aby wykonywać zadania. W tym czasie symbiont jest traktowany jako sojusznik, a ruchy związane z połączeniem mogą być niedostępne lub cierpisz na ciągłe  –1. Rzuć +Cool. Jeżeli otrzymałeś niestabilność za pomocą tego ruchu, po zjednoczeniu możesz je wyczyścić.",
+                "desc": "Twój symbiont może opuszczać twoje ciało na krótki czas, aby wykonywać zadania. W tym czasie symbiont jest traktowany jako sojusznik, a ruchy związane z połączeniem mogą być niedostępne lub cierpisz na ciągłe  –1. Rzuć +Spokój. Jeżeli otrzymałeś niestabilność za pomocą tego ruchu, po zjednoczeniu możesz je wyczyścić.",
                 "rollType": "cool",
                 "success": "Masz ~30 min separacji zanim będziesz niestabilny.",
                 "patrial": "Masz ~10 min separacji zanim będziesz niestabilny.",
@@ -2450,10 +2450,10 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Jedwabne Sieci", "group": "Adaptacja", "tags": ["0-harm", "close", "sticky" ]},
-            {"type": "weapon", "name": "Kwas", "group": "Adaptacja", "tags": ["1-harm", "close", "blinding", "acid" ]},
-            {"type": "weapon", "name": "Uspokojenie myśli", "group": "Adaptacja", "tags": ["0-harm", "intimate/hand", "sedative", "calming" ]},
-            {"type": "armour", "name": "Łuski", "group": "Adaptacja", "tags": ["1-armour" ]},
+            {"type": "weapon", "name": "Jedwabne Sieci", "group": "Adaptacja", "tags": ["0-ran", "bliski", "lepki" ]},
+            {"type": "weapon", "name": "Kwas", "group": "Adaptacja", "tags": ["1-ran", "bliski", "oślepiający", "kwas" ]},
+            {"type": "weapon", "name": "Uspokojenie myśli", "group": "Adaptacja", "tags": ["0-ran", "intymny/na dłoń", "usypiający", "uspokajający" ]},
+            {"type": "armour", "name": "Łuski", "group": "Adaptacja", "tags": ["1-pancerz" ]},
             {"type": "armour", "name": "Maskowanie", "group": "Adaptacja", "tags": ["+1 do działania skrytego" ]},
             {"type": "gear", "name": "Szepty", "group": "Adaptacja", "tags": ["+1 do Ogarnięcia Problemu" ]},
             {"type": "gear", "name":"Pamiętnik waszej więzi", "group": "Przedmiot Osobisty"},
@@ -2464,14 +2464,14 @@ const playbooks = [
             {"type": "gear", "name":"Zdjęcie z lepszych czasów", "group": "Przedmiot Osobisty"},
             {"type": "gear", "name":"Brudnopis", "group": "Przedmiot Osobisty"},
             {"type": "gear", "name":"Dyktafon", "group": "Przedmiot Osobisty"},
-            {"type": "weapon", "group": "Broń", "name": "Dziwne Sztuki Walki", "tags": [ "1-harm", "hand" ] },
-            {"type": "weapon", "group": "Broń", "name": "Symbpityczne Ostrze", "tags": ["2-harm","hand","integrated","retractable"]},
-            {"type": "weapon", "group": "Broń", "name": "Oszałamiający Symbiont","tags": [ "0-harm", "close", "stun", "integrated", "retractable" ]},
-            {"type": "weapon", "group": "Broń", "name": "Revolwer .38","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "group": "Broń", "name": "Magnum","tags": [ "3-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "group": "Broń", "name": "Miecz", "tags": [ "2-harm", "hand" ] },
-            {"type": "weapon", "group": "Broń", "name": "Pistolet Promieniotwórczy","tags": [ "2-harm", "close", "messy", "energy" ]},
-            {"type": "weapon", "group": "Broń", "name": "Strzelba","tags": [ "3-harm", "close", "messy", "loud" ]}
+            {"type": "weapon", "group": "Broń", "name": "Dziwne Sztuki Walki", "tags": [ "1-ran", "na dłoń" ] },
+            {"type": "weapon", "group": "Broń", "name": "Symbpityczne Ostrze", "tags": ["2-ran","na dłoń","zintegrowany","chowany"]},
+            {"type": "weapon", "group": "Broń", "name": "Oszałamiający Symbiont","tags": [ "0-ran", "bliski", "ogłuszający", "zintegrowany", "chowany" ]},
+            {"type": "weapon", "group": "Broń", "name": "Revolwer .38","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "group": "Broń", "name": "Magnum","tags": [ "3-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "group": "Broń", "name": "Miecz", "tags": [ "2-ran", "na dłoń" ] },
+            {"type": "weapon", "group": "Broń", "name": "Pistolet Promieniotwórczy","tags": [ "2-ran", "bliski", "niezdarne", "energetyczne" ]},
+            {"type": "weapon", "group": "Broń", "name": "Strzelba","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ]}
         ],
         "stats": [
             {
@@ -2525,8 +2525,8 @@ const playbooks = [
             "Połączyło was hobby, co to jest? Czy było to przed twoją symbiozą? Jeśli tak to co się zmieniło?",
             "Był nosicielem tego symbionta co ty. Jak doszło do rozdzielenia i co o tym sądzą? Czy rozmawialiście o tym?",
         ],
-        "advance": [ "Get +1 Cool, max+3", "Get +1 Weird, max+2", "Get +1 Tough, max+2", "Get +1 Charm, max+2", "Take another Host move", "Take another Host move", "Take a move from another playbook", "Take a move from another playbook", "Get a haven like the Expert has, with two options", "Gain an ally, either another with a symbiote like yours or someone who helps you manage the condition", "Take another benefit from Symbiosis", "Gain another option from defensive adaptation" ],
-        "exp_advance": [ "Get +1 to any rating, max+3", "Change this hunter to a new playbook", "Create a second hunter to play in addition to this one", "Create a second hunter by symbiotic fission: they are either a non-human hunter or a symbiote bonded to another Host", "Retire this hunter to safety", "Mark two basic moves as advanced", "Mark another two basic moves advanced", "Erase one used Luck mark from your playbook", "Add a third option to your haven", "Take another benefit from Symbiosis" ]
+        "advance": [ "Weź +1 Spokój, max+3", "Weź +1 Dziw, max+2", "Weź +1 Hart, max+2", "Weź +1 Urok, max+2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Weź ruch innego archetypu", "Weź ruch innego archetypu", "Uzyskaj Azyl od Eksperta z dwiema opcjami", "Zyskaj sojusznika, osobę która ci pomaga lub jest nosicielem jak ty", "Weź dwodatkową Korzyść Symbiozy.", "Weź kolejną Adaptację" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max+3", "Zmień archetyp tego łowcy", "Stwórz drugiego łowcę i graj dwoma", "Stwórz drugiego łowcę poprzez podział symbionta: może być nie ludzkim łowcą lub nowym Nosicielem", "Bezpiecznie udaj się na emeryturę", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Odzyskaj 1 punkt na torze Fuksa", "Weź dodatkową opcję dla Azylu", "Weź dwodatkową Korzyść Symbiozy." ]
     },
     // Kultysta
     {
@@ -2552,14 +2552,14 @@ const playbooks = [
                 "isActive": true,
                 "group": "Zakon",
                 "rollType": "charm",
-                "desc": "Kiedy masz dobrą reputację w swojej Sekcie, na początku każdej tajemnicy, rzuć +Charm. Jeśli nie uda Ci się wykonać misji lub odmówisz rozkazu, będziesz miał kłopoty w Sekcie, dopóki nie odpokutujesz.",
+                "desc": "Kiedy masz dobrą reputację w swojej Sekcie, na początku każdej tajemnicy, rzuć +Urok. Jeśli nie uda Ci się wykonać misji lub odmówisz rozkazu, będziesz miał kłopoty w Sekcie, dopóki nie odpokutujesz.",
                 "success": "dostarczają jakieś przydatne informacje lub pomoc w terenie",
                 "patrial": "otrzymujesz misję związaną z tajemnicą, a jeśli ją wykonasz, również otrzymasz informacje lub pomoc",
                 "failure": "proszą Cię o zrobienie czegoś złego."
             },
             {
                 "name": "Zapomniane Sztuki Walki",
-                "desc": "Kiedy walczysz z użyciem Staroszkolnej Broni, zadajesz +1-harm, a Chronienia Kogoś i otrzymujesz +1."
+                "desc": "Kiedy walczysz z użyciem Staroszkolnej Broni, zadajesz +1-ran, a Chronienia Kogoś i otrzymujesz +1."
             },
             {
                 "name": "Mistyk",
@@ -2568,7 +2568,7 @@ const playbooks = [
             {
                 "name": "Fortuna",
                 "rollType": "weird",
-                "desc": "Sekta posiada starożytne proroctwa lub techniki wróżbiarskie do przewidywania przyszłości. Raz na tajemnicę możesz ich użyć. Gdy spoglądasz w przyszłość, rzuć +Weird.",
+                "desc": "Sekta posiada starożytne proroctwa lub techniki wróżbiarskie do przewidywania przyszłości. Raz na tajemnicę możesz ich użyć. Gdy spoglądasz w przyszłość, rzuć +Dziw.",
                 "success": "Zatrzymaj 3",
                 "patrial": "Zatrzymaj 1",
                 "failure": "Otrzymujesz złe informacje, a Strażnik decyduje, jak to na ciebie wpłynie",
@@ -2586,7 +2586,7 @@ const playbooks = [
             {
                 "name": "Mentor",
                 "rollType": "sharp",
-                "desc": "Masz mentora w Sekcie, kim jest? Kiedy kontaktujesz się ze swoim mentorem w celu uzyskania informacji, rzuć +Sharp.",
+                "desc": "Masz mentora w Sekcie, kim jest? Kiedy kontaktujesz się ze swoim mentorem w celu uzyskania informacji, rzuć +Spryt.",
                 "success": "Otrzymasz odpowiedź na swoje pytanie bez problemów",
                 "patrial": "Masz do wyboru: albo są zajęci i nie mogą pomóc, albo odpowiadają na pytanie, ale jesteś im coś winien.",
                 "failure": "Twoje pytania sprowadzaj na ciebie kłopoty."
@@ -2608,72 +2608,72 @@ const playbooks = [
             {
                 "name": "Miecz",
                 "group": "Staroszkolna Broń",
-                "tags": [ "2-harm", "hand", "messy" ]
+                "tags": [ "2-ran", "na dłoń", "niezdarne" ]
             },
             {
                 "name": "Topór",
                 "group": "Staroszkolna Broń",
-                "tags": [ "2-harm", "hand", "messy" ]
+                "tags": [ "2-ran", "na dłoń", "niezdarne" ]
             },
             {
                 "name": "Mieczysko",
                 "group": "Staroszkolna Broń",
-                "tags": [ "3-harm", "hand", "messy", "heavy" ]
+                "tags": [ "3-ran", "na dłoń", "niezdarne", "ciężki" ]
             },
             {
                 "name": "Topór Bojowy",
                 "group": "Staroszkolna Broń",
-                "tags": [ "3-harm", "hand", "messy", "slow", "heavy" ]
+                "tags": [ "3-ran", "na dłoń", "niezdarne", "powolne", "ciężki" ]
             },
             {
                 "name": "Srebrny nóż",
                 "group": "Staroszkolna Broń",
-                "tags": [ "1-harm", "hand", "silver" ]
+                "tags": [ "1-ran", "na dłoń", "srebrne" ]
             },
             {
                 "name": "Kije do walki",
                 "group": "Staroszkolna Broń",
-                "tags": [ "1-harm", "hand", "quick" ]
+                "tags": [ "1-ran", "na dłoń", "szybkie" ]
             },
             {
                 "name": "Włócznia",
                 "group": "Staroszkolna Broń",
-                "tags": [ "2-harm", "hand/close" ]
+                "tags": [ "2-ran", "na dłoń/bliski" ]
             },
             {
                 "name": "Maczuga",
                 "group": "Staroszkolna Broń",
-                "tags": [ "2-harm", "hand", "messy" ]
+                "tags": [ "2-ran", "na dłoń", "niezdarne" ]
             },
             {
                 "name": "Kusza",
                 "group": "Staroszkolna Broń",
-                "tags": [ "2-harm", "close", "slow" ]
+                "tags": [ "2-ran", "bliski", "powolne" ]
             },
             {
                 "name": "Revolwer .38",
                 "group": "Nowoczesna Broń",
-                "tags": [ "2-harm", "close", "reload", "loud" ]
+                "tags": [ "2-ran", "bliski", "magazynki", "głośny" ]
             },
             {
                 "name": "Pistolet 9mm",
                 "group": "Nowoczesna Broń",
-                "tags": [ "2-harm", "close", "loud" ]
+                "tags": [ "2-ran", "bliski", "głośny" ]
             },
             {
                 "name": "Snajperka",
                 "group": "Nowoczesna Broń",
-                "tags": [ "3-harm", "far" ]
+                "tags": [ "3-ran", "daleki" ]
             },
             {
                 "name": "Magnum",
                 "group": "Nowoczesna Broń",
-                "tags": [ "3-harm", "close", "reload", "loud" ]
+                "tags": [ "3-ran", "bliski", "magazynki", "głośny" ]
             },
             {
                 "name": "Strzelba",
                 "group": "Nowoczesna Broń",
-                "tags": [ "3-harm", "close", "messy" ]
+                "tags": [ "3-ran", "bliski", "niezdarne" ]
             }
         ],
         "stats":[
@@ -2727,12 +2727,12 @@ const playbooks = [
             "Były członek Sekty, ale nadal przyjaciel. Dlaczego odeszli / zostali wyrzuceni?",
             "Spotkaliście się badając mistyczne dziwactwa i od tego czasu jesteście okultystycznymi towarzyszami.",
         ],
-        "advance": [ "Get +1 Weird, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Tough, max +2", "Take another Initiate move", "Take another Initiate move", "Get command of your chapter of the Sect", "Get a Sect team under your command", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Become the leader, or effective leader, of the whole Sect.", "Get back one used Luck point." ]
+        "advance": [ "Weź +1 Dziw, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Hart, max +2", "Take another Initiate move", "Take another Initiate move", "Weź command of your chapter of the Sect", "Weź a Sect team under your command", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Become the leader, or EFEKTive leader, of the whole Sect.", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
-    // Android
+    // Cyborg
     {
-        "name": "Android",
+        "name": "Cyborg",
         "desc": "Wiem, na czym stoję, jeśli chodzi o obwody i przewody. Ludzie to po prostu nonsens.",
         "luck": "Kiedy wydajesz Fuksa, masz szansę zdobyć albo znaczące kontakty społeczne, albo niesamowity kawałek technologii.",
         "group_desc": {
@@ -2746,13 +2746,13 @@ const playbooks = [
                 "label": "Integracja",
                 "type": "LongText",
                 "position": "left",
-                "value": "<p>Wybierz Ulepszenia (dwa)</p><ul><li>Zawsze połączony</li><li>Specjalistyczne narzędzia</li><li>Spec ds. Bezpieczeństwa</li><li>Baza danych wywiadowczych</li><li>Wspomaganie celowania</li><li>Wyświetlacz holograficzny</li><li>Przejściówki na wszystko</li><li>Szybkie pisanie</li></ul><p>Wybierz Usterkę (jedna)</p><ul><li>Tylko na swoim sprzęcie</li><li>Hakowalny any mózg</li><li>Specjalistyczna konserwacja</li><li>Niezdyscyplinowany</li><li>Przereklamowana reputacja</li><li>Zbytnia pewność siebie</li><li>Awaryjne implanty</li></ul><p>Następnie wybierz, w jaki sposób zdobyłeś te umiejętności:</p><ul><li>Przebudowany: Zostałeś odbudowany po doświadczeniu bliskim śmierci lub rzeczywistej śmierci. Kto pomyślał, że jesteś na tyle ważny, by cię utrzymać przy życiu?</li><li>Techno-Magia: Masz magiczną więź z maszynami. Jak zdobyłeś lub odkryłeś swoje moce?</li><li>Ochotnik: Zgłosiłeś się na ochotnika do ulepszenia. Kto miał technologię, aby to zrobić?</li><li>Geniusz: Czysty geniusz i ciężka praca. Jakie wydarzenie przyniosło ci reputację i jak sprawia ci kłopoty?</li><li>Sztuczny: Zostałeś stworzony w ten sposób. Jaki był twój pierwotny cel? Czy go przekroczyłeś?</li></ul>"
+                "value": "<p>Wybierz Ulepszenia (dwa)</p><ul><li>Zawsze połączony</li><li>Specjalistyczne narzędzia</li><li>Spec ds. Bezpieczeństwa</li><li>Baza danych wywiadowczych</li><li>Wspomaganie celowania</li><li>Wyświetlacz holograficzny</li><li>Przejściówki na wszystko</li><li>Szybkie pisanie</li></ul><p>Wybierz Usterkę (jedna)</p><ul><li>Tylko na swoim sprzęcie</li><li>Hakowalny mózg</li><li>Specjalistyczna konserwacja</li><li>Niezdyscyplinowany</li><li>Przereklamowana reputacja</li><li>Zbytnia pewność siebie</li><li>Awaryjne implanty</li></ul><p>Następnie wybierz, w jaki sposób zdobyłeś te umiejętności:</p><ul><li>Przebudowany: Zostałeś odbudowany po doświadczeniu bliskim śmierci lub rzeczywistej śmierci. Kto pomyślał, że jesteś na tyle ważny, by cię utrzymać przy życiu?</li><li>Techno-Magia: Masz magicznezną więź z maszynami. Jak zdobyłeś lub odkryłeś swoje moce?</li><li>Ochotnik: Zgłosiłeś się na ochotnika do ulepszenia. Kto miał technologię, aby to zrobić?</li><li>Geniusz: Czysty geniusz i ciężka praca. Jakie wydarzenie przyniosło ci reputację i jak sprawia ci kłopoty?</li><li>Sztuczny: Zostałeś stworzony w ten sposób. Jaki był twój pierwotny cel? Czy go przekroczyłeś?</li></ul>"
             }
         ],
         "moves": [
             {
                 "name": "Technomancer",
-                "desc": "Gdy w biegu dostosowujesz maszynę do czego nie była zaprojektowana, rzuć +Cool",
+                "desc": "Gdy w biegu dostosowujesz maszynę do czego nie była zaprojektowana, rzuć +Spokój",
                 "rollType": "cool",
                 "success": "Działa jak chciałeś, wybierz 3",
                 "patrial": "Zrobi to i się wysypie, wybierz 1",
@@ -2761,7 +2761,7 @@ const playbooks = [
             },
             {
                 "name": "Modus Operandi",
-                "desc": "Możesz Ogarniać Problem przy każdej bazie myślącej istoty, rzuć +Sharp.",
+                "desc": "Możesz Ogarniać Problem w bazie każdej myślącej istoty, rzuć +Spryt.",
                 "rollType": "sharp",
                 "success": "Zatrzymaj 3",
                 "patrial": "Zatrzymaj 1",
@@ -2791,13 +2791,13 @@ const playbooks = [
             },
             {
                 "name": "Twórca Hacków",
-                "desc": "Kiedy tworzysz lub walczysz z wirusem komputerowym, rzuć +Cool",
+                "desc": "Kiedy tworzysz lub walczysz z wirusem komputerowym, rzuć +Spokój",
                 "rollType": "cool",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
                 "failure": "Wirus infekuje ciebie",
                 "choices": [
-                    "Bezpiecznie zawierasz wirusa."
+                    "Bezpiecznie izolujesz wirusa."
                     ,"Usuwa lub zmienia określone informacje."
                     ,"Blokuje system."
                     ,"Zadaj jedno pytanie z listy Zbadaj Tajemnicę."
@@ -2818,14 +2818,14 @@ const playbooks = [
             {"type": "gear", "name": "Dziennik projektu","group": "Status Życia"},
             {"type": "gear", "name": "Konsola do gier wideo","group": "Status Życia"},
             {"type": "gear", "name": "Zestaw energetykow","group": "Status Życia"},
-            {"type": "weapon", "name": "Weź boń Zawodowca i dodaj do niej tag +Integrated and +Blatant","group": "Broń"},
-            {"type": "weapon", "name": "Wszczepy Mięśni","group": "Broń","tags": [ "1-harm", "hand", "useful", "integrated" ]},
-            {"type": "weapon", "name": "Pistolet Energetyczny","group": "Broń","tags": [ "2-harm", "close", "energy" ]},
-            {"type": "weapon", "name": "Drony","group": "Broń","tags": [ "1-harm", "close", "autonomous", "area" ]},
-            {"type": "weapon", "name": "Zapper","group": "Broń","tags": [ "0-harm", "close", "stun" ]},
-            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Broń z ostrzami","group": "Broń","tags": [ "2-harm", "hand" ]},
-            {"type": "weapon", "name": "Narzędzie","group": "Broń","tags": [ "1-harm", "close", "useful" ]}
+            {"type": "weapon", "name": "Weź boń Zawodowca i dodaj do niej tag +Zingegrowany and +Oczywisty","group": "Broń"},
+            {"type": "weapon", "name": "Wszczepy Mięśni","group": "Broń","tags": [ "1-ran", "na dłoń", "użyteczzne", "zintegrowany" ]},
+            {"type": "weapon", "name": "Pistolet Energetyczny","group": "Broń","tags": [ "2-ran", "bliski", "energetyczne" ]},
+            {"type": "weapon", "name": "Drony","group": "Broń","tags": [ "1-ran", "bliski", "autonomiczny", "obszarowe" ]},
+            {"type": "weapon", "name": "Zapper","group": "Broń","tags": [ "0-ran", "bliski", "ogłuszający" ]},
+            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Broń z ostrzami","group": "Broń","tags": [ "2-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Narzędzie","group": "Broń","tags": [ "1-ran", "bliski", "użyteczzne" ]}
         ],
         "stats": [
             {
@@ -2879,8 +2879,8 @@ const playbooks = [
             "Dziko rozczochrane włosy, implanty, pachnący ozonem, niechlujny, nienaturalnie czysty",
             "Wygodne ubrania, brudne ubrania, taktyczne ubrania, ubrania z lat 90",
         ],
-        "advance": [ "Get +1 Sharp, max +3", "Get +1 Tough, max +2", "Get +1 Cool, max +2", "Get +1 Weird, max +2", "Take another Interface move", "Take another Interface move", "Take a move from another playbook", "Take a move from another playbook", "Add, remove, or change three tags on gear. May be distributed between multiple pieces of gear.", "Add, remove, or change three tags on gear. May be distributed between multiple pieces of gear." ],
-        "exp_advance": [ "Get +1 to any rating, max+3", "Change this hunter to a new playbook", "Create a second hunter to play in addition to this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Retire as an uploaded consciousness. Are you now a threat, an ally, or wholly disinterested in meatspace?", "Get a haven like the Expert with workshop, supercomputer, and two other options", "Add an Upgrade or change a Fault", "Add the “integrated and “blatant tags (SSK page 188) to a piece of wearable or handheld gear", "Add the “retractable tag (SSK page 188) to a piece of wearable or handheld gear" ]
+        "advance": [ "Weź +1 Spryt, max +3", "Weź +1 Hart, max +2", "Weź +1 Spokój, max +2", "Weź +1 Dziw, max +2", "Weź ruch tego archetypu", "Weź ruch tego archetypu", "Weź ruch innego archetypu", "Weź ruch innego archetypu", "Dodaj, usuń lub zmień 3 tagi swojego sprzętu.", "Dodaj, usuń lub zmień 3 tagi swojego sprzętu." ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max+3", "Zmień archetyp tego łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Dostąp transcendencji i stan się świadomością. Kim się sajesz? Wrogiem? Sojusznikiem? A może zamykasz się w świecie wirtualnym?", "Weź Azyl od Eksperta z Pracownią, Super Komputerem i dwiema dodatkowymi opcjami.", "Dodaj Ulepszenie lub usuń Useterkę", "Dodaj tagi 'zintegrowany' i 'jawny' do noszonego sprzętu ", "Dodaj 'ukryty' do noszonego sprzętu" ]
     },
     // Potwór
     {
@@ -2890,7 +2890,7 @@ const playbooks = [
         "group_desc": {
             "Broń": "Wybierz 1",
             "moves": "Wybierz 2",
-            "Naturalne Ataki": "Wybierz 2 (min. jedna podstawa)",
+            "Naturalne Ataki": "Wybierz 2 - min 1 BAZA",
             "Potworne pochodzenie": "Jesteś w połowie człowiekiem, w połowie potworem: zdecyduj, czy zawsze tak wyglądałeś, czy najpierw byłeś człowiekiem i w jakiś sposób się przemieniłeś. Teraz zdecyduj, czy zawsze walczyłeś, aby być dobrym, czy byłeś złym i zmieniłeś stronę. Określ swój potworny gatunek, wybierając klątwę, umiejętności i naturalne ataki. Stwórz potwora, którym chcesz być: cokolwiek wybierzesz, definiuje twój gatunek w grze."
         },
         "moves": [
@@ -2898,7 +2898,7 @@ const playbooks = [
                 "name": "Klątwa",
                 "isActive": true,
                 "group": "Potworne pochodzenie",
-                "desc": "<ul><li>Żerowanie: musisz żerować na żywych ludziach – twoim pożywieniem mogą być mózgi, krew czy esencja duchowa, byle pochodziło to od ludzi. Musisz Działać pod Presją, by się oprzeć, gdy pojawia się doskonała okazja do żerowania.</li><li>Wrażliwość: wybierz jakąś substancję. Zadaje ci ona +1-harm. Gdy jesteś nią związana lub otoczona, musisz Działać pod Presją, by użyć swoich mocy.</li><li>Czysta pasja: rządzi tobą jedna emocja, do wyboru – głód, nienawiść, złość, strach, zazdrość, chciwość, radość, duma, zawiść, żądza lub okrucieństwo. Ilekroć masz okazję oddać się tej emocji, musisz natychmiast to zrobić lub Działać pod Presją, by się oprzeć. </li><li>Mroczny mistrz: masz złego Pana, który nie wie, że zmieniłaś strony. Wciąż wydaje ci rozkazy i nie toleruje odmowy ani porażki.</li></ul>"
+                "desc": "<ul><li>Żerowanie: musisz żerować na żywych ludziach – twoim pożywieniem mogą być mózgi, krew czy esencja duchowa, byle pochodziło to od ludzi. Musisz Działać pod Presją, by się oprzeć, gdy pojawia się doskonała okazja do żerowania.</li><li>Wrażliwość: wybierz jakąś substancję. Zadaje ci ona +1-ran. Gdy jesteś nią związana lub otoczona, musisz Działać pod Presją, by użyć swoich mocy.</li><li>Czysta pasja: rządzi tobą jedna emocja, do wyboru – głód, nienawiść, złość, strach, zazdrość, chciwość, radość, duma, zawiść, żądza lub okrucieństwo. Ilekroć masz okazję oddać się tej emocji, musisz natychmiast to zrobić lub Działać pod Presją, by się oprzeć. </li><li>Mroczny mistrz: masz złego Pana, który nie wie, że zmieniłaś strony. Wciąż wydaje ci rozkazy i nie toleruje odmowy ani porażki.</li></ul>"
             },
             {
                 "name": "Nieśmiertelny",
@@ -2906,7 +2906,7 @@ const playbooks = [
             },
             {
                 "name": "Nienaturalny urok",
-                "desc": "rzucaj +Dziw zamiast +Charm, gdy Manipulujesz Kimś."
+                "desc": "rzucaj +Dziw zamiast +Urok, gdy Manipulujesz Kimś."
             },
             {
                 "name": "Przeklęta siła",
@@ -2927,7 +2927,7 @@ const playbooks = [
             {
                 "name": "Kontrola umysłu",
                 "rollType": "charm",
-                "desc": "gdy patrzysz w oczy zwykłego człowieka i wpływasz na niego swoją wolą, rzuć +Charm.  Możesz je wydawać, by rozkazywać tej osobie. Zwyczajni ludzie wykonają rozkaz, jaki by on nie był. Łowcy mogą wybrać, czy to robią (jeśli tak, zaznaczają doświadczenie), czy nie.",
+                "desc": "gdy patrzysz w oczy zwykłego człowieka i wpływasz na niego swoją wolą, rzuć +Urok.  Możesz je wydawać, by rozkazywać tej osobie. Zwyczajni ludzie wykonają rozkaz, jaki by on nie był. Łowcy mogą wybrać, czy to robią (jeśli tak, zaznaczają doświadczenie), czy nie.",
                 "success": "zatrzymaj 3",
                 "patrial": "zatrzymaj 1",
                 "failure": "Coś idzie całkowicie nie potwojej myśli"
@@ -2935,7 +2935,7 @@ const playbooks = [
             },
             {
                 "name": "Niespożyta witalność",
-                "desc": "gdy otrzymujesz obrażenia, możesz się uleczyć. Rzuć +Cool",
+                "desc": "gdy otrzymujesz obrażenia, możesz się uleczyć. Rzuć +Spokój",
                 "rollType": "cool",
                 "success": "leczysz 2 obrażenia i stabilizujesz swoje rany",
                 "patrial": "leczysz 1 obrażenie i się stabilizujesz",
@@ -3011,24 +3011,24 @@ const playbooks = [
             "Uratował ciebie przed innym Łowcą, który był gotów cię zabić. Co się stało?",
         ],
         "gear": [
-            {"type": "weapon", "name": "Kły", "group": "Naturalne Ataki", "tags": ["base", "3-harm", "intimate"]},
-            {"type": "weapon", "name": "Szpony", "group": "Naturalne Ataki", "tags": ["base", "2-harm", "hand"]},
-            {"type": "weapon", "name": "Magiczna Energia", "group": "Naturalne Ataki", "tags": ["base", "1-harm", "magical", "close"]},
-            {"type": "weapon", "name": "Wyssysanie Życia", "group": "Naturalne Ataki", "tags": ["base", "1-harm", "intimate", "life-drain"]},
-            {"type": "weapon", "name": "Silne", "group": "Naturalne Ataki", "tags": ["extra", "1-harm"]},
-            {"type": "weapon", "name": "Przebijające", "group": "Naturalne Ataki", "tags": ["extra", "ignore-armour"]},
-            {"type": "weapon", "name": "Odległe", "group": "Naturalne Ataki", "tags": ["extra", "extra range"]},
-            {"type": "weapon", "name": "Revolwer .38 ","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Magnum","group": "Broń","tags": [ "3-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Dóży Nóż","group": "Broń","tags": [ "1-harm", "hand" ]},
-            {"type": "weapon", "name": "Kastet","group": "Broń","tags": [ "1-harm", "hand", "quiet", "small" ]},
-            {"type": "weapon", "name": "Miecz","group": "Broń","tags": [ "2-harm", "hand", "messy" ]},
-            {"type": "weapon", "name": "Mieczysko","group": "Broń","tags": [ "3-harm", "hand", "heavy" ]}
+            {"type": "weapon", "name": "Kły", "group": "Naturalne Ataki", "tags": ["BAZA", "3-ran", "intymny"]},
+            {"type": "weapon", "name": "Szpony", "group": "Naturalne Ataki", "tags": ["BAZA", "2-ran", "na dłoń"]},
+            {"type": "weapon", "name": "Magiczna Energia", "group": "Naturalne Ataki", "tags": ["BAZA", "1-ran", "magiczne", "bliski"]},
+            {"type": "weapon", "name": "Wyssysanie Życia", "group": "Naturalne Ataki", "tags": ["BAZA", "1-ran", "intymny", "kradzież życia"]},
+            {"type": "weapon", "name": "Silne", "group": "Naturalne Ataki", "tags": ["DODATEK", "1-ran"]},
+            {"type": "weapon", "name": "Przebijające", "group": "Naturalne Ataki", "tags": ["DODATEK", "ignoruje pancerz"]},
+            {"type": "weapon", "name": "Odległe", "group": "Naturalne Ataki", "tags": ["DODATEK", "dodatkowy zasięg"]},
+            {"type": "weapon", "name": "Revolwer .38 ","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Magnum","group": "Broń","tags": [ "3-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Dóży Nóż","group": "Broń","tags": [ "1-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Kastet","group": "Broń","tags": [ "1-ran", "na dłoń", "wyciszone", "mały" ]},
+            {"type": "weapon", "name": "Miecz","group": "Broń","tags": [ "2-ran", "na dłoń", "niezdarne" ]},
+            {"type": "weapon", "name": "Mieczysko","group": "Broń","tags": [ "3-ran", "na dłoń", "ciężki" ]}
         ],
-        "advance": [ "Get +1 Charm, max +2", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Tough, max +2", "Take another Monstrous move", "Take another Monstrous move", "Gain a haven, like the Expert has, with two options", "Take a natural attacks pick", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Free yourself from the curse of your kind. Your curse no longer applies, but you lose 1 Weird.", "You turn evil (again). Retire this character, they become one of the Keeper’s threats.", "Get back one used Luck point." ]
+        "advance": [ "Weź +1 Urok, max +2", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Hart, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Uzyskaj Azyl od Eksperta z dwiema opcjami", "Weź kolejny Naturalny Atak", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Strać swoją klątwę, ale tracisz też 1 Dziwu", "Stajesz się złem. Przejdź na emeryturę jako zagożenie w rękach Strażnika", "Odzyskaj 1 punkt na torze Fuksa" ]
 
     },
     // Normik
@@ -3052,11 +3052,11 @@ const playbooks = [
             },
             {
                 "name": "Wyciągnę Cię stąd",
-                "desc": "Kiedy chronisz kogoś mówiąc co ma zrobić, albo prowadzisz go w bezpieczne miejsce, rzucasz +Charm zamiast +Tough"
+                "desc": "Kiedy chronisz kogoś mówiąc co ma zrobić, albo prowadzisz go w bezpieczne miejsce, rzucasz +Urok zamiast +Hart"
             },
             {
                 "name": "Nogi za pas",
-                "desc": "Kiedy uciekasz, opisz jak to robisz, rzuć +Sharp",
+                "desc": "Kiedy uciekasz, opisz jak to robisz, rzuć +Spryt",
                 "rollType": "sharp",
                 "success": "nie ma problemu, jesteś w bezpiecznym miejscu",
                 "patrial": "możesz uciec lub zostać, ale jeśli uciekasz, będzie to miało swój koszt (coś zostawisz albo coś pójdzie za tobą)",
@@ -3068,7 +3068,7 @@ const playbooks = [
             },
             {
                 "name": "Zaufaj mi",
-                "desc": "Kiedy przedstawiasz prawdę statyście, by chronić go przed niebezpieczeństwiem, rzuć +Charm",
+                "desc": "Kiedy przedstawiasz prawdę statyście, by chronić go przed niebezpieczeństwiem, rzuć +Urok",
                 "rollType": "charm",
                 "success": "bez żadnych pytań zrobi to, co mówisz, że powinien",
                 "patrial": "zrobi to, ale dodatkowo Strażnik wybiera jedną z rzeczy, która go spotyka:",
@@ -3083,7 +3083,7 @@ const playbooks = [
                 "name": "Co może pójść nie tak?",
                 "desc": "Kiedy bez namysłu rzucasz się prosto w niebiezpieczeństwo, masz 2 Zatrzymania. Wydaj je na siebie lub kogoś innego:",
                 "choices": [
-                    "Zadaj 1-harm",
+                    "Zadaj 1-ran",
                     "Zmniejsz obrażenia o 1",
                     "Przyznajesz +2 do Działania Pod Presją"
                 ]
@@ -3094,12 +3094,12 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"name": "Kij sportowy","group": "Broń","tags": [ "2-harm", "hand", "innocuous", "messy" ]},
-            {"name": "Nóż składany lub scyzoryk","group": "Broń","tags": [ "1-harm", "hand", "useful", "small" ]},
-            {"name": "Pistolecik","group": "Broń","tags": [ "2-harm", "close", "loud", "reload" ]},
-            {"name": "Karabin Myśliwski","group": "Broń","tags": [ "3-harm", "far", "loud", "reload" ]},
-            {"name": "Młot lub siekera strażacka","group": "Broń","tags": [ "3-harm", "hand", "messy" ]},
-            {"name": "Nunczaki","group": "Broń","tags": [ "2-harm", "hand", "area" ]},
+            {"name": "Kij sportowy","group": "Broń","tags": [ "2-ran", "na dłoń", "nieszkodliwy", "niezdarne" ]},
+            {"name": "Nóż składany lub scyzoryk","group": "Broń","tags": [ "1-ran", "na dłoń", "użyteczzne", "mały" ]},
+            {"name": "Pistolecik","group": "Broń","tags": [ "2-ran", "bliski", "głośny", "magazynki" ]},
+            {"name": "Karabin Myśliwski","group": "Broń","tags": [ "3-ran", "daleki", "głośny", "magazynki" ]},
+            {"name": "Młot lub siekera strażacka","group": "Broń","tags": [ "3-ran", "na dłoń", "niezdarne" ]},
+            {"name": "Nunczaki","group": "Broń","tags": [ "2-ran", "na dłoń", "obszarowe" ]},
             {"name": "Deskorolka","group": "Środek transportu"},
             { "name": "Rower", "group": "Środek transportu" },
             {"name": "W miarę nowy samochód","group": "Środek transportu"},
@@ -3129,8 +3129,8 @@ const playbooks = [
             "Oni wprowadzili cię w istnienie potworów. Co o tym myślisz?",
             "Uratowałeś ich życie przed potworem w wyniku mało prawdopodobnego splotu wydarzeń. Jak to wyglądało?",
         ],
-        "advance": [ "Get +1 Charm, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Tough, max +2", "Take another Mundane move", "Take another Mundane move", "Get back one used Luck point", "Get back one used Luck point", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Get back one used Luck point.", "Get back one used Luck point." ]
+        "advance": [ "Weź +1 Urok, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Hart, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Odzyskaj 1 punkt na torze Fuksa", "Odzyskaj 1 punkt na torze Fuksa", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Para-romantyk
     {
@@ -3147,6 +3147,7 @@ const playbooks = [
         "moves": [
             {
                 "name": "Los Twojej Miłości",
+                "isActive": true, 
                 "group": "Para-romantyzm",
                 "desc": "Istnieje powód, dla którego twoja miłość z Twoją Drugą Połókwą jest zakazana lub skazana na niepowodzenie. Wymyśl ten powód lub pozostaw to Strażnikowi. Za każdym razem, gdy wydajesz Fuksa, prawda o losie twojej miłości powoli się odsłania: zaznacz jedno pole w ścieżce Statusu Związku. Gdy wykorzystasz ostatni Fuksa, stanie się jasne, że nie możecie być razem. Twoja Druga Połówka może nawet stać się wrogiem, w zależności od rozwoju sytuacji. Kiedy pakujesz siebie lub kogoś innego w poważne niebezpieczeństwo, aby ukryć prawdę o sobie lub swoim związku, zaznacz doświadczenie."
             },
@@ -3154,13 +3155,13 @@ const playbooks = [
                 "name": "Nadnaturalny Towarzysz",
                 "isActive": true, 
                 "group": "Para-romantyzm",
-                "desc": "Masz (najprawdopodobniej intymną) więź z jakąś nadprzyrodzoną istotą, która jest twoim przewodnikiem w świecie poza naszym. Wybierz, czy wasza relacja jest tajna, czy nie. Określ, jakiego rodzaju istotą jest Twoja Druga Połówka i jak działa wasza relacja. Powiedz, jaką moc posiada. Strażnik zdecyduje, jak to działa i uzna twojego Przewodnika za zagrożenie. Jeśli Twoja Druga Połówka jest innym łowcą, ustalcie wspólnie, jak działa wasza relacja. Za każdym razem, gdy miałbyś rzucać +Weird, możesz rzucić +Charm zamiast tego, czerpiąc moc z waszej więzi. Kiedy to robisz i nie udaje ci się, oprócz zwykłych konsekwencji, ty i Twoja Druga Połówka cierpicie tak, jakbyście nieudanie wykonali rzut za nadużycie więzi."
+                "desc": "Masz (najprawdopodobniej intymną) więź z jakąś nadprzyrodzoną istotą, która jest twoim przewodnikiem w świecie poza naszym. Wybierz, czy wasza relacja jest tajna, czy nie. Określ, jakiego rodzaju istotą jest Twoja Druga Połówka i jak działa wasza relacja. Powiedz, jaką moc posiada. Strażnik zdecyduje, jak to działa i uzna twojego Przewodnika za zagrożenie. Jeśli Twoja Druga Połówka jest innym łowcą, ustalcie wspólnie, jak działa wasza relacja. Za każdym razem, gdy miałbyś rzucać +Dziw, możesz rzucić +Urok zamiast tego, czerpiąc moc z waszej więzi. Kiedy to robisz i nie udaje ci się, oprócz zwykłych konsekwencji, ty i Twoja Druga Połówka cierpicie tak, jakbyście nieudanie wykonali rzut za nadużycie więzi."
             },
             {
                 "name": "Nadużywanie Relacji",
                 "isActive": true,
                 "group": "Para-romantyzm",
-                "desc": "Za każdym razem, gdy robisz coś, aby nadużyć więzi z Twoją Drugą Połówką, na przykład działając przeciwko niemu lub nie poświęcając mu wystarczającej uwagi, wykonaj rzut +Charm",
+                "desc": "Za każdym razem, gdy robisz coś, aby nadużyć więzi z Twoją Drugą Połówką, na przykład działając przeciwko niemu lub nie poświęcając mu wystarczającej uwagi, wykonaj rzut +Urok",
                 "rollType": "charm",
                 "success": "Twoje działania nie mają wpływu na więź, ewentualnie kilka wściekłychł słów",
                 "patrial": "Twoje działania mają jakiś wpływ, wybierz 1",
@@ -3174,7 +3175,7 @@ const playbooks = [
             },
             {
                 "name": "Czas więzi",
-                "desc": "Kiedy spędzasz upojne chwile ze swoją Drugą Połówką zamiast pracować nad aktualną tajemnicą, możesz wykonać rzut +Charm",
+                "desc": "Kiedy spędzasz upojne chwile ze swoją Drugą Połówką zamiast pracować nad aktualną tajemnicą, możesz wykonać rzut +Urok",
                 "rollType": "charm",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
@@ -3204,7 +3205,7 @@ const playbooks = [
             },
             {
                 "name": "Potworna Empatia",
-                "desc": "Kiedy próbujesz dowiedzieć się, czego pragnie nadprzyrodzona istota, rzuć +Charm",
+                "desc": "Kiedy próbujesz dowiedzieć się, czego pragnie nadprzyrodzona istota, rzuć +Urok",
                 "rollType": "charm",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
@@ -3217,7 +3218,7 @@ const playbooks = [
             },
             {
                 "name": "Magiczny Dotyk",
-                "desc": "Twoje doświadczenia uczyniły cię wrażliwym na zjawiska nadprzyrodzone. Kiedy wyczuwasz magiczne rzeczy, rzuć +Weird",
+                "desc": "Twoje doświadczenia uczyniły cię wrażliwym na zjawiska nadprzyrodzone. Kiedy wyczuwasz magicznezne rzeczy, rzuć +Dziw",
                 "rollType": "weird",
                 "success": "Czujesz to wpełni",
                 "patrial": "Albo wyczuwasz tylko wrażenia, albo odczuwasz to w pełni, ale one też ciebie czuje",
@@ -3236,18 +3237,18 @@ const playbooks = [
             "Normalne ubrania, codzienne ubrania, gotyckie ubrania, sportowe ubrania, uliczne ubrania, nerdowskie ubrania",
         ],
         "gear": [
-            {"name": "Kij sportowy","group": "Broń","tags": [ "2-harm", "hand", "innocuous", "messy" ]},
-            {"name": "Nóż składany lub scyzoryk","group": "Broń","tags": [ "1-harm", "hand", "useful", "small" ]},
-            {"name": "Pistolecik","group": "Broń","tags": [ "2-harm", "close", "loud", "reload" ]},
+            {"name": "Kij sportowy","group": "Broń","tags": [ "2-ran", "na dłoń", "nieszkodliwy", "niezdarne" ]},
+            {"name": "Nóż składany lub scyzoryk","group": "Broń","tags": [ "1-ran", "na dłoń", "użyteczzne", "mały" ]},
+            {"name": "Pistolecik","group": "Broń","tags": [ "2-ran", "bliski", "głośny", "magazynki" ]},
             {"name": "Deskorolka","group": "Środek transportu"},
             { "name": "Rower", "group": "Środek transportu" },
             {"name": "W miarę nowy samochód","group": "Środek transportu"},
             {"name": "Klasyczny wóz w kiepskim stanie","group": "Środek transportu"},
             {"name": "Motocykl","group": "Środek transportu"},
-            {"name": "Część ciała Ukochanego", "group": "Prezent", "tags": ["heals you", "weakness against a specific sort of monster"]},
-            {"name": "Biżuteria", "group": "Prezent", "tags": ["1-armour", "magic", "protects you from the powers of a specific sort of monster"]},
-            {"name": "Pamiątka", "group": "Prezent", "tags": ["+1 on bond abuse rolls"]},
-            {"name": "Dziwna Broń", "group": "Prezent", "tags": ["2-harm", "hand", "messy" , "magic / silver / holy / iron"]},
+            {"name": "Część ciała Ukochanego", "group": "Prezent", "tags": ["leczy ciebie", "słabość na określony rodzaj potwora"]},
+            {"name": "Biżuteria", "group": "Prezent", "tags": ["1-pancerz", "magiczne", "chroni cię przed określonym rodzajem potwora"]},
+            {"name": "Pamiątka", "group": "Prezent", "tags": ["+1 do Nadużywania Relacji"]},
+            {"name": "Dziwna Broń", "group": "Prezent", "tags": ["2-ran", "na dłoń", "niezdarne" , "magiczne / srebrne / święta / żelazo"]},
 
         ],
         "story": [
@@ -3261,15 +3262,15 @@ const playbooks = [
         ],
         "trackers": [
             {
-                "label": "Stanu Związku",
+                "label": "Stan Związku",
                 "desc": "Po zapełnieniu wasza relacja się rozpada",
                 "max": 10,
                 "position": "left",
                 "type": "Clock"
             }
         ],
-        "advance": [ "Get +1 Charm, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Weird, max +2", "Take another Pararomantic move", "Take another Pararomantic move", "Gain an ally", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Take a second gift from your guide or add another property to an existing gift.", "Change your Guide, as you fall for another creature.", "Gain a second Guide. Track the relationship status tracks of both relationships separately. Both Guides initially hate each other, but this could change through play. All moves that applied to your original Guide can now apply to either one.", "Erase all the marks from the Relationship Status track." ]
+        "advance": [ "Weź +1 Urok, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Dziw, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Otrzymaj kolejny prezent od swojej Drugiej Połówki lub dodaj zdolność do istniejacego prezentu", "Zmień swoją Drugą Połówkę, masz nowy obiekt westchnień", "Masz kolejną Drugą Połówkę. Otrzymujesz osobny tor dla tej miłości. Obie Drugie Połówki nienawidzą siebie na początku. Wszystkie ruchy aplikują się do obu.", "Wyczyś cały tor Stanu Związku." ]
     },
     // Zawodowiec
     {
@@ -3288,13 +3289,13 @@ const playbooks = [
                 "isActive": true,
                 "group": "Agencja",
                 "desc": "Zdecyduj, dla kogo tak naprawdę pracujesz. Czy jest to dział rządowy działający na czarny budżet, tajna jednostka wojskowa, ukryta jednostka policyjna, prywatna inicjatywa indywidualna, korporacja, zespół naukowy, czy coś innego? Czy celem Agencji jest: niszczenie potworów, badanie nadprzyrodzonych zjawisk, ochrona ludzi, zdobywanie władzy, czy coś innego? Wybierz dwa Zasoby dla Agencji oraz dwie Biurokracje:",
-                "choices": "<p>Zasoby:</p><ul><li>Dobrze uzbrojeni</li><li>Dobrze finansowani</li><li>Rygorystyczne szkolenie</li><li>Oficjalne wsparcie</li><li>Ukryte tożsamości</li><li>Biura w wielu miejscach</li><li>Dobre informacje wywiadowcze</li><li>Uznana władza</li><li>Dziwne gadżety technologiczne</li><li>Zespoły wsparcia</li></ul><p>Biurokracja:</p><ul><li>Wątpliwe motywy</li><li>Biurokratyczne</li><li>Tajemnicza hierarchia</li><li>Zagadkowe misje</li><li>Wrogo nastawieni przełożeni</li><li>Wewnętrzna rywalizacja między działami</li><li>Cięcia</li><li>udżetowe</li><li>Polityka</li><li>ez taryfy ulgowej</li><li>Polityka schwytania żywego</li></ul>"
+                "choices": "<p>Zasoby:</p><ul><li>Dobrze uzbrojeni</li><li>Dobrze finansowani</li><li>Rygorystyczne szkolenie</li><li>Oficjalne wsparcie</li><li>Ukryte tożsamości</li><li>Biura w wielu miejscach</li><li>Dobre informacje wywiadowcze</li><li>Uznana władza</li><li>Dziwne gadżety technologiczne</li><li>Zespoły wsparcia</li></ul><p>Biurokracja:</p><ul><li>Wątpliwe motywy</li><li>Biurokratyczne</li><li>Tajemnicza hierarchia</li><li>Zagadkowe misje</li><li>Wrogo nastawieni przełożeni</li><li>Wewnętrzna rywalizacja między działami</li><li>Cięcia</li><li>udżetowe</li><li>Polityka</li><li>Bez taryfy ulgowej</li><li>Polityka schwytania żywego</li></ul>"
             },
             {
                 "name": "Nagły Wypadek",
                 "group": "Agencja",
                 "isActive": true,
-                "desc": "Gdy Kontaktujesz się z Agencją, prosząc o wsparcie lub sprzęt bądź tłumacząc porażkę, rzuć +Sharp",
+                "desc": "Gdy Kontaktujesz się z Agencją, prosząc o wsparcie lub sprzęt bądź tłumacząc porażkę, rzuć +Spryt",
                 "rollType": "sharp",
                 "success": "jest w porządku – zatwierdzają twoją prośbę o zasoby czy personel lub nie zauważają pomyłki",
                 "patrial": "przełożeni mogą się na tobie wyżyć i może będą jakieś konsekwencje, ale dostajesz to, czego wymaga zadanie",
@@ -3314,7 +3315,7 @@ const playbooks = [
             },
             {
                 "name": "Nie stracę nikogo",
-                "desc": "Kiedy pomagasz komuś uciec z pola walki, rzuć +Sharp.",
+                "desc": "Kiedy pomagasz komuś uciec z pola walki, rzuć +Spryt.",
                 "rollType": "sharp",
                 "success": "wyciągasz te osoby z niebezpieczeństwa bez problemu",
                 "patrial": "Wybierasz: wyciągasz je, albo nie otrzymujesz obrażeń",
@@ -3322,11 +3323,11 @@ const playbooks = [
             },
             {
                 "name": "Geniusz Taktyczny",
-                "desc": "Możesz rzucać na Ogarnij Problem z +Cool, zamiast +Sharp"
+                "desc": "Możesz rzucać na Ogarnij Problem z +Spokój, zamiast +Spryt"
             },
             {
                 "name": "Medyk",
-                "desc": "Gdy udzielasz pierwszej pomocy, rzuć +Cool.",
+                "desc": "Gdy udzielasz pierwszej pomocy, rzuć +Spokój.",
                 "rollType": "cool",
                 "success": "pacjent jest ustabilizowany i wyleczony z 2 obrażeń",
                 "patrial": "wybierz: wylecz 2 obrażenia, alub ustabilizuj rany",
@@ -3342,16 +3343,16 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Karabin","group": "Konkretna Broń","tags": [ "3-harm", "far", "area", "loud", "reload" ]},
-            {"type": "weapon", "name": "Granatnik","group": "Konkretna Broń","tags": ["4-harm","far","area","messy","loud","reload"]},
-            {"type": "weapon", "name": "Snajperka","group": "Konkretna Broń","tags": [ "4-harm", "far" ]},
-            {"type": "weapon", "name": "Gratanty","group": "Konkretna Broń","tags": [ "4-harm", "close", "area", "messy", "loud" ]},
-            {"type": "weapon", "name": "Automat","group": "Konkretna Broń","tags": [ "3-harm", "close", "area", "loud", "reload" ]},
-            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Karabin Myśłiwski","group": "Broń","tags": [ "2-harm", "far", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Nożysko","group": "Broń","tags": [ "1-harm", "hand" ]}
+            {"type": "weapon", "name": "Karabin","group": "Konkretna Broń","tags": [ "3-ran", "daleki", "obszarowe", "głośny", "magazynki" ]},
+            {"type": "weapon", "name": "Granatnik","group": "Konkretna Broń","tags": ["4-ran","daleki","obszarowe","niezdarne","głośny","magazynki"]},
+            {"type": "weapon", "name": "Snajperka","group": "Konkretna Broń","tags": [ "4-ran", "daleki" ]},
+            {"type": "weapon", "name": "Gratanty","group": "Konkretna Broń","tags": [ "4-ran", "bliski", "obszarowe", "niezdarne", "głośny" ]},
+            {"type": "weapon", "name": "Automat","group": "Konkretna Broń","tags": [ "3-ran", "bliski", "obszarowe", "głośny", "magazynki" ]},
+            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Karabin Myśłiwski","group": "Broń","tags": [ "2-ran", "daleki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Nożysko","group": "Broń","tags": [ "1-ran", "na dłoń" ]}
         ],
         "story": [
             "Czujecie do siebie miętę. Dlaczego wasz romans nie rozkwitł?",
@@ -3365,7 +3366,7 @@ const playbooks = [
         ],
         "look": [
             "Rzeźbiona twarz, twarz z bliznami, nieogolona twarz, miękka twarz, młoda twarz, stara twarz, zdeterminowana twarz",
-            "Garnitur na miarę, zniszczony garnitur, idealny garnitur, kombinezon roboczy, mundur bojowy, mundur paramilitarny, fartuch laboratoryjny"
+            "Garnitur na miarę, zniszczony garnitur, idealny garnitur, kombinezon roboczy, mundur bojowy, mundur paramilitarny, dalekituch laboratoryjny"
         ],
         "stats": [
             {"charm": "0","cool": "2","sharp": "-1","tough": "2","weird": "-1"},
@@ -3374,8 +3375,8 @@ const playbooks = [
             {"charm": "-1","cool": "2","sharp": "1","tough": "0","weird": "1"},
             {"charm": "0","cool": "2","sharp": "2","tough": "-1","weird": "-1"}
         ],
-        "advance": [ "Get +1 Cool, max +3", "Get +1 Charm, max +2", "Get +1 Sharp, max +2", "Get +1 Tough, max +2", "Take another Professional move", "Take another Professional move", "Add a new resource tag for your Agency or change a red tape tag", "Get command of an Agency team of monster hunters", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Get some or all of the other players’ hunters hired by your agency. They get the deal with the agency move, as well as salary and benefits.", "Get back one used Luck point." ]
+        "advance": [ "Weź +1 Spokój, max +3", "Weź +1 Urok, max +2", "Weź +1 Spryt, max +2", "Weź +1 Hart, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Dodaj Zasób Agencji albo zmień Biurokrację", "Dowodzisz Agencją łowców potowrów", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Zatrudnij łowcę / łowców do swojej Agencji. Otrzymują oni Agencję z twoimi Zasobami i Biurokracją, a także mają pensję.", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Poszukiwacz
     {
@@ -3449,7 +3450,7 @@ const playbooks = [
             },
             {
                 "name": "Dzień jak codzień",
-                "desc": "Gdy musisz działać pod Presją z powodu potwora, fenomenu lub mistycyzmu, możesz rzucić +Weird zamiast +Cool."
+                "desc": "Gdy musisz działać pod Presją z powodu potwora, fenomenu lub mistycyzmu, możesz rzucić +Dziw zamiast +Spokój."
             },
             {
                 "name": "Znajomości",
@@ -3482,12 +3483,12 @@ const playbooks = [
             {"charm": "1","cool": "0","sharp": "2","tough": "-1","weird": "1"}
         ],
         "gear": [
-            {"name": "Laska","group": "Obrona Osobista","tags": [ "1-harm", "hand", "innocuous." ]},
-            {"name": "Pistolecik","group": "Obrona Osobista","tags": [ "2-harm", "close", "reload", "loud." ]},
-            {"name": "Mały nóż","group": "Obrona Osobista","tags": [ "1-harm", "hand", "messy." ]},
-            {"name": "Sztuki Walki","group": "Obrona Osobista","tags": [ "1-harm", "hand", "innocuous." ]},
-            {"name": "Paraliżujący Spraj","group": "Obrona Osobista","tags": [ "0-harm", "hand", "irritating." ]},
-            {"name": "Ciężka Latarka","group": "Obrona Osobista","tags": [ "1-harm", "hand", "innocuous" ]},
+            {"name": "Laska","group": "Obrona Osobista","tags": [ "1-ran", "na dłoń", "nieszkodliwy" ]},
+            {"name": "Pistolecik","group": "Obrona Osobista","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"name": "Mały nóż","group": "Obrona Osobista","tags": [ "1-ran", "na dłoń", "niezdarne" ]},
+            {"name": "Sztuki Walki","group": "Obrona Osobista","tags": [ "1-ran", "na dłoń", "nieszkodliwy" ]},
+            {"name": "Paraliżujący Spraj","group": "Obrona Osobista","tags": [ "0-ran", "na dłoń", "irytujący" ]},
+            {"name": "Ciężka Latarka","group": "Obrona Osobista","tags": [ "1-ran", "na dłoń", "nieszkodliwy" ]},
             {"group": "Narzędzia Śledcze", "name": "Torba z aparatami i mikrofonami."},
             {"group": "Narzędzia Śledcze", "name": "Narzędzia kryminalistyczne."},
             {"group": "Narzędzia Śledcze", "name": "Łapacze duchów."},
@@ -3496,8 +3497,8 @@ const playbooks = [
             {"group": "Narzędzia Śledcze", "name": "Dokumenty historyczne i relacje świadków dziwnych wydarzeń."},
             {"group": "Narzędzia Śledcze", "name": "Mapy, plany i raporty budowlane dotyczące znacznych miejsc."}
         ],
-        "advance": [ "Get +1 Sharp, max +3", "Get +1 Weird, max +3", "Get +1 Charm, max +2", "Get +1 Cool, max +2", "Take another Searcher move", "Take another Searcher move", "Gain an ally.", "Take a second first encounter move, based on a recent mystery.", "Take a move from another playbook", "Take a move from another playbook." ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Retire this hunter to safety.", "Mark two of the basic moves as advanced.", "Erase a used Luck mark from your playbook.", "Erase a used Luck mark from your playbook.", "Mark another two of the basic moves as advanced.", "Resolve your first encounter. The Keeper makes the next mystery about this event, and should try to answer all remaining questions about it during the mystery (although there are sure to be new threads to investigate after...)" ]
+        "advance": [ "Weź +1 Spryt, max +3", "Weź +1 Dziw, max +3", "Weź +1 Urok, max +2", "Weź +1 Spokój, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika.", "Weź kolejne Pierwsze Spotkanie", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Bezpiecznie udaj się na emeryturę", "Rozszerz dwa Ruchy Podstawowe","Odzyskaj 1 punkt na torze Fuksa","Odzyskaj 1 punkt na torze Fuksa", "Rozszerz dwa Ruchy Podstawowe", "Rozwiąż swoje Pierwsze Spotkanie. Otwierasz Zagadkę, która odpowie na twoje obecne pytania..." ]
     },
     // Łowca Sensacji
     {
@@ -3522,7 +3523,7 @@ const playbooks = [
             },
             {
                 "name": "Postać znana",
-                "desc": "Na początku tajemnicy, rzuć +Weird. Podczas tajemnicy możesz wydać Zatrzymania, by spotkać kogoś, kto ciebie zna i potrafi rzucić światło na tajemnicę.",
+                "desc": "Na początku tajemnicy, rzuć +Dziw. Podczas tajemnicy możesz wydać Zatrzymania, by spotkać kogoś, kto ciebie zna i potrafi rzucić światło na tajemnicę.",
                 "rollType": "wierd",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
@@ -3534,7 +3535,7 @@ const playbooks = [
             },
             {
                 "name": "Jestem z prasy!",
-                "desc": "Kiedy badasz Tajemnicę, rozmawiając ze świadkami, przeprowadzając wywiady z miejscowymi lub wykonując inne czynności wymagające umiejętności interpersonalnych, rzuć +Charm zamiast +Sharp."
+                "desc": "Kiedy badasz Tajemnicę, rozmawiając ze świadkami, przeprowadzając wywiady z miejscowymi lub wykonując inne czynności wymagające umiejętności interpersonalnych, rzuć +Urok zamiast +Spryt."
             },
             {
                 "name": "Wiarygodny",
@@ -3575,15 +3576,15 @@ const playbooks = [
             { "name": "Wahadło", "group": "Wykrywacze"},
             { "name": "Talia Tarota","group": "Wykrywacze"},
             { "name": "Zestaw chemika", "group": "Wykrywacze"},
-            {"type": "weapon", "name": "Scyzoryk","group": "Broń","tags": [ "1-harm", "hand", "hidden", "useful" ]},
-            {"type": "weapon", "name": "Paralizator","group": "Broń","tags": [ "1-harm", "hand", "stun" ]},
-            {"type": "weapon", "name": "Baseball","group": "Broń","tags": [ "2-harm", "hand", "innocuous", "messy" ]},
-            {"type": "weapon", "name": "Pistolet","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Nóż","group": "Broń","tags": [ "1-harm", "hand", "hidden"]}
+            {"type": "weapon", "name": "Scyzoryk","group": "Broń","tags": [ "1-ran", "na dłoń", "ukryty", "użyteczzne" ]},
+            {"type": "weapon", "name": "Paralizator","group": "Broń","tags": [ "1-ran", "na dłoń", "ogłuszający" ]},
+            {"type": "weapon", "name": "Baseball","group": "Broń","tags": [ "2-ran", "na dłoń", "nieszkodliwy", "niezdarne" ]},
+            {"type": "weapon", "name": "Pistolet","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Nóż","group": "Broń","tags": [ "1-ran", "na dłoń", "ukryty"]}
         ],
         "look": [
-            "Szczupłe ciało, masywne ciało, zgrabne ciało, nerwowe ciało, wysokie ciało, niskie ciało",
-            "Ubrania studenckie, ubrania artystyczne, stary garnitur, stylowy garnitur, strój safari, kapelusz i trencz, ubrania użytkowe"
+            "Szczupłe ciało, masywne ciało, zchwytne ciało, nerwowe ciało, wysokie ciało, niskie ciało",
+            "Ubrania studenckie, ubrania artystyczne, stary garnitur, stylowy garnitur, strój sadalekii, kapelusz i trencz, ubrania użytkowe"
         ],
         "stats": [
             {"charm": "2","cool": "-1","sharp": "1","tough": "0","weird": "1"},
@@ -3602,8 +3603,8 @@ const playbooks = [
             "Fan twojej pracy. Trzyma to w tajemnicy, czy wszyscy o tym wiedzą?",
             "Jest twoim krewnym, bliższym lub dalszym. Ustalcie dokładnie między sobą jak to wygląda.",
         ],
-        "advance": [ "Get +1 Charm, max +3", "Get +1 Cool, max +2", "Get +1 Weird, max +2", "Get +1 Sharp, max +2", "Take another Snoop move", "Take another Snoop move", "Gain an ally: one of your existing crew members or the whole crew as an ally team", "Get a haven, like the Expert has, with one option plus a film lab and editing suite", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Get back one used Luck point", "Make it big. You’re a superstar now!" ]
+        "advance": [ "Weź +1 Urok, max +3", "Weź +1 Spokój, max +2", "Weź +1 Dziw, max +2", "Weź +1 Spryt, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika: ktoś z twojego obecnego Zespołu albo stwórz nowy Zespół", "Uzyskaj Azyl od Eksperta z jedną opcją oraz stanowiskiem montażysty", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Masz coś wielkiego. Masz sławę!" ]
     },
     // Czaromiot
     {
@@ -3615,7 +3616,7 @@ const playbooks = [
             "Nagrywanie": "Wybierz 3",
             "Wykrywacze": "Wybierz 2",
             "Broń": "Wybierz 1",
-            "Magia Bojowa": "Wybierz 3 (min 1 podstawa)",
+            "Magia Bojowa": "Wybierz 3 - min 1 BAZA",
             "Magia": "To posiadasz"
         },
         "moves": [
@@ -3702,19 +3703,19 @@ const playbooks = [
             {"charm": "0","cool": "0","sharp": "1","tough": "0","weird": "2"}
         ],
         "gear":[
-            {"name": "Wybuch", "group": "Magia Bojowa", "tags": ["base", "2-harm", "magic", "close", "obvious", "loud"]},
-            {"name": "Kula", "group": "Magia Bojowa", "tags": ["base", "1-harm", "magic", "area", "close", "obvious", "loud"]},
-            {"name": "Pocisk", "group": "Magia Bojowa", "tags": ["base", "1-harm", "magic", "far", "obvious", "loud"]},
-            {"name": "Ściana", "group": "Magia Bojowa", "tags": ["base", "1-harm", "1-armour", "magic", "barrier", "close", "obvious", "loud"]},
-            {"name": "Ogień", "group": "Magia Bojowa", "tags": ["effect", "1-harm", "forcefull"]},
-            {"name": "Moc / Wiatr", "group": "Magia Bojowa", "tags": ["effect", "1-harm", "messy" ]},
-            {"name": "Elektryczność / Entropia", "group": "Magia Bojowa", "tags": ["effect", "+1 harm", "forcefull", "1-armour for wall"]},
-            {"name": "Mórz / Lód", "group": "Magia Bojowa", "tags": ["effect", "-1-harm", "2-armour", "restraining for wall" ]},
-            {"name": "Ziemia", "group": "Magia Bojowa", "tags": ["effect", "forceful", "restraining" ]},
-            {"name": "Nekromancja", "group": "Magia Bojowa", "tags": ["effect", "life-drain" ]},
-            {"name": "Stary Revolwer","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"name": "Nóż rytualny","group": "Broń","tags": [ "1-harm", "hand" ]},
-            {"name": "Miecz rodowy","group": "Broń","tags": [ "2-harm", "hand", "messy" ]}
+            {"name": "Wybuch", "group": "Magia Bojowa", "tags": ["BAZA", "2-ran", "magiczne", "bliski", "oczywiste", "głośny"]},
+            {"name": "Kula", "group": "Magia Bojowa", "tags": ["BAZA", "1-ran", "magiczne", "obszarowe", "bliski", "oczywiste", "głośny"]},
+            {"name": "Pocisk", "group": "Magia Bojowa", "tags": ["BAZA", "1-ran", "magiczne", "daleki", "oczywiste", "głośny"]},
+            {"name": "Ściana", "group": "Magia Bojowa", "tags": ["BAZA", "1-ran", "1-pancerz", "magiczne", "barrier", "bliski", "oczywiste", "głośny"]},
+            {"name": "Ogień", "group": "Magia Bojowa", "tags": ["EFEKT", "1-ran", "potężny"]},
+            {"name": "Moc / Wiatr", "group": "Magia Bojowa", "tags": ["EFEKT", "1-ran", "niezdarne" ]},
+            {"name": "Elektryczność / Entropia", "group": "Magia Bojowa", "tags": ["EFEKT", "+1 harm", "potężny", "1-pancerz dla Ściany"]},
+            {"name": "Mórz / Lód", "group": "Magia Bojowa", "tags": ["EFEKT", "-1-ran", "2-pancerz", "ograniczający dla Ściany" ]},
+            {"name": "Ziemia", "group": "Magia Bojowa", "tags": ["EFEKT", "potężny", "ograniczający" ]},
+            {"name": "Nekromancja", "group": "Magia Bojowa", "tags": ["EFEKT", "kradzież życia" ]},
+            {"name": "Stary Revolwer","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"name": "Nóż rytualny","group": "Broń","tags": [ "1-ran", "na dłoń" ]},
+            {"name": "Miecz rodowy","group": "Broń","tags": [ "2-ran", "na dłoń", "niezdarne" ]}
         ],
         "look": [
             "Pogniecione ubrania, stylowe ubrania, gotyckie ubrania, staromodne ubrania",
@@ -3730,8 +3731,8 @@ const playbooks = [
             "Twój przelotny kochanek. Co was dzieli? Co was łączy?",
             "Towarzysz broni. Razem stawialiście czoła największym zagrożeniom.",
         ],
-        "advance": [ "Get +1 Weird, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Tough, max +2", "Take another Spell-Slinger move.", "Take another Spell-Slinger move.", "Take a move from another playbook.", "Take a move from another playbook.", "Take another Combat Magic pick" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "Erase one used Luck mark from your playbook.", "Take another Combat Magic pick.", "You may cross off another option from your Tools and Techniques." ]
+        "advance": [ "Weź +1 Dziw, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Hart, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Weź ruch innego archetypu", "Weź ruch innego archetypu", "Dobierz coś z Magii Bojowej" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa.", "Dobierz coś z Magii Bojowej.", "Możesz wykreślić kolejną rzecz z Narzędzi i techniki." ]
     },
     // Upiornista
     {
@@ -3754,7 +3755,7 @@ const playbooks = [
             {
                 "name": "Magia i Iluzja",
                 "group": "Występ",
-                "desc": "Możesz rzucać mylące zaklęcia. Kiedy tkasz iluzję, rzuć +Weird",
+                "desc": "Możesz rzucać mylące zaklęcia. Kiedy tkasz iluzję, rzuć +Dziw",
                 "rollType": "weird",
                 "success": "wszyscy są oszukani, są albo kierowani w stronę, którą wybierzesz, albo ty i ci, których wybierzesz, uciekacie niezauważeni",
                 "patrial": "Zasadniczo się udaje, ale Strażnik wybiera jedno: ktoś się nie daje oszukać albo przyciągasz niechcianą uwagę",
@@ -3763,7 +3764,7 @@ const playbooks = [
             {
                 "name": "Buźka",
                 "group": "Występ",
-                "desc": "Masz dużo wprawy w oszukiwaniu ludzi. Kiedy kogoś wkręcasz, rzuć +Charm",
+                "desc": "Masz dużo wprawy w oszukiwaniu ludzi. Kiedy kogoś wkręcasz, rzuć +Urok",
                 "rollType": "charm",
                 "success": "nie wiedzą, co się dzieje, i pomijają coś według twojego wyboru",
                 "patrial": "wciąż coś przeoczą, ale są bardziej źli niż zdezorientowani",
@@ -3781,7 +3782,7 @@ const playbooks = [
             },
             {
                 "name": "Pora na pokaz",
-                "desc": "Kiedy zabawiasz ludzi, by ci zapomnieli o bólu istnienia, rzuć +Charm, albo +Weird. W zależności jak magiczne to jest.",
+                "desc": "Kiedy zabawiasz ludzi, by ci zapomnieli o bólu istnienia, rzuć +Urok, albo +Dziw. W zależności jak magicznezne to jest.",
                 "rollType": "prompt",
                 "success": "Publiczność jest podbudowana i szczęśliwa. Problemy i traumy łagodnieją w ich umysłach, przynajmniej na jakiś czas.",
                 "patrial": "wybierz jedno: efekt trwa tylko chwilę, albo normalny czas, ale jest zamieszanie, kiedy skończysz",
@@ -3789,11 +3790,11 @@ const playbooks = [
             },
             {
                 "name": "Poświęcenie na jakie jestem gotów",
-                "desc": "Możesz zawrzeć magiczną umowę, aby spełnić czyjeś pragnienie. Ceną jest to, że osoba ta ujawnia ci tajemni[cę, a świat następnie układa się tak, aby spełnić jej pragnienie, dostosowując się do skali sekretu."
+                "desc": "Możesz zawrzeć magicznezną umowę, aby spełnić czyjeś pragnienie. Ceną jest to, że osoba ta ujawnia ci tajemni[cę, a świat następnie układa się tak, aby spełnić jej pragnienie, dostosowując się do skali sekretu."
             },
             {
                 "name": "Luzak",
-                "desc": "Masz swój urok. Kiedy próbujesz wywrzeć dobre wrażenie na kimś, kogo właśnie poznałeś, rzuć +Charm",
+                "desc": "Masz swój urok. Kiedy próbujesz wywrzeć dobre wrażenie na kimś, kogo właśnie poznałeś, rzuć +Urok",
                 "rollType": "charm",
                 "success": "traktują cię jako godnego zaufania i przyjaznego znajomego",
                 "patrial": "otwierają się bardziej niż zwykle, ale wciąż traktują cię jak obcego",
@@ -3820,12 +3821,12 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Scyzoryk","group": "Zestaw Obozowy","tags": [ "1-harm", "hand", "useful", "small" ]},
-            {"type": "weapon", "name": "Młotek","group": "Zestaw Obozowy","tags": [ "1-harm", "hand", "useful", "blunt" ]},
-            {"type": "weapon", "name": "Łom","group": "Zestaw Obozowy","tags": [ "2-harm", "hand", "useful", "messy" ]},
-            {"type": "weapon", "name": "Baseball","group": "Zestaw Obozowy","tags": [ "2-harm", "hand" ]},
-            {"type": "weapon", "name": "Siekiera","group": "Zestaw Obozowy","tags": [ "2-harm", "hand", "messy" ]},
-            {"type": "weapon", "name": "Skarpeta monet","group": "Zestaw Obozowy","tags": [ "1-harm", "hand", "stun" ]},
+            {"type": "weapon", "name": "Scyzoryk","group": "Zestaw Obozowy","tags": [ "1-ran", "na dłoń", "użyteczzne", "mały" ]},
+            {"type": "weapon", "name": "Młotek","group": "Zestaw Obozowy","tags": [ "1-ran", "na dłoń", "użyteczzne", "tępe" ]},
+            {"type": "weapon", "name": "Łom","group": "Zestaw Obozowy","tags": [ "2-ran", "na dłoń", "użyteczzne", "niezdarne" ]},
+            {"type": "weapon", "name": "Baseball","group": "Zestaw Obozowy","tags": [ "2-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Siekiera","group": "Zestaw Obozowy","tags": [ "2-ran", "na dłoń", "niezdarne" ]},
+            {"type": "weapon", "name": "Skarpeta monet","group": "Zestaw Obozowy","tags": [ "1-ran", "na dłoń", "ogłuszający" ]},
             {"type": "transport", "name": "Pickup", "group": "Pojazd" },
             {"type": "transport", "name": "Van", "group": "Pojazd" },
             {"type": "transport", "name": "Truck", "group": "Pojazd" },
@@ -3859,26 +3860,26 @@ const playbooks = [
             "Eleganckie ubrania, stare ubrania, kostium sceniczny, odzież robocza"
         ],
         "advance": [
-            "Get +1 Charm, max +3",
-            "Get +1 Cool, max +2",
-            "Get +1 Sharp, max +2",
-            "Get +1 Weird, max +3",
-            "Take another Spooktacular move",
-            "Take another Spooktacular move",
-            "Gain an ally",
+            "Weź +1 Urok, max +3",
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Spryt, max +2",
+            "Weź +1 Dziw, max +3",
+            "Weź kolejny ruch tego archetypu",
+            "Weź kolejny ruch tego archetypu",
+            "Zyskaj sojusznika",
             "Take another Show option.",
-            "Take a move from another playbook.",
-            "Take a move from another playbook",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new type",
-            "Create a second hunter to play as well as this one",
-            "Mark two of the basic moves as advanced",
-            "Mark another two of the basic moves as advanced",
-            "Retire this hunter to safety",
-            "Get back one used Luck point",
-            "Get your own traveling show. Maybe you take over your old one, maybe you start anew",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Stań na czele Cyrku, może przejąłeś obecny, albo stworzyłeęś nwoy?",
         ]
     },
     // Mroczny
@@ -3925,17 +3926,17 @@ const playbooks = [
                 "desc": "Gdy Używasz Magii, oprócz normalnych efektów możesz wybrać spośród następujących",
                 "choices": [
                     "Cel zaraża się chorobą.",
-                    "Cel natychmiast doświadcza rany (magia 2-harm ignore-armour)).",
+                    "Cel natychmiast doświadcza rany (magia 2-ran ignoruje pancerz)).",
                     "Cel niszczy coś cennego lub ważnego.",
                 ]
             },
             {
                 "name": "Zza Zasłony",
-                "desc": "Potrafisz dostrzegać to, co niewidoczne, szczególnie duchy i magiczne wpływy. Możesz komunikować się z duchami, które widzisz (a być może nawet zawierać z nimi umowy), a one dają ci więcej możliwości dostrzegania wskazówek podczas badania tajemnicy."
+                "desc": "Potrafisz dostrzegać to, co niewidoczne, szczególnie duchy i magicznezne wpływy. Możesz komunikować się z duchami, które widzisz (a być może nawet zawierać z nimi umowy), a one dają ci więcej możliwości dostrzegania wskazówek podczas badania tajemnicy."
             },
             {
                 "name": "Wizje",
-                "desc": "Na początku tajemnicy rzuć +Weird",
+                "desc": "Na początku tajemnicy rzuć +Dziw",
                 "rollType": "weird",
                 "success": "otrzymujesz szczegółową wizję czegoś złego, co dopiero ma się wydarzyć. Zyskujesz +1 do rzutu, by zapobiec jego spełnieniu, i zdobywasz doświadczenie, jeśli powstrzymasz to zdarzenie.",
                 "patrial": "otrzymujesz zamazane obrazy czegoś złego, co jeszcze ma się wydarzyć: zaznacz doświadczenie, jeśli je powstrzymasz.",
@@ -3943,7 +3944,7 @@ const playbooks = [
             },
             {
                 "name": "Gęsia Skórka",
-                "desc": "Jeżeli dzieje się (albo zaraz ma się zadziać) coś złego po za sceną w której jesteś, rzuć +Sharp",
+                "desc": "Jeżeli dzieje się (albo zaraz ma się zadziać) coś złego po za sceną w której jesteś, rzuć +Spryt",
                 "rollType": "sharp",
                 "success": "wiesz dokąd musisz iść, dokładnie na czas, aby tam dotrzeć",
                 "patrial": "docierasz tam późno — na czas, żeby interweniować, ale nie da się tego całkowicie zapobiec",
@@ -3951,7 +3952,7 @@ const playbooks = [
             },
             {
                 "name": "Dostrojenie",
-                "desc": "Możesz dostroić swój umysł do potwora lub sługi, rzuć +Weird. Wydaj, aby zadać jedno z poniższych pytań i mieć ciąłe +1 podążając za odpowiedzią.",
+                "desc": "Możesz dostroić swój umysł do potwora lub sługi, rzuć +Dziw. Wydaj, aby zadać jedno z poniższych pytań i mieć ciąłe +1 podążając za odpowiedzią.",
                 "rollType": "weird",
                 "success": "Zatrzmaj 3",
                 "patrial": "Zatrzmaj 1",
@@ -3966,7 +3967,7 @@ const playbooks = [
             },
             {
                 "name": "Kuku",
-                "desc": "Kiedy używasz swojej mocy by Dawać Wycisk, rzuć +Weird. (2-harm, close, obvious, ignore-armour)",
+                "desc": "Kiedy używasz swojej mocy by Dawać Wycisk, rzuć +Dziw. (2-ran, bliski, oczywiste, ignoruje pancerz)",
                 "rollType": "weird",
                 "success": "Dajesz Wycisk oraz wybierz 1: <ul><li>uzyskujesz przewagę – dostajesz jednorazowe +1 lub dajesz je innemu Łowcy</li><li>zadajesz wielkie obrażenia (+1 obrażeń)</li><li>otrzymujesz mniejsze obrażenia (-1 obrażeń)</li><li>przeciwnik trafia tam, gdzie chcesz, żeby był</li></ul>",
                 "patrial": "Dajesz Wycisk",
@@ -3974,7 +3975,7 @@ const playbooks = [
             },
             {
                 "name": "Peszek",
-                "desc": "Możesz sprzyjać przypadkom, aby zdarzały się w sposób, jaki chcesz. Kiedy przynosisz pecha celowi, rzuć +Weird",
+                "desc": "Możesz sprzyjać przypadkom, aby zdarzały się w sposób, jaki chcesz. Kiedy przynosisz pecha celowi, rzuć +Dziw",
                 "rollType": "weird",
                 "success": "Zatrzmaj 2",
                 "patrial": "Zatrzmaj 1",
@@ -3990,11 +3991,11 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Karabin Myśliwski","group": "Broń","tags": [ "2-harm", "far", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Duży Nóż", "group": "Broń", "tags": [ "1-harm", "hand" ] }
+            {"type": "weapon", "name": "Revolwer .38","group": "Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Pistolet 9mm","group": "Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Karabin Myśliwski","group": "Broń","tags": [ "2-ran", "daleki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Duży Nóż", "group": "Broń", "tags": [ "1-ran", "na dłoń" ] }
         ],
         "stats": [
             {
@@ -4049,26 +4050,26 @@ const playbooks = [
             "Zniszczone ubrania, zwykłe ubrania, gotyckie ubrania, schludne ubrania, nerdowskie ubrania"
         ],
         "advance": [
-            "Get +1 Weird, max +3",
-            "Get +1 Charm, max +2",
-            "Get +1 Cool, max +2",
-            "Get +1 Sharp, max +2",
-            "Take another Spooky move",
-            "Take another Spooky move",
-            "Change some, or all, your dark side tags",
-            "Get a mystical library, like the Expert’s haven option",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Dziw, max +3",
+            "Weź +1 Urok, max +2",
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Spryt, max +2",
+            "Weź kolejny ruch tego archetypu",
+            "Weź kolejny ruch tego archetypu",
+            "Zmień jakieś taki Mrocznego Ja",
+            "Zdobądź Azyl do Eksperta z Mistyczną Biblioteką",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3.",
-            "Change this hunter to a new type.",
-            "Create a second hunter to play as well as this one.",
-            "Mark two of the basic moves as advanced.",
-            "Mark another two of the basic moves as advanced.",
-            "Retire this hunter to safety.",
-            "You discover how to use your powers at a lower price. Delete one dark side tag permanently.",
-            "Get back one used Luck point.",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp łowcy.",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Naucz się ponosić mniejsze koszta, usuń jeden tag z Mrocznego Ja",
+            "Odzyskaj 1 punkt na torze Fuksa",
         ]
     },
     // Przybysz
@@ -4108,7 +4109,7 @@ const playbooks = [
             },
             {
                 "name": "Sąsiad Znikąd",
-                "desc": "Na początku każdej sesji możesz rzucić +Cool",
+                "desc": "Na początku każdej sesji możesz rzucić +Spokój",
                 "rollType": "cool",
                 "success": "miejscowi dostarczą ci przydatnych zasobów lub informacji",
                 "patrial": "lokalni przyjaciele mogą pomóc, ale najpierw potrzebują czegoś",
@@ -4145,12 +4146,12 @@ const playbooks = [
             {"type": "gear", "group": "Obcy Sprzęt","name": "Holograficzny kamuflaż"},
             {"type": "gear", "group": "Obcy Sprzęt","name": "Rower grawitacyjny"},
             {"type": "gear", "group": "Obcy Sprzęt","name": "Przenośny generator energii (może zasilić technologię odpowiadającą małemu miastu na Ziemi)"},
-            {"type": "weapon", "name": "Zakrzywiacz Promieni","group": "Kosmiczna Broń","tags": [ "2-harm", "close", "disorienting" ]},
-            {"type": "weapon", "name": "Ostrze Psioniczne","group": "Kosmiczna Broń","tags": [ "2-harm", "hand", "ignore", "armour", "magic" ]},
-            {"type": "weapon", "name": "Pistolet Piorunowy","group": "Kosmiczna Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Zamrażacz","group": "Kosmiczna Broń","tags": [ "0-harm", "close", "stun" ]},
-            {"type": "weapon", "name": "Kryształ Żniwiarza","group": "Kosmiczna Broń","tags": [ "1-harm,", "far", "energy", "life-drain" ]},
-            {"type": "weapon", "name": "Niestabline Nasiona","group": "Kosmiczna Broń","tags": [ "3-harm", "area", "messy", "loud" ]},
+            {"type": "weapon", "name": "Zakrzywiacz Promieni","group": "Kosmiczna Broń","tags": [ "2-ran", "bliski", "disorienting" ]},
+            {"type": "weapon", "name": "Ostrze Psioniczne","group": "Kosmiczna Broń","tags": [ "2-ran", "na dłoń", "ignore", "armour", "magiczne" ]},
+            {"type": "weapon", "name": "Pistolet Piorunowy","group": "Kosmiczna Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Zamrażacz","group": "Kosmiczna Broń","tags": [ "0-ran", "bliski", "ogłuszający" ]},
+            {"type": "weapon", "name": "Kryształ Żniwiarza","group": "Kosmiczna Broń","tags": [ "1-ran,", "daleki", "energetyczne", "kradzież życia" ]},
+            {"type": "weapon", "name": "Niestabline Nasiona","group": "Kosmiczna Broń","tags": [ "3-ran", "obszarowe", "niezdarne", "głośny" ]},
             {"type": "gear", "group": "Lokalny Sprzęt", "name": "Konsola do gier mobilnych"},
             {"type": "gear", "group": "Lokalny Sprzęt", "name": "E-book"},
             {"type": "gear", "group": "Lokalny Sprzęt", "name": "Odtwarzacz Walkman"},
@@ -4183,8 +4184,8 @@ const playbooks = [
             "Dzielicie te samo hobby, jakie?",
             "Któryś z was uznał drugiego za zagrożenie, przed którym należało chronić ludzi. Zdecydujcie razem, jak to się rozegrało.",
         ],
-        "advance": [ "+1 Sharp, max +3", "+1 Weird, max +3", "+1 Tough, max +2", "+1 Charm, max +2", "+1 Cool, max +2", "Gain an ally: alien, local animal, or local friend", "Take another Visitor move", "Take another Visitor move", "Take a move from another playbook", "Take a move from another playbook", "Repair the vehicle that brought you here so it can safely enter a vacuum and travel in space" ],
-        "exp_advance": [ "Get +1 to any rating, max+3", "This is my home now, and I’ll protect it. Change this hunter to a new playbook.", "Create a second hunter to play in addition to this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "This is my home now, and I need to rest. Retire this hunter to safety, on Earth.", "This was just an adventure, and now it’s over. Retire this hunter to safety back on your homeworld.", "Establish official, friendly contact between Earth and your people" ]
+        "advance": [ "+1 Spryt, max +3", "+1 Dziw, max +3", "+1 Hart, max +2", "+1 Urok, max +2", "+1 Spokój, max +2", "Zyskaj sojusznika: kosmita, zwierze, or przyjaciel", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Weź ruch innego archetypu", "Weź ruch innego archetypu", "Napraw swój pojazd kosmiczny i uzyskaj moc lotu między gwiezdnego" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max+3", "Ta planeta to twój dom, chorń ją. Zmień archetyp tego łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Ta planeta to twój dom. Bezpiecznie udaj się na emeryturę, na ziemi.", "Co to była za przygoda, ale dobiegła końca. Bezpiecznie udaj się na emeryturę i wróć na swoją ojczyznę.", "Przypieczętuj przyjacielksie stosunki między ziemią a twoim ludem." ]
     },
     // Wygnaniec
     {
@@ -4205,7 +4206,7 @@ const playbooks = [
                 "choices": [
                     "w pogoni za swoim arcywrogiem",
                     "twój arcywróg pierwszy przeniósł się do przyszłości, więc ty lub twoi kompani rzuciliście czar pozwalający ci podążyć za nim",
-                    "magiczny wypadek lub skutek uboczny",
+                    "magicznezny wypadek lub skutek uboczny",
                     "rozgniewałeś czarodziejkę",
                     "dzięki boskiej interwencji",
                     "trafiłeś tu nagle i z niezrozumiałych powodów",
@@ -4219,7 +4220,7 @@ const playbooks = [
             },
             {
                 "name": "Wielki Wojownik",
-                "desc": "jeśli odniesiesz obrażenia w walce, w której obie strony walczą staroświecką bronią, otrzymujesz -1-harm. Ataki Potworów prawie zawsze liczą się jako staroświeckie na potrzeby tego Ruchu."
+                "desc": "jeśli odniesiesz obrażenia w walce, w której obie strony walczą staroświecką bronią, otrzymujesz -1-ran. Ataki Potworów prawie zawsze liczą się jako staroświeckie na potrzeby tego Ruchu."
             },
             {
                 "name": "Szeptucha",
@@ -4231,7 +4232,7 @@ const playbooks = [
             },
             {
                 "name": "Zahartowany oganizm",
-                "desc": "Nie zapadasz na zwykłe choroby i masz ciągłe +1 przeciwko magicznym chorobom i truciznom."
+                "desc": "Nie zapadasz na zwykłe choroby i masz ciągłe +1 przeciwko magiczneznym chorobom i truciznom."
             },
             {
                 "name": "Zagubiony",
@@ -4252,20 +4253,20 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Miecz","group": "Broń z Epoki","tags": [ "2-harm", "hand", "messy" ]},
-            {"type": "weapon", "name": "Topór","group": "Broń z Epoki","tags": [ "2-harm", "hand", "messy" ]},
-            {"type": "weapon", "name": "Włócznia","group": "Broń z Epoki","tags": [ "2-harm", "hand/close", "balanced" ]},
-            {"type": "weapon", "name": "Mieczysko","group": "Broń z Epoki","tags": [ "3-harm", "hand", "messy", "heavy" ]},
-            {"type": "weapon", "name": "Topór Bojowy","group": "Broń z Epoki","tags": [ "3-harm", "hand", "messy", "heavy" ]},
-            {"type": "weapon", "name": "Tarcza","group": "Broń z Epoki","tags": [ "1-harm", "hand", "1-armour" ]},
-            {"type": "weapon", "name": "Strbrny Nóż","group": "Broń z Epoki","tags": [ "1-harm", "hand", "silver" ]},
-            {"type": "weapon", "name": "Łuk","group": "Broń z Epoki","tags": [ "2-harm", "close/1-harm", "far" ]},
-            {"type": "weapon", "name": "Kusza","group": "Broń z Epoki","tags": [ "2-harm", "close", "slow" ]},
-            {"type": "weapon", "name": "Pistolet Skałkowy","group": "Broń z Epoki","tags": ["1-harm","hand/close","loud","volatile","smokey","reload"]},
-            {"type": "weapon", "name": "Hakownica","group": "Broń z Epoki","tags": ["2-harm", "close","loud", "volatile","smokey", "heavy","reload"]},
-            {"type": "weapon", "name": "Duży nóż","group": "Broń z Epoki","tags": [ "1-harm", "hand" ]},
-            {"type": "weapon", "name": "Cep","group": "Broń z Epoki","tags": [ "1-harm", "hand" ]},
-            {"type": "weapon", "name": "Sztuki walki","group": "Broń z Epoki","tags": ["1-harm"]}
+            {"type": "weapon", "name": "Miecz","group": "Broń z Epoki","tags": [ "2-ran", "na dłoń", "niezdarne" ]},
+            {"type": "weapon", "name": "Topór","group": "Broń z Epoki","tags": [ "2-ran", "na dłoń", "niezdarne" ]},
+            {"type": "weapon", "name": "Włócznia","group": "Broń z Epoki","tags": [ "2-ran", "na dłoń/bliski", "wyważona" ]},
+            {"type": "weapon", "name": "Mieczysko","group": "Broń z Epoki","tags": [ "3-ran", "na dłoń", "niezdarne", "ciężki" ]},
+            {"type": "weapon", "name": "Topór Bojowy","group": "Broń z Epoki","tags": [ "3-ran", "na dłoń", "niezdarne", "ciężki" ]},
+            {"type": "weapon", "name": "Tarcza","group": "Broń z Epoki","tags": [ "1-ran", "na dłoń", "1-pancerz" ]},
+            {"type": "weapon", "name": "Strbrny Nóż","group": "Broń z Epoki","tags": [ "1-ran", "na dłoń", "srebrne" ]},
+            {"type": "weapon", "name": "Łuk","group": "Broń z Epoki","tags": [ "2-ran", "bliski/1-ran", "daleki" ]},
+            {"type": "weapon", "name": "Kusza","group": "Broń z Epoki","tags": [ "2-ran", "bliski", "powolne" ]},
+            {"type": "weapon", "name": "Pistolet Skałkowy","group": "Broń z Epoki","tags": ["1-ran","na dłoń/bliski","głośny","niestabilne","skałkowe","magazynki"]},
+            {"type": "weapon", "name": "Hakownica","group": "Broń z Epoki","tags": ["2-ran", "bliski","głośny", "niestabilne","skałkowe", "ciężki","magazynki"]},
+            {"type": "weapon", "name": "Duży nóż","group": "Broń z Epoki","tags": [ "1-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Cep","group": "Broń z Epoki","tags": [ "1-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Sztuki walki","group": "Broń z Epoki","tags": ["1-ran"]}
         ],
         "look": [
             "Ciało wojownika, zniszczone ciało, ciało z bliznami, gibkie ciało, niskie, wysokie, ciało z tatuażami",
@@ -4289,8 +4290,8 @@ const playbooks = [
             "Miał wizję, przeczucie lub proroctwo, w którym była mowa o tobie. Co wizja pokazała mu o tobie?",
             "Oboje zostaliście łowcami, ponieważ zaatakował was lub waszych bliskich potwór. Ustalcie czym on był.",
         ],
-        "advance": [ "Get +1 Weird, max +3", "Get +1 Tough, max +3", "Get +1 Cool, max +3", "Get +1 Sharp, max +3", "Take another Exile move", "Take another Exile move", "Gain an ally: another one of your old comrades has come to join you in the modern day", "Find a cache of objects left for you by your comrades in the past. The Keeper will decide what they expected you might need", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Get back one used Luck point", "When you use magic, you may choose create a gateway between the modern world and my origin as an effect" ]
+        "advance": [ "Weź +1 Dziw, max +3", "Weź +1 Hart, max +3", "Weź +1 Spokój, max +3", "Weź +1 Spryt, max +3", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika: jeden z twoich towarzyszy wkracza w te czasy", "Znajdź skrytkę z przedmiotami pozostawionymi dla ciebie przez twoich towarzyszy z przeszłości. Ustal szczegóły ze Strażnikiem", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Podczas Użyj Magii możesz otworzyć portal łączący twoje czasy z obecnymi" ]
     },
     // Mściciel
     {
@@ -4308,7 +4309,7 @@ const playbooks = [
                 "label": "Strata",
                 "type": "LongText",
                 "position": "left",
-                "value": "<p>Kogo straciłeś?</p><ul><li>Rodzica/ów</li><li>Rodzeństwo</li><li>Partnera</li><li>Dzieci</li><li>Najlepszego Przyjaciela</li></ul><p>Kto to zrobił? ___</p><p>Dlaczego tego nie powstrzymałeś?</p><ul><li>Z Błędu</li><li>Z powodu Ran</li><li>Wyparcia</li><li>ze strachu</li><li>ze słabości</li><li>samolubności</li><li>zbyt wolno zareagowałem</li></ul>"
+                "value": "<p>Kogo straciłeś?</p><ul><li>Rodzica/ów</li><li>Rodzeństwo</li><li>Partnera</li><li>Dzieci</li><li>Najlepszego Przyjaciela</li></ul><p>Kto to zrobił? ___</p><p>Dlaczego tego nie powstrzymałeś?</p><ul><li>Z Błędu</li><li>Z powodu Ran</li><li>Wyparcia</li><li>ze strachu</li><li>ze słabości</li><li>samolubności</li><li>zbyt wolno zobszarowegowałem</li></ul>"
             }
         ],
         "moves": [
@@ -4331,15 +4332,15 @@ const playbooks = [
             },
             {
                 "name": "Gorliwość",
-                "desc": "Możesz Manipulować Kimś na +Tough"
+                "desc": "Możesz Manipulować Kimś na +Hart"
             },
             {
                 "name": "Bezpieczeństwo przede wszystkim",
-                "desc": "Masz dodatkowy, prowizoryczny pancerz, otrzymujesz +1-armour"
+                "desc": "Masz dodatkowy, prowizoryczny pancerz, otrzymujesz +1-pancerz"
             },
             {
                 "name": "Poskładaj się SAM",
-                "desc": "Kiedy udzielasz szybkiej i prowizorycznej pierwszej pomocy komuś (w tym sobie), rzuć +Cool:",
+                "desc": "Kiedy udzielasz szybkiej i prowizorycznej pierwszej pomocy komuś (w tym sobie), rzuć +Spokój:",
                 "rollType": "cool",
                 "success": "Stabilizujesz rany i leczysz 1 obrażeń",
                 "patrial": "Wybierz jedno: <ul><li>Stabilizujesz rany, ale pacjent ma -1 do nast rzutu.</li><li>Wylecz 1 obrażenie i tymczasowo ustabilizuj, ale powróci jako 2 obrażenia i niestabilność później.</li><li>Wylecz 1 obrażenie i ustabilizuj, ale pacjent otrzymuje ciągłe -1, aż zostanie to prawidłowo wyleczony.</li></ul>",
@@ -4351,21 +4352,21 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "armour", "group": "Pancerz", "name": "Odzież Ochronna", "tags": ["1-armour"]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Obrzyn","tags": ["3-harm","hand/close","messy","loud","reload"]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Garłacz","tags": [ "3-harm", "close", "loud" ]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Nóż Wojsoowy","tags": [ "2-harm", "hand", "quiet" ]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Olbrzymi Miecz lub Topór","tags": [ "3-harm", "hand", "messy", "heavy" ]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Specjał na dany Gatunek","tags": [ "1-harm", "+3-harm as weakness" ]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Zaklęty Sztylet","tags": [ "2-harm", "hand", "magic" ]},
-            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Piła Mechanicza","tags": ["3-harm","hand","messy","unreliable","loud","heavy"]},
-            {"type": "weapon", "name": "Revolwer .38","group": "Praktyczna Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Pistolet 9mm","group": "Praktyczna Broń","tags": [ "2-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "karabin Myśliwski","group": "Praktyczna Broń","tags": [ "2-harm", "far", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Praktyczna Broń","tags": [ "3-harm", "close", "messy", "loud" ]},
-            {"type": "weapon", "name": "Duży Nóż","group": "Praktyczna Broń","tags": [ "1-harm", "hand" ]},
-            {"type": "weapon", "name": "Kastet","group": "Praktyczna Broń","tags": [ "1-harm", "hand", "stealthy" ]},
-            {"type": "weapon", "name": "Karabin Szturmowy","group": "Praktyczna Broń","tags": [ "3-harm", "close", "area", "loud", "reload" ]}
+            {"type": "armour", "group": "Pancerz", "name": "Odzież Ochronna", "tags": ["1-pancerz"]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Obrzyn","tags": ["3-ran","na dłoń/bliski","niezdarne","głośny","magazynki"]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Garłacz","tags": [ "3-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Nóż Wojsoowy","tags": [ "2-ran", "na dłoń", "wyciszone" ]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Olbrzymi Miecz lub Topór","tags": [ "3-ran", "na dłoń", "niezdarne", "ciężki" ]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Specjał na dany Gatunek","tags": [ "1-ran", "+3-ran na słabość" ]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Zaklęty Sztylet","tags": [ "2-ran", "na dłoń", "magiczne" ]},
+            {"type": "weapon", "group": "Ikoniczna Broń", "name": "Piła Mechanicza","tags": ["3-ran","na dłoń","niezdarne","niewiarygodny","głośny","ciężki"]},
+            {"type": "weapon", "name": "Revolwer .38","group": "Praktyczna Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Pistolet 9mm","group": "Praktyczna Broń","tags": [ "2-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "karabin Myśliwski","group": "Praktyczna Broń","tags": [ "2-ran", "daleki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Praktyczna Broń","tags": [ "3-ran", "bliski", "niezdarne", "głośny" ]},
+            {"type": "weapon", "name": "Duży Nóż","group": "Praktyczna Broń","tags": [ "1-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "Kastet","group": "Praktyczna Broń","tags": [ "1-ran", "na dłoń", "ukryte" ]},
+            {"type": "weapon", "name": "Karabin Szturmowy","group": "Praktyczna Broń","tags": [ "3-ran", "bliski", "obszarowe", "głośny", "magazynki" ]}
         ],
         "look": [
             "Smutne oczy, lodowate oczy, gniewne oczy, nieosiągalne oczy, bezemocjonalne oczy, zranione oczy, przerażone oczy",
@@ -4388,8 +4389,8 @@ const playbooks = [
             "Nauczył ciebie podstaw walki z potworami.",
             "Świadek, jak całkowicie tracisz kontrolę i wpadasz w szał. Jaka była sytuacja, i ile szkód ubocznych spowodowałeś?",
         ],
-        "advance": [ "Get +1 Tough, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Weird, max +2", "Take another Wronged move", "Take another Wronged move", "Gain a haven, like the Expert has, with two options", "Add one more option to your haven", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3.", "Change this hunter to a new type.", "Create a second hunter to play as well as this one.", "Mark two of the basic moves as advanced.", "Mark another two of the basic moves as advanced.", "Retire this hunter to safety.", "You track down the specific monster(s) responsible for your loss. The Keeper must make the next mystery about them.", "Change the target of your vengeful rage. Pick a new monster breed: I know my prey now applies to them instead.", "Get back one used Luck point" ]
+        "advance": [ "Weź +1 Hart, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Dziw, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Uzyskaj Azyl od Eksperta z dwiema opcjami", "Weź kolejną opcję dla Azylu", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy.", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Znajdujesz trop swojej zemsty. Jest świeży i możesz rozpocząć kolejną tajemnicę.", "Zmień cel swojej zemsty", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Trudny Przypadek
     {
@@ -4419,7 +4420,7 @@ const playbooks = [
                 "name": "Tykająca Bomba",
                 "isActive": true,
                 "group": "Trudne Obycie",
-                "desc": "Masz tor Ognia z 10 polami. Zaznacz 1 Ogień za każdą ranę, której doświadczysz, za każdym razem gdy ktoś jawnie ci się sprzeciwi i za każdym razem gdy ktoś z przyjaciół zostanie zraniony. Jeśli tor się zapełni, nie zdobywasz więcej Ognia. Możesz wydać 1 punkt Ognia, aby dodać +1 do obrażeń, które zadajesz, lub uzyskać +1 do ruchu Daj Wycisk lub Chroń. Jeśli usuniesz jakiekolwiek oznaczenie szkody, usuń połowę swojego Ognia. Między tajemnicami usuń cały Ogień."
+                "desc": "Masz tor Lonu z 10 polami. Zaznacz 1 za każdą ranę, której doświadczysz, za każdym razem gdy ktoś jawnie ci się sprzeciwi i za każdym razem gdy ktoś z przyjaciół zostanie zraniony. Jeśli tor się zapełni, nie zdobywasz więcej. Możesz wydać 1 punkt, aby dodać +1 do obrażeń, które zadajesz, lub uzyskać +1 do ruchu Daj Wycisk albo Chroń. Jeśli uleczysz się, usuń połowę Lontu. Między tajemnicami wyczyść cały."
             },
             {
                 "name": "Ochroniarz",
@@ -4444,7 +4445,7 @@ const playbooks = [
             {
                 "name": "Rewolucjonista",
                 "group": "Trudne doświadczenie",
-                "desc": "Jaka była twoja sprawa? Masz kontakty wśród sympatyzujących aktywistów. Jeśli potrzebujesz pomocy i pasuje to do sprawy, zwróć się do nich. Rzuć kostką +Charm. Możesz zamiast rzutu wydać 2 Ognia; pobudzisz ich i pomogą tak, jakbyś wyrzucił 10+. Zyskaj sojusznika, starego towarzysza z ruchu. Zdobądź przedmiot formuła zaklęcia.",
+                "desc": "Jaka była twoja sprawa? Masz kontakty wśród sympatyzujących aktywistów. Jeśli potrzebujesz pomocy i pasuje to do sprawy, zwróć się do nich. Rzuć kostką +Urok. Możesz zamiast rzutu wydać 2 Ognia; pobudzisz ich i pomogą tak, jakbyś wyrzucił 10+. Zyskaj sojusznika, starego towarzysza z ruchu. Zdobądź przedmiot formuła zaklęcia.",
                 "rollType": "charm",
                 "success": "pomogą ci",
                 "patrial": "pomogą ci, ale będziesz musiał im pomóc w zamian",
@@ -4453,11 +4454,11 @@ const playbooks = [
             {
                 "name": "Kibol",
                 "group": "Trudne doświadczenie",
-                "desc": "Kiedy masz sojusznika stojącego u twojego boku, wydaj 1-Ogień, aby dodać +2-harm. Jeśli przy twoim boku jest więcej niż jeden sojusznik, możesz wydać Ogień za każdego z nich. Zyskaj sojusznika, starego przyjaciela, na którego możesz liczyć w każdej sytuacji. Zdobądź wybór ekwipunku ognista woda."
+                "desc": "Kiedy masz sojusznika stojącego u twojego boku, wydaj 1-Ogień, aby dodać +2-ran. Jeśli przy twoim boku jest więcej niż jeden sojusznik, możesz wydać Ogień za każdego z nich. Zyskaj sojusznika, starego przyjaciela, na którego możesz liczyć w każdej sytuacji. Zdobądź wybór ekwipunku ognista woda."
             },
             {
                 "name": "Niepowstrzymany",
-                "desc": "Możesz wydać 3 punkty Ognia, by uniknąć lub uleczyć 2-harm oraz się ustabilizować. To leczenie nie podlega czyszczeniu toru Ognia."
+                "desc": "Możesz wydać 3 punkty Ognia, by uniknąć lub uleczyć 2-ran oraz się ustabilizować. To leczenie nie podlega czyszczeniu toru Ognia."
             },
             {
                 "name": "Asceta",
@@ -4469,7 +4470,7 @@ const playbooks = [
             },
             {
                 "name": "WYKOŃCZ TO!",
-                "desc": "Kiedy masz zaznaczony Ogień i zadasz min. 3-harm. Jeśli wróg ma mniej życia niż ty zaznaczeń na torze Ognia. Możesz natychmiast wykorzystać cały Ogień, aby wykonać kolejną atak, pokonując wroga.",
+                "desc": "Kiedy masz zaznaczony Ogień i zadasz min. 3-ran. Jeśli wróg ma mniej życia niż ty zaznaczeń na torze Ognia. Możesz natychmiast wykorzystać cały Ogień, aby wykonać kolejną atak, pokonując wroga.",
             },
             {
                 "name": "Pobudzona Wyobraźnia",
@@ -4492,26 +4493,26 @@ const playbooks = [
             {"charm": "-1","cool": "1","sharp": "0","tough": "2","weird": "1"}
         ],
         "gear": [
-            {"type": "weapon", "name": "Starożytny Miecz","group": "Trudna Broń","tags": ["2-harm","hand","valuable","balanced","holy"]},
-            {"type": "weapon", "name": "Strzelba Automatyczna","group": "Trudna Broń","tags": [ "3-harm", "close", "load", "reload", "area" ]},
-            {"type": "weapon", "name": "Wysłużony Karabin Szturmowy","group": "Trudna Broń","tags": [ "3-harm", "close/far", "area", "loud" ]},
-            {"type": "weapon", "name": "Piła Mechaniczna","group": "Trudna Broń","tags": ["3-harm","hand","unreliable","messy","heavy"]},
-            {"type": "weapon", "name": "Łom","group": "Trudna Broń","tags": [ "2-harm", "hand", "messy", "innocuous" ]},
-            {"type": "weapon", "name": "Garłacz","group": "Trudna Broń","tags": [ "3-harm", "close", "loud" ]},
-            {"type": "weapon", "name": "Cholerne Nożysko","group": "Trudna Broń","tags": [ "2-harm", "hand", "messy" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Karabin Myśliwski","group": "Broń","tags": [ "2-harm", "far", "loud" ]},
-            {"type": "weapon", "name": "Pistolet","group": "Broń","tags": [ "2-harm", "close" ]},
-            {"type": "weapon", "name": "Duży Nóż","group": "Broń","tags": [ "1-harm", "hand" ]},
+            {"type": "weapon", "name": "Starożytny Miecz","group": "Trudna Broń","tags": ["2-ran","na dłoń","cenna","wyważona","święta"]},
+            {"type": "weapon", "name": "Strzelba Automatyczna","group": "Trudna Broń","tags": [ "3-ran", "bliski", "ładowane", "magazynki", "obszarowe" ]},
+            {"type": "weapon", "name": "Wysłużony Karabin Szturmowy","group": "Trudna Broń","tags": [ "3-ran", "bliski/daleki", "obszarowe", "głośny" ]},
+            {"type": "weapon", "name": "Piła Mechaniczna","group": "Trudna Broń","tags": ["3-ran","na dłoń","niewiarygodny","niezdarne","ciężki"]},
+            {"type": "weapon", "name": "Łom","group": "Trudna Broń","tags": [ "2-ran", "na dłoń", "niezdarne", "nieszkodliwy" ]},
+            {"type": "weapon", "name": "Garłacz","group": "Trudna Broń","tags": [ "3-ran", "bliski", "głośny" ]},
+            {"type": "weapon", "name": "Cholerne Nożysko","group": "Trudna Broń","tags": [ "2-ran", "na dłoń", "niezdarne" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Karabin Myśliwski","group": "Broń","tags": [ "2-ran", "daleki", "głośny" ]},
+            {"type": "weapon", "name": "Pistolet","group": "Broń","tags": [ "2-ran", "bliski" ]},
+            {"type": "weapon", "name": "Duży Nóż","group": "Broń","tags": [ "1-ran", "na dłoń" ]},
             {"type": "transport", "name": "Pickup", "group": "Pojazd" },
             {"type": "transport", "name": "Motor", "group": "Pojazd" },
             {"type": "transport", "name": "Muscle car", "group": "Pojazd" },
             {"type": "transport", "name": "Sportowy wóz", "group": "Pojazd" },
-            {"type": "armour", "name": "Ukryta Zbroja","group": "Sprzęt","tags": [ "1-armour", "hidden" ]},
-            {"type": "armour", "name": "Ciężki Pancerz","group": "Sprzęt","tags": [ "2-armour", "heavy" ]},
-            {"type": "gear", "name": "Woda Ognista","group": "Sprzęt","tags": [ "once per mystery, drink it to mark 1 Lont" ]},
-            {"type": "gear", "name": "Torba kasy","group": "Sprzęt","tags": [ "untraceable" ]},
-            {"type": "gear", "name": "Wykrywacz duchów","group": "Sprzęt","tags": [ "unreliable" ]},
+            {"type": "armour", "name": "Ukryta Zbroja","group": "Sprzęt","tags": [ "1-pancerz", "ukryty" ]},
+            {"type": "armour", "name": "Ciężki Pancerz","group": "Sprzęt","tags": [ "2-pancerz", "ciężki" ]},
+            {"type": "gear", "name": "Woda Ognista","group": "Sprzęt","tags": [ "raz na tajemnicę otrzymujesz 1 Lont" ]},
+            {"type": "gear", "name": "Torba kasy","group": "Sprzęt","tags": [ "niewykrywalny" ]},
+            {"type": "gear", "name": "Wykrywacz duchów","group": "Sprzęt","tags": [ "niewiarygodny" ]},
             {"type": "gear", "name": "Stary dziennik Łowcy Potworów","group": "Sprzęt"},
             {"type": "gear", "name": "Serwetka z zapisanym zaklęciem","group": "Sprzęt"}
         ],
@@ -4529,8 +4530,8 @@ const playbooks = [
             "Przerażające blizny, ogromne blizny, blizny po oparzeniach, blizny po pazurach, blizny po ugryzieniach, rytualne blizny",
             "Ubrania uliczne, odzież taktyczna, odzież wojskowa, skórzane ubrania motocyklowe, elegancki garnitur, odzież użytkowa, dżinsy i koszulka, dres"
         ],
-        "advance": [ "Get +1 Tough, max +3", "Get +1 Cool, max +2", "Get +1 Sharp, max +2", "Get +1 Weird, max +2", "Take another Hard Case move", "Take another Hard Case move", "Add an extra harm box to your harm track, before the Unstable mark", "Gain command of an ally team of monster hunters", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Get back one used Luck point", "Your Fire track increases to 13 boxes.", "Add an extra harm box to your harm track, before Dying" ]
+        "advance": [ "Weź +1 Hart, max +3", "Weź +1 Spokój, max +2", "Weź +1 Spryt, max +2", "Weź +1 Dziw, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Powiększ swój tor Ran o 1. Stajesz się niestabilny o jedną Ranę później", "Zyskaj sojuszniczą grupę Łowców Potworów", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Wydłuż tor Lontu do 13 pól", "Powiększ swój tor Ran o 1" ]
     },
     // Pomagier
     {
@@ -4563,7 +4564,7 @@ const playbooks = [
             },
             {
                 "name": "Siet!",
-                "desc": "Kiedy ktoś nowy pojawia się w scenie, a ty chcesz się uktyć, rzuć +Sharp.",
+                "desc": "Kiedy ktoś nowy pojawia się w scenie, a ty chcesz się uktyć, rzuć +Spryt.",
                 "rollType": "sharp",
                 "success": "Schowaj się w najlepszym pobliskim miejscu, zanim cię zobaczy",
                 "patrial": "Wybierz jedno: <ul><li>Ukrywasz się dobrze, ale potwór jest teraz pomiędzy tobą a drogą wyjścia.</li><li>Na razie ukrywasz się dobrze, ale niedługo zostaniesz zdekonspirotwany.</li><li>Ukrywasz się dobrze, ale gubisz coś istotnego.</li></ul>",
@@ -4598,11 +4599,11 @@ const playbooks = [
         ],
         "gear": [
             {"type": "gear", "name": "Sprzęt od bohatera: __", "group": "Sprzęt Bohatera", "isActive": true},
-            {"type": "weapon", "name": "Pistolet","group": "Pomocna Broń","tags": [ "2-harm", "close", "reload", "loud" ]},
-            {"type": "weapon", "name": "Strzelba","group": "Pomocna Broń","tags": [ "3-harm", "close", "messy" ]},
-            {"type": "weapon", "name": "Baseball","group": "Pomocna Broń","tags": [ "2-harm", "hand" ]},
-            {"type": "weapon", "name": "paralizator","group": "Pomocna Broń","tags": [ "1-harm", "hand", "stun" ]},
-            {"type": "weapon", "name": "Duży Nóż","group": "Pomocna Broń","tags": [ "1-harm", "hand" ]}
+            {"type": "weapon", "name": "Pistolet","group": "Pomocna Broń","tags": [ "2-ran", "bliski", "magazynki", "głośny" ]},
+            {"type": "weapon", "name": "Strzelba","group": "Pomocna Broń","tags": [ "3-ran", "bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Baseball","group": "Pomocna Broń","tags": [ "2-ran", "na dłoń" ]},
+            {"type": "weapon", "name": "paralizator","group": "Pomocna Broń","tags": [ "1-ran", "na dłoń", "ogłuszający" ]},
+            {"type": "weapon", "name": "Duży Nóż","group": "Pomocna Broń","tags": [ "1-ran", "na dłoń" ]}
         ],
         "look": [
             "Sprawdź wybory swojego bohatera w jego podręczniku. Wybierz jedną opcję z każdego wiersza w tym podręczniku i skopiuj przynajmniej jeden z ich dokonanych wyborów."
@@ -4614,8 +4615,8 @@ const playbooks = [
             {"charm": "0","cool": "1","sharp": "1","tough": "-1","weird": "1"},
             {"charm": "1","cool": "0","sharp": "1","tough": "1","weird": "-1"}
         ],
-        "advance": ["Get +1 Sharp, max +3", "Get +1 Charm, max +3", "Get +1 Cool, max +2", "Get +1 Tough, max +2", "Take another Sidekick move", "Take another Sidekick move", "Gain an ally: another sidekick for your hero, but junior to you", "Change playbooks to be the same as your hero. This overrides the general rule that only one of each playbook may be in use.", "Take a move from another playbook", "Take a move from another playbook"],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Get back one used Luck point", "Pick a new hero. All moves that mention your hero now apply to the new hero" ]
+        "advance": ["Weź +1 Spryt, max +3", "Weź +1 Urok, max +3", "Weź +1 Spokój, max +2", "Weź +1 Hart, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika: młodszy pomagier twojego bohatera", "Zmień Archetyp na ten twojego Bohatera. Pomija to zasadę 1 archetypu w drużynie.", "Weź ruch innego archetypu", "Weź ruch innego archetypu"],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa", "Wybierz nowego Bohatera, teraz twoje Ruchy aplikują się do niego." ]
     },
     // Wścibski dzieciak
     {
@@ -4629,7 +4630,7 @@ const playbooks = [
         "moves": [
             {
                 "name": "Już Wyjaśniam!",
-                "desc": "gdy Potwór jest złapany lub zapędzony w kozi róg, możesz wyjaśnić, że to żaden potwór, tylko konkretna osoba w przebraniu. Musisz podać realistyczne wyjaśnienia wszystkich pozornie nadnaturalnych wydarzeń, których byliście świadkami i wytłumaczyć, w jaki sposób złoczyńca je spowodował. Gdy demaskujesz oskarżonego, rzuć +Sharp",
+                "desc": "gdy Potwór jest złapany lub zapędzony w kozi róg, możesz wyjaśnić, że to żaden potwór, tylko konkretna osoba w przebraniu. Musisz podać realistyczne wyjaśnienia wszystkich pozornie nadnaturalnych wydarzeń, których byliście świadkami i wytłumaczyć, w jaki sposób złoczyńca je spowodował. Gdy demaskujesz oskarżonego, rzuć +Spryt",
                 "rollType": "sharp",
                 "success": "twoje wnioski były poprawne i to naprawdę była ta osoba w przebraniu!",
                 "patrial": "Strażnik wybiera jedną z poniższych opcji: <ul><li>Potwór jest prawdziwy, ale wskazany przez ciebie Statysta cały czas był jego tajnym sprzymierzeńcem</li><li>masz rację, ale gdy mówiłeś, oskarżony wpadł na pomysł, jak spróbować ucieczki</li><li>wyjaśnienie wszystkich wydarzeń jest słuszne, ale wybrałeś nie tę osobę – gdy demaskujesz złoczyńcę, okazuje się nim być ktoś niespodziewany.</li></ul>",
@@ -4649,7 +4650,7 @@ const playbooks = [
             },
             {
                 "name": "To Pułapka!",
-                "desc": "Kiedy tworzysz pułapkę, aby schwytać potwora lub sługę, rzuć +Sharp",
+                "desc": "Kiedy tworzysz pułapkę, aby schwytać potwora lub sługę, rzuć +Spryt",
                 "rollType": "sharp",
                 "success": "Złapałeś coś! oraz wybierz jedno: <ul><li>Ofierze zajmie trochę czasu uwolnienie się</li><li>Pułapka zadaje obrażenia (pułapka może być improwizowaną bronią)</li><li>Pułapka może zostać ponownie ustawiona i użyta później (dostajesz  +1 do tego nastpęnego rzutu)</li></ul>",
                 "patrial": "Uchwyciłeś coś!",
@@ -4679,7 +4680,7 @@ const playbooks = [
                 "choices": [
                     "Chwilowo ogłusz go",
                     "Splątać ich",
-                    "Zadaj +1-harm, ale twoja broń się rozpada.",
+                    "Zadaj +1-ran, ale twoja broń się rozpada.",
                 ]
             }
         ],
@@ -4719,8 +4720,8 @@ const playbooks = [
             "Kiedy zobaczyłeś swojego pierwszego potwora. Wyjaśnił, co się dzieje. Nie musisz wierzyć we wszystko, w co on wierzy, ale doceniasz, że jego intencje są dobre.",
             "Powstrzymałeś go raz przed zaatakowaniem niewłaściwej osoby, kiedy myślał, że to potwór.",
         ],
-        "advance": [ "Get +1 Charm, max +3", "Get +1 Sharp, max +2", "Get +1 Cool, max +2", "Get +1 Weird, max +2", "Take another Meddling Kid move", "Take another Meddling Kid move", "Gain an ally: a new mystery team member (they may be an animal)", "Get back one used Luck point", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Get back one used Luck point" ]
+        "advance": [ "Weź +1 Urok, max +3", "Weź +1 Spryt, max +2", "Weź +1 Spokój, max +2", "Weź +1 Dziw, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika: tajemniczy członek drużyny (może być to zwierze)", "Odzyskaj 1 punkt na torze Fuksa", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Konstrukt
     {
@@ -4757,7 +4758,7 @@ const playbooks = [
                 "name": "Powód",
                 "isActive": true,
                 "group": "Konstrukcja",
-                "desc": "<p>Zostałeś stworzony, aby pełnić określoną funkcję, wybierz jedną:</p><ul><li>Broń: Zadajesz +1-harm.</li><li>Stróż: Masz +1, gdy Chronisz kogoś.</li><li>Pomocnik: Dostajesz +2, gdy kogoś Wspierasz.</li><li>Eksperyment: Weź ruch z innego playbooka.</li></ul><p>Dlaczego nie pełnisz już tej funkcji? Twoje opcje historii pokrywają się z tymi, więc sprawdź je, aby pomóc sobie zdecydować. Wybierz jedną:</p><ul><li>Twój stwórca umarł.</li><li>Zostałeś puszczony wolno. Dlaczego?</li><li>Stwórca odrzucił ciebie jako porażkę.</li><li>Lata spędziłeś zostawiony i zapomniany. Kto to zmienił?</li><li>Zabiłeś swego stwórcę. Jak do tego doszło?</li><li>Uciekłeś od stwórcy. </li><li>Straicłeś kontakt podczas wojny. Z kim walczyłeś?</li><li>Byłeś popsuty, ale ktoś ciebie naprawił. Kto?</li></ul>"
+                "desc": "<p>Zostałeś stworzony, aby pełnić określoną funkcję, wybierz jedną:</p><ul><li>Broń: Zadajesz +1-ran.</li><li>Stróż: Masz +1, gdy Chronisz kogoś.</li><li>Pomocnik: Dostajesz +2, gdy kogoś Wspierasz.</li><li>Eksperyment: Weź ruch z innego archetypu.</li></ul><p>Dlaczego nie pełnisz już tej funkcji? Twoje opcje historii pokrywają się z tymi, więc sprawdź je, aby pomóc sobie zdecydować. Wybierz jedną:</p><ul><li>Twój stwórca umarł.</li><li>Zostałeś puszczony wolno. Dlaczego?</li><li>Stwórca odrzucił ciebie jako porażkę.</li><li>Lata spędziłeś zostawiony i zapomniany. Kto to zmienił?</li><li>Zabiłeś swego stwórcę. Jak do tego doszło?</li><li>Uciekłeś od stwórcy. </li><li>Straicłeś kontakt podczas wojny. Z kim walczyłeś?</li><li>Byłeś popsuty, ale ktoś ciebie naprawił. Kto?</li></ul>"
             },
             {
                 "name": "Nie Ludzki",
@@ -4769,10 +4770,10 @@ const playbooks = [
                 "name": "Doładowanie",
                 "isActive": true,
                 "group": "Konstrukcja",
-                "desc": "Możesz się naprawić, zanurzając się w źródle swojej siły animującej, ale jest to niebezpieczne, rzuć +Weird",
+                "desc": "Możesz się naprawić, zanurzając się w źródle swojej siły animującej, ale jest to niebezpieczne, rzuć +Dziw",
                 "rollType": "weird",
-                "success": "Leczysz 3-harm",
-                "patrial": "Leczysz 2-harm",
+                "success": "Leczysz 3-ran",
+                "patrial": "Leczysz 2-ran",
                 "failure": "energia cię przytłacza, co nigdy nie kończy się dobrze"
             },
             {
@@ -4781,11 +4782,11 @@ const playbooks = [
             },
             {
                 "name": "Magiczny rdzeń",
-                "desc": "Twoje ciało działa jako magiczny punkt skupienia i może liczyć się jako wymóg do użycia magii lub dużej magii"
+                "desc": "Twoje ciało działa jako magicznezny punkt skupienia i może liczyć się jako wymóg do użycia magii lub dużej magii"
             },
             {
                 "name": "Przebudzenie Rzeczy",
-                "desc": "Podziel się swoją siłą animującą z innym obiektem w bliskim zasięgu, aby traktować go jako przedłużenie samego siebie. Kiedy ożywiasz przedmiot, rzuć +Weird",
+                "desc": "Podziel się swoją siłą animującą z innym obiektem w bliskim zasięgu, aby traktować go jako przedłużenie samego siebie. Kiedy ożywiasz przedmiot, rzuć +Dziw",
                 "rollType": "weird",
                 "success": "kontrolujesz obiekt jak część siebie i otrzymujesz ciągłe +1 kiedy używasz tego przy rzucie.",
                 "patrial": "kontrolujesz obiekt jakby był częścią siebie",
@@ -4801,20 +4802,20 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "name": "Młot Wyburzeniowy","group": "Wielka Broń","tags": [ "3-harm", "hand", "heavy", "messy" ]},
-            {"type": "weapon", "name": "Mieczysko","group": "Wielka Broń","tags": [ "3-harm", "hand", "heavy", "messy" ]},
-            {"type": "weapon", "name": "Potężny Gnat","group": "Wielka Broń","tags": [ "3-harm", "close", "loud", "reload" ]},
-            {"type": "weapon", "name": "Topór Bojowy","group": "Wielka Broń","tags": [ "3-harm", "hand/close", "messy" ]},
-            {"type": "weapon", "name": "Pięści","group": "Twoje Ciało","tags": [ "2-harm", "hand", "forceful" ]},
-            {"type": "weapon", "name": "Wybuch Energii","group": "Twoje Ciało","tags": [ "2-harm", "close", "animating-force" ]},
-            {"type": "weapon", "name": "Zapasy","group": "Twoje Ciało","tags": [ "1-harm", "intimate/hand", "restraining" ]},
-            {"type": "weapon", "name": "Puls Energii","group": "Twoje Ciało","tags": ["1-harm","close","area","animating-force"]},
-            {"type": "armour", "name": "Bastion","group": "Twoje Ciało","tags": [ "1-armour" ]}
+            {"type": "weapon", "name": "Młot Wyburzeniowy","group": "Wielka Broń","tags": [ "3-ran", "na dłoń", "ciężki", "niezdarne" ]},
+            {"type": "weapon", "name": "Mieczysko","group": "Wielka Broń","tags": [ "3-ran", "na dłoń", "ciężki", "niezdarne" ]},
+            {"type": "weapon", "name": "Potężny Gnat","group": "Wielka Broń","tags": [ "3-ran", "bliski", "głośny", "magazynki" ]},
+            {"type": "weapon", "name": "Topór Bojowy","group": "Wielka Broń","tags": [ "3-ran", "na dłoń/bliski", "niezdarne" ]},
+            {"type": "weapon", "name": "Pięści","group": "Twoje Ciało","tags": [ "2-ran", "na dłoń", "potężny" ]},
+            {"type": "weapon", "name": "Wybuch Energii","group": "Twoje Ciało","tags": [ "2-ran", "bliski", "energia ożywiająca" ]},
+            {"type": "weapon", "name": "Zapasy","group": "Twoje Ciało","tags": [ "1-ran", "intymny/na dłoń", "ograniczający" ]},
+            {"type": "weapon", "name": "Puls Energii","group": "Twoje Ciało","tags": ["1-ran","bliski","obszarowe","energia ożywiająca"]},
+            {"type": "armour", "name": "Bastion","group": "Twoje Ciało","tags": [ "1-pancerz" ]}
         ],
         "look": [
             "W kształcie mężczyzny, w kształcie kobiety, w kształcie potwora, w kształcie nijakim",
             "Ciało z gliny, ciało drewniane, ciało kamienne, ciało metalowe, ciało plastikowe, ciało robotyczne",
-            "Płaszcz i kapelusz, toga, strój służby, fartuch laboratoryjny, peleryna z kapturem, ubranie robocze, ubranie codzienne, eleganckie ubranie, nago"
+            "Płaszcz i kapelusz, toga, strój służby, dalekituch laboratoryjny, peleryna z kapturem, ubranie robocze, ubranie codzienne, eleganckie ubranie, nago"
         ],
         "stats": [
             {"charm": "-1","cool": "2","sharp": "-1","tough": "2","weird": "0"},
@@ -4833,8 +4834,8 @@ const playbooks = [
             "Uważał cię za potwora i próbował cię zabić. Dlaczego teraz jesteście przyjaciółmi.",
             "Zna cię od dziecka. Jaka jest natura waszej relacji.",
         ],
-        "advance": [ "Get +1 Tough, max +3", "Get +1 Cool, max +3", "Get +1 Sharp, max +2", "Get +1 Weird, max +2", "Take another Constructed move", "Take another Constructed move", "Gain an ally: you make a friend (literally)", "Adjust your needs: mark a second animating force", "Take a move from another playbook", "Take a move from another playbook" ],
-        "exp_advance": [ "Get +1 to any rating, max +3", "Become human, and change to a new type", "Change this hunter to a new type", "Create a second hunter to play as well as this one", "Mark two of the basic moves as advanced", "Mark another two of the basic moves as advanced", "Retire this hunter to safety", "Erase one used luck mark from your playbook" ]
+        "advance": [ "Weź +1 Hart, max +3", "Weź +1 Spokój, max +3", "Weź +1 Spryt, max +2", "Weź +1 Dziw, max +2", "Weź kolejny ruch tego archetypu", "Weź kolejny ruch tego archetypu", "Zyskaj sojusznika: stwórz sobie przyjaciela (dosłownie)", "Zaznacz dodatkowe Źródło", "Weź ruch innego archetypu", "Weź ruch innego archetypu" ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max +3", "Stań się człowiekiem i zmień swój archetyp", "Zmień archetyp łowcy", "Stwórz drugiego łowcę i graj dwoma", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz dwa Ruchy Podstawowe", "Bezpiecznie udaj się na emeryturę", "Odzyskaj 1 punkt na torze Fuksa" ]
     },
     // Przekuty
     {
@@ -4852,7 +4853,7 @@ const playbooks = [
                 "name": "Druga Natura",
                 "isActive": true,
                 "group": "Żywa Broń",
-                "desc": "<p>Możesz swobodnie zmieniać się między swoją ludzką a broń formą. Nie możesz Dawać Wycisku w formie broni, ale gdy jesteś używany jako broń, twój posiadacz dodaje obrażenia równe Wierd. Wybierz swój podstawowy zasięg, korzyści i wadę.</p><p>Zasięg: Intimate / Hand / Close / Far</p><p>Zaleta (dwie):</p><ul><li>Magia: Dodaj tag 'magic'</li><li>Okropne: +1-harm</li><li>Precyzyjne: +1-harm</li><li>Wyssanie Życia: Dodaj tag 'life-drain'; możesz leczyć swojego użytkownika zamiast siebie</li><li>Zasięg: Dodaj kolejny zasięg</li><li>Obronne: Dodaj 1-armour dla swojego użytkownika</li><li>Rozległe: Dodaj tag 'area'</li><li>Elementalne: Dodaj odpowiednie tagi, takie jak 'fire', 'wind', 'thunder', 'psychic' lub 'dark'</li></ul><p>Wada (jedna):</p><ul><li>Spektakularny</li><li>Charakterystyczny</li><li>Ograniczony</li><li>Nieporęczny</li><li>Ładowany</li></ul>"
+                "desc": "<p>Możesz swobodnie zmieniać się między swoją ludzką a broń formą. Nie możesz Dawać Wycisku w formie broni, ale gdy jesteś używany jako broń, twój posiadacz dodaje obrażenia równe Dziw. Wybierz swój podstawowy zasięg, korzyści i wadę.</p><p>Zasięg: Intymne / Na dłoń / Bliske / Dalekie</p><p>Zaleta (dwie):</p><ul><li>Magia: Dodaj tag 'magiczne'</li><li>Okropne: +1-ran</li><li>Precyzyjne: +1-ran</li><li>Wyssanie Życia: Dodaj tag 'kradzież życia'; możesz leczyć swojego użytkownika zamiast siebie</li><li>Zasięg: Dodaj kolejny zasięg</li><li>Obronne: Dodaj 1-pancerz dla swojego użytkownika</li><li>Rozległe: Dodaj tag 'obszarowe'</li><li>Elementalne: Dodaj odpowiednie tagi, takie jak 'ogień', 'wiatr', 'piorun', 'psychiczne' lub 'mrok'</li></ul><p>Wada (jedna):</p><ul><li>Spektakularny</li><li>Charakterystyczny</li><li>Ograniczony</li><li>Nieporęczny</li><li>Ładowany</li></ul>"
             },
             {
                 "name": "Kuźnia",
@@ -4873,7 +4874,7 @@ const playbooks = [
             },
             {
                 "name": "Moja Pasja",
-                "desc": "Masz hobby, które pogłębia poczucie własnej tożsamości. Cóż, przynajmniej taką masz nadzieję. Raz na tajemnicę, gdy poświęcasz czas na swoje hobby, rzuć +Cool",
+                "desc": "Masz hobby, które pogłębia poczucie własnej tożsamości. Cóż, przynajmniej taką masz nadzieję. Raz na tajemnicę, gdy poświęcasz czas na swoje hobby, rzuć +Spokój",
                 "rollType": "cool",
                 "success": "Zatrzymaj 2",
                 "patrial": "Zatrzymaj 1",
@@ -4885,7 +4886,7 @@ const playbooks = [
             },
             {
                 "name": "Po Mojej Stronie",
-                "desc": "Zawsze jesteś gotów, aby pojawić się obok partnera, albo on obok ciebie, albo zaminić się miejscami, rzuć +Wierd",
+                "desc": "Zawsze jesteś gotów, aby pojawić się obok partnera, albo on obok ciebie, albo zaminić się miejscami, rzuć +Dziw",
                 "rollType": "weird",
                 "success": "Idzie jak planowałeś",
                 "patrial": "Strażnik określa co poszło nie tak.",
@@ -4914,10 +4915,10 @@ const playbooks = [
             {"type": "gear", "name": "Prezent podarowany ci przez małe dziecko","group": "Pamiątka"},
             {"type": "gear", "name": "Notatnik, w którym piszesz poezję","group": "Pamiątka"},
             {"type": "gear", "name": "Ulubiona powieść", "group": "Pamiątka" },
-            {"type": "weapon", "name": "Urodzony Wojownik","group": "Obrona w Ludzkiej Formie","tags": [ "1-harm", "intimate/hand" ]},
-            {"type": "weapon", "name": "Zasapy","group": "Obrona w Ludzkiej Formie","tags": ["2-harm","intimate/hand","grab","forceful"]},
-            {"type": "weapon", "name": "Sztylet","group": "Obrona w Ludzkiej Formie","tags": [ "1-harm", "intimate/hand" ]},
-            {"type": "weapon", "name": "Ukryty Pistolet","group": "Obrona w Ludzkiej Formie","tags": [ "1-harm", "close", "small" ]}
+            {"type": "weapon", "name": "Urodzony Wojownik","group": "Obrona w Ludzkiej Formie","tags": [ "1-ran", "intymny/na dłoń" ]},
+            {"type": "weapon", "name": "Zasapy","group": "Obrona w Ludzkiej Formie","tags": ["2-ran","intymny/na dłoń","chwyt","potężny"]},
+            {"type": "weapon", "name": "Sztylet","group": "Obrona w Ludzkiej Formie","tags": [ "1-ran", "intymny/na dłoń" ]},
+            {"type": "weapon", "name": "Ukryty Pistolet","group": "Obrona w Ludzkiej Formie","tags": [ "1-ran", "bliski", "mały" ]}
         ],
         "stats": [
             {"charm": "2","cool": "1","sharp": "0","tough": "-1","weird": "1"},
@@ -4945,8 +4946,8 @@ const playbooks = [
             "Dzielicie wspólne zainteresowania lub hobby. Co to takiego?",
             "Zostałeś stworzony, aby go zabić – albo personalnie, albo jego lud. Dlaczego sprzeciwiłeś się temu celowi? Czy wiedzą o tym?",
         ],
-        "advance": [ "Get +1 Charm, max+3", "Get +1 Weird, max+3", "Get +1 Tough, max+2", "Get +1 Sharp, max+2", "Get +1 Cool, max+2", "Take another Forged move", "Take another Forged move", "Take a move from another playbook", "Take a move from another playbook", "Pick another benefit for your weapon form", "You can choose to count your current wielder as your partner for the purpose of your moves. Your chosen partner still counts as well." ],
-        "exp_advance": [ "Get +1 to any rating, max+3", "Change this hunter to a new playbook", "Create a second hunter to play in addition to this one", "Get a second partner", "You are able to wield yourself in weapon form, either by magical flight or manifesting a spectral figure to hold you. This frees up your wielder to do other things, while you fight on your own.", "Mark two of the basic moves as advanced", "Choose an advanced move you have. Anyone wielding you treats that move as advanced.", "Choose another advanced move you have. Anyone wielding you treats that move as advanced.", "Retire this hunter to safety", "Choose to be either human or weapon permanently from now on. Either retire to safety or change playbooks" ]
+        "advance": [ "Weź +1 Urok, max+3", "Weź +1 Dziw, max+3", "Weź +1 Hart, max+2", "Weź +1 Spryt, max+2", "Weź +1 Spokój, max+2", "Take another Forged move", "Take another Forged move", "Weź ruch innego archetypu", "Weź ruch innego archetypu", "Zyskaj kolejną Zaletę Drugiej Natury", "Wybierz osobę, która może ciebie używać, ale nie jest twoim partnerem." ],
+        "exp_advance": [ "Weź +1 dla dowolnej cechy, max+3", "Zmień archetyp tego łowcy", "Stwórz drugiego łowcę i graj dwoma", "Wybierz drugiego Partnera", "Jesteś w stanie sam siebie używać w walce. Jak to wygląda? Latasz w powietrzu? Masz astralną manifestację?", "Rozszerz dwa Ruchy Podstawowe", "Rozszerz jeden swój Ruch. Daj Wycisk za pomocą ciebie traktuje się jako Ruch rozszerzony.", "Rozszerz jeden swój Ruch. Daj Wycisk za pomocą ciebie traktuje się jako Ruch rozszerzony.", "Bezpiecznie udaj się na emeryturę", "Zmień się w człowieka lub stań się bronią na zawsze. Przejdź na emeryturę lub zmień archetyp" ]
     },
     // Przyzwaniec
     {
@@ -5015,11 +5016,11 @@ const playbooks = [
             },
             {
                 "name": "Miałem to poczuć?",
-                "desc": "Twoje ciało traktujemy jako 2-armour. Nie kumuluje się z innymi pancerzami."
+                "desc": "Twoje ciało traktujemy jako 2-pancerz. Nie kumuluje się z innymi pancerzami."
             },
             {
                 "name": "Rozróba!",
-                "desc": "<p>Kiedy walczysz tym co masz pod tęką. Wybierz jak duży jest to obiekt i rzuć +harm:</p><ul><li>Gaśnica, słupek ogrodzeniowy, meble itp.: 2-harm</li><li>Motocykl, latarnia, kawałek muru itp.: 3-harm</li><li>Samochód, kontener na śmieci, głaz itp.: 4-harm</li><li>Autobus, ciężarówka, ściana itp.: 5-harm</ul></li>",
+                "desc": "<p>Kiedy walczysz tym co masz pod tęką. Wybierz jak duży jest to obiekt i rzuć +harm:</p><ul><li>Gaśnica, słupek ogrodzeniowy, meble itp.: 2-ran</li><li>Motocykl, latarnia, kawałek muru itp.: 3-ran</li><li>Samochód, kontener na śmieci, głaz itp.: 4-ran</li><li>Autobus, ciężarówka, ściana itp.: 5-ran</ul></li>",
                 "rollType": "prompt",
                 "success": "Wybierz 2",
                 "patrial": "Wybierz 1",
@@ -5034,7 +5035,7 @@ const playbooks = [
             },
             {
                 "name": "Twardziel",
-                "desc": "Zwiększ swóej Tough o +1 (maks +3)"
+                "desc": "Zwiększ swóej Hart o +1 (maks +3)"
             },
             {
                 "name": "Wal się",
@@ -5042,7 +5043,7 @@ const playbooks = [
             },
             {
                 "name": "Niech będzie",
-                "desc": "Wydaj Fuksa, by mieć +1 Tough do końca tajemnicy (maks +4)"
+                "desc": "Wydaj Fuksa, by mieć +1 Hart do końca tajemnicy (maks +4)"
             },
             {
                 "name": "Coś taki poważny?",
@@ -5050,17 +5051,17 @@ const playbooks = [
             }
         ],
         "gear": [
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Super Gnat","tags": ["4-harm","close","heavy","loud","reload"]},
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Minigun","tags": ["3-harm", "close","area",  "messy","heavy", "loud","reload"]},
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Wyrzutnia Rakiet","tags": ["4-harm", "far","area", "heavy","messy", "reload","loud"]},
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Półtorak z Piekła","tags": ["4-harm","hand","heavy","messy","magic"]},
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Strzlba Automatyczna","tags": ["3-harm","close","area","heavy","loud","reload"]},
-            {"type": "weapon", "group": "Wielki Oręż", "name": "Niewidzialna Zemsta","tags": [ "3-harm", "hand", "magic" ]},
-            {"type": "weapon", "group": "Ciężka Broń", "name": "Młot Wyburzeniowy","tags": [ "3-harm", "hand", "heavy", "blunt" ]},
-            {"type": "weapon", "group": "Ciężka Broń", "name": "Mieczysko","tags": [ "3-harm", "hand", "heavy", "messy" ]},
-            {"type": "weapon", "group": "Ciężka Broń", "name": "Toporzysko","tags": [ "3-harm", "hand", "heavy", "slow" ]},
-            {"type": "weapon", "group": "Ciężka Broń", "name": "Magnum","tags": [ "3-harm", "close", "loud", "reload" ]},
-            {"type": "weapon", "group": "Ciężka Broń", "name": "Strzelba","tags": ["3-harm","close","loud","messy","reload"]}
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Super Gnat","tags": ["4-ran","bliski","ciężki","głośny","magazynki"]},
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Minigun","tags": ["3-ran", "bliski","obszarowe",  "niezdarne","ciężki", "głośny","magazynki"]},
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Wyrzutnia Rakiet","tags": ["4-ran", "daleki","obszarowe", "ciężki","niezdarne", "magazynki","głośny"]},
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Półtorak z Piekła","tags": ["4-ran","na dłoń","ciężki","niezdarne","magiczne"]},
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Strzlba Automatyczna","tags": ["3-ran","bliski","obszarowe","ciężki","głośny","magazynki"]},
+            {"type": "weapon", "group": "Wielki Oręż", "name": "Niewidzialna Zemsta","tags": [ "3-ran", "na dłoń", "magiczne" ]},
+            {"type": "weapon", "group": "Ciężka Broń", "name": "Młot Wyburzeniowy","tags": [ "3-ran", "na dłoń", "ciężki", "tępe" ]},
+            {"type": "weapon", "group": "Ciężka Broń", "name": "Mieczysko","tags": [ "3-ran", "na dłoń", "ciężki", "niezdarne" ]},
+            {"type": "weapon", "group": "Ciężka Broń", "name": "Toporzysko","tags": [ "3-ran", "na dłoń", "ciężki", "powolne" ]},
+            {"type": "weapon", "group": "Ciężka Broń", "name": "Magnum","tags": [ "3-ran", "bliski", "głośny", "magazynki" ]},
+            {"type": "weapon", "group": "Ciężka Broń", "name": "Strzelba","tags": ["3-ran","bliski","głośny","niezdarne","magazynki"]}
         ],
         "stats": [
             {"charm": "-1","cool": "2","sharp": "0","tough": "2","weird": "-1"},
@@ -5086,27 +5087,27 @@ const playbooks = [
             "Nie ufasz motywacji tego Łowcy. Co ostatnio zrobił, co wzbudziło twoje podejrzenia?"
         ],
         "advance": [
-            "Get +1 Weird, max +3",
-            "Get +1 Charm, max +2",
-            "Get +1 Cool, max +2",
-            "Get +1 Sharp, max +2",
-            "Take another Summoned move",
-            "Take another Summoned move",
-            "Gain an ally team of monster hunters (or monstrous hunters) under your command",
-            "Get a position in a Sect, like the Initiate has. Create your Sect as if you were making an Initiate character, or join a Sect that already exists in your game. You gain the Initiate move for when you are in good standing with your Sect",
-            "Take a move from another playbook",
-            "Take a move from another playbook",
+            "Weź +1 Dziw, max +3",
+            "Weź +1 Urok, max +2",
+            "Weź +1 Spokój, max +2",
+            "Weź +1 Spryt, max +2",
+            "Weź kolejny ruch tego archetypu",
+            "Weź kolejny ruch tego archetypu",
+            "Zyskaj sojusznika: grupę łowców potowrów lub potworów pod twoim dowodzeniem",
+            "Zyskujesz Sektę od Kultysty. Stwórz nową albo dołącz do istniejącej. Weź ruch Kultysty, możesz z niego korzystać jak masz dobrą reputację w Sekcie.",
+            "Weź ruch innego archetypu",
+            "Weź ruch innego archetypu",
         ],
         "exp_advance": [
-            "Get +1 to any rating, max +3",
-            "Change this hunter to a new type",
-            "Create a second hunter to play as well as this one",
-            "Mark two of the basic moves as advanced",
-            "Mark another two of the basic moves as advanced",
-            "Retire this hunter to safety",
-            "Get back one used Luck point",
-            "You turn evil (again?): retire this hunter. They become one of the Keeper’s threats",
-            "Undo one sign of the Apocalypse",
+            "Weź +1 dla dowolnej cechy, max +3",
+            "Zmień archetyp łowcy",
+            "Stwórz drugiego łowcę i graj dwoma",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Rozszerz dwa Ruchy Podstawowe",
+            "Bezpiecznie udaj się na emeryturę",
+            "Odzyskaj 1 punkt na torze Fuksa",
+            "Stajesz się złem. Przejdź na emeryturę jako zagożenie w rękach Strażnika",
+            "Wymaż jeden Objaw Jeźdźca Apokalipsy",
         ]
     }
 ];
@@ -5323,17 +5324,17 @@ function createMoves({name,type,desc,rollType,success,patrial,failure,choices, g
     const moveResults = (good, mixed, fail) => ({
             success: {
                 key: "system.moveResults.success.value",
-                label: "Success!",
+                label: "Sukces!",
                 value: good
             },
             patrial: {
                 key: "system.moveResults.partial.value",
-                label: "Partial success",
+                label: "Częściowy",
                 value: mixed
             },
             failure: {
                 key: "system.moveResults.failure.value",
-                label: "Miss...",
+                label: "Porażka...",
                 value: fail,
             }
     })
@@ -5381,6 +5382,7 @@ function createItem({name, tags, type}) {
 const style = `.playbook:is(h1,h3,p){margin:0;min-height:0}.playbook ul{margin:0;padding:0 5mm}.playbook{text-align:justify}.playbook .title p{font-style:italic}.playbook .move{position:relative;margin-left:5mm}.playbook .move label{font-weight:bold}.playbook .move label input{display:none}.playbook .move::before{position:absolute;content:'';width:3mm;height:3mm;display:inline-block;border:1px solid;border-radius:2px;left:-5mm;top:1mm}.playbook .move:has(input:checked)::before{background:blue}.playbook .move:has(input:disabled:checked)::before{background:gold}.playbook label:has([name="unstable"])::before{content:"|"}`;
 
 async function playbookDialog(actor, playbook, isReset = false) {
+    const statsLabel = { charm: "Urok", cool: "Spokój", wierd: "Dziw", tough: "Hart", sharp: "Spryt"};
     if (isReset) {
         actor.items.forEach( (x) => { x.delete() });
         b_moves.forEach( move => {
@@ -5414,7 +5416,7 @@ async function playbookDialog(actor, playbook, isReset = false) {
                         switch (space) {
                             case "stats":
                                 actor.update({
-                                    "system.stats": Object.assign(...Object.keys(playbook.stats[checks[i].value]).map( key => ({[key]: {label: key.capitalize(), value: Number(playbook.stats[checks[i].value][key]) }})))
+                                    "system.stats": Object.assign(...Object.keys(playbook.stats[checks[i].value]).map( key => ({[key]: {label: statsLabel[key], value: Number(playbook.stats[checks[i].value][key]) }})))
                                 })
                                 break;
                             case "gear":
@@ -5427,25 +5429,26 @@ async function playbookDialog(actor, playbook, isReset = false) {
                                 break;
                         }
                     }
-                    actor.update({
+                    const tracksUpdate = {
                         "system.attributes.luckspecial.value": playbook.luck,
-                        "system.attributes.look.value": 
-                            '<ul><li>'+playbook.look.join('</li><li>')+'</li></ul>',
-                        "system.attributes.improvements.value": 
-                            '<ul><li>'+playbook.advance.join('</li><li>')+'</li></ul>',
-                        "system.attributes.advancedimprovements.value": 
-                            '<ul><li>'+playbook.exp_advance.join('</li><li>')+'</li></ul>',
-                    });
-                    const playbookItem = game.items.getName("Przeklęty");
+                    };
+                    if (isReset) {
+                        tracksUpdate["system.attributes.look.value"] = '<ul><li>'+playbook.look.join('</li><li>')+'</li></ul>';
+                        tracksUpdate["system.attributes.improvements.value"] = '<ul><li>'+playbook.advance.join('</li><li>')+'</li></ul>';
+                        tracksUpdate["system.attributes.advancedimprovements.value"] = '<ul><li>'+playbook.exp_advance.join('</li><li>')+'</li></ul>';
+                    }
+                    actor.update(tracksUpdate);
+
+                    const playbookItem = game.items.getName(playbook.name);
                     if ( playbookItem ) {
                         actor.createEmbeddedDocuments("Item", [playbookItem])
-                            actor.update({
-                                "system.playbook": {
-                                    name: playbookItem.name,
-                                    slug: playbookItem.system.slug,
-                                    uuid: playbookItem.uuid
-                                }
-                            })
+                        actor.update({
+                            "system.playbook": {
+                                name: playbookItem.name,
+                                slug: playbookItem.system.slug,
+                                uuid: playbookItem.uuid
+                            }
+                        })
                     } else {
                         Item.create({
                             name: playbook.name,
@@ -5518,7 +5521,7 @@ let actorPlaybook = new Dialog({
             }
         },
         changePlabook: {
-            label: "Zmień Playbook",
+            label: "Zmień Archetyp",
             callback: async (html) => {
                 playbookDialog(
                     game.actors.find( ({name}) => name == html.find('.actorName').val() ),
@@ -5528,7 +5531,7 @@ let actorPlaybook = new Dialog({
             }
         },
         getItem: {
-            label: "Weź ruch/przedmiot",
+            label: "Weź ruch/sprzęt",
             callback: async (html) => {
                 itemsDialog(
                     game.actors.find( ({name}) => name == html.find('.actorName').val() ),

@@ -1,7 +1,7 @@
 const b_attrs = {
     "harm": {
-        "label": "Harm",
-        "description": "When you reach 4 or more, mark unstable.",
+        "label": "Rany",
+        "description": "Po otrzymaniu 4 Rany stajesz się Niestabilny.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -11,18 +11,18 @@ const b_attrs = {
         "steps": [false,false,false,false,false,false,false]
     },
     "unstable": {
-        "label": "Unstable",
-        "description": "(Unstable injuries will worsen as time passes)",
+        "label": "Niestabilny",
+        "description": "Twój stan będzie się pogarszał z czasem.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
         "type": "Checkbox",
-        "checkboxLabel": "Unstable Injuries",
+        "checkboxLabel": "Niestabliność",
         "value": false
     },
     "luck": {
-        "label": "Luck",
-        "description": "Mark luck to change a roll to 12 or avoid all harm.",
+        "label": "Fuks",
+        "description": "Zamień wynik na 12 lub uniknij obrażeń.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -32,8 +32,8 @@ const b_attrs = {
         "steps": [false,false,false,false,false,false,false]
     },
     "xp": {
-        "label": "Experience",
-        "description": "When you roll a miss, or when a move says to, mark Xp.",
+        "label": "Doświadczenie",
+        "description": "Przy porżce lub kiedy mówi o tym ruch.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -43,8 +43,8 @@ const b_attrs = {
         "steps": [false,false,false,false,false]
     },
     "armour": {
-        "label": "Armour",
-        "description": "Armour reduces harm suffered by the armour rating.",
+        "label": "Pancerz",
+        "description": "Chroni przed otrzymaniem Ran.",
         "customLabel": false,
         "userLabel": false,
         "position": "left",
@@ -52,7 +52,7 @@ const b_attrs = {
         "value": 0
     },
     "luckspecial": {
-        "label": "Luck Special",
+        "label": "Zasada Fuksa",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -61,7 +61,7 @@ const b_attrs = {
         "value": ""
     },
     "look": {
-        "label": "Look",
+        "label": "Wygląd",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -70,7 +70,7 @@ const b_attrs = {
         "value": ""
     },
     "improvements": {
-        "label": "Improvements",
+        "label": "Rozwinięcia",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -79,7 +79,7 @@ const b_attrs = {
         "value": ""
     },
     "advancedimprovements": {
-        "label": "Advanced Improvements",
+        "label": "Rozwinięcia Zaaw.",
         "description": null,
         "customLabel": false,
         "userLabel": false,
@@ -102,6 +102,13 @@ const playbookTrackers = [
     },
     {
         "label": "Stanu Związku",
+        "desc": "Po zapełnieniu wasza relacja się rozpada",
+        "max": 10,
+        "position": "left",
+        "type": "Clock"
+    },
+    {
+        "label": "Druga Miłość",
         "desc": "Po zapełnieniu wasza relacja się rozpada",
         "max": 10,
         "position": "left",
@@ -173,21 +180,91 @@ function createActorList() {
     return list.outerHTML
 }
 
+function cellOpt(key, option) {
+    const cell = document.createElement('td');
+    switch (option) {
+        case 'reset':
+            cell.innerHTML = `<label><input type="checkbox" data-key="${key}" value="reset">Restet</label>`;
+            break;
+        case 'delete':
+            cell.innerHTML = `<label><input type="checkbox" data-key="${key}" value="del">Usuń</label>`;
+            break;
+        case 'add':
+            cell.setAttribute('colspan',"3");
+            cell.innerHTML = `<label><input type="checkbox" data-key="${key}" value="add">Dodaj</label>`;
+            break;
+        case 'edit':
+            cell.innerHTML = `<label><input name="edit" type="radio" data-key="${key}" value="edit">Edytuj</label>`;
+            break;
+        default: break;
+    }
+    return cell.outerHTML;
+}
+
+async function editTrackDialog(actor, attr, customKey) {
+    const form = document.createElement('div');
+    
+    // name 
+    form.innerHTML += `<label>Nazwa: <input type="text" name="label" value="${attr.label}" ${attr.label ? 'disabled' : ''}/></label>`;
+    // opis
+    form.innerHTML += `<label>Opis: <input type="text" name="desc" value="${attr.description||''}" /></label>`;
+    // value
+    form.innerHTML += `<label>Wartość: <input type="text" name="value" value="${attr.value||''}" /></label>`;
+    // max
+    form.innerHTML += `<label>Max: <input type="number" name="max" value="${attr.max||0}" /></label>`;
+    // position
+    form.innerHTML += `<select name="position"><option value="top">Góra</option><option value="left">Lewo</option></select>`;
+    // type
+    form.innerHTML += `<select name="type"><option value="Clock">Zegar</option><option value="Checkbox">Checkboxy</option><option value="Xp">Doświadczenie</option><option value="Number">Liczba</option><option value="LongText">Tekst</option><option value="ListMany">Lista</option></select>`;
+
+    return new Dialog({
+        title: `${actor.name} ${attr.label||'Nowy'}`,
+        content: `${form.outerHTML}`,
+        buttons: {
+            submit: {
+                label: "Zatwierdź",
+                callback: async ( html ) => {
+                    const data = {
+                        label: html.find('[name="label"]').val(),
+                        desc: html.find('[name="desc"]').val(),
+                        value: html.find('[name="value"]').val(),
+                        max: html.find('[name="max"]').val(),
+                        position: html.find('[name="position"]').val(),
+                        type: html.find('[name="type"]').val(),
+                    };
+                    /// TESTS
+                    if ( data.label === '' || data.label !== attr.label) 
+                        console.error('Niewłaściwy Label');
+                    if (['Clock', 'Xp', 'Number'].includes(data.type) && isNaN(parseInt(data.value)) )
+                        console.error('Wartość musi być liczbą')
+                    
+                    actor.update({
+                        [`system.attributes.${customKey||data.label}`]: addTrack(data)
+                    })
+                }
+            }
+        }
+    }).render(true);
+}
+
 async function trackDialog(actor) {
     const tracks = actor.system.attributes, table = document.createElement('table');
+    table.classList.add('tracksTable');
+    const style = `.tracksTable td{border:1px solid;padding:2px}.tracksTable td:has([type="checkbox"]:checked){background:lightgreen}.tracksTable td:has([type="radio"]:checked){background:lightblue}.tracksTable td input:is([type="checkbox"],[type="radio"]){display:none}.tracksTable td:not(:first-child){text-align:center}.tracksTable label{cursor:pointer}`;
+    table.innerHTML += `<style>${style}</style>`;
     Object.keys(tracks).forEach( key => {
         const track = tracks[key];
         if ( track === '' && b_attrs[key] ) {
-            table.innerHTML += `<td>${b_attrs[key].label}</td><td>Brak</td><td><label><input type="checkbox" data-key="${key}" value="reset">Restet</label>|<label><input type="checkbox" data-key="${key}" value="del">Usuń</label></td>`
+            table.innerHTML += `<td>${b_attrs[key].label}</td><td>Brak</td>${cellOpt(key,"edit")}${cellOpt(key,"reset")}${cellOpt(key,"delete")}`
         }
         else if (track === '') return ;
         else {
-            table.innerHTML += `<td>${track.label}</td><td>${track.type}${["Clock","Xp"].includes(track.type) ? `(${track.max})`  : ''}</td><td><label><input type="checkbox" data-key="${key}" value="reset">Restet</label>|<label><input type="checkbox" data-key="${key}" value="del">Usuń</label></td>`;
+            table.innerHTML += `<td>${track.label}</td><td>${track.type}${["Clock","Xp"].includes(track.type) ? `(${track.max})`  : ''}</td>${cellOpt(key,"edit")}${cellOpt(key,"reset")}${cellOpt(key,"delete")}`;
         }
     })
     playbookTrackers.forEach( track => {
         if ( Object.keys(tracks).includes(track.label) && tracks[track.label] !== '' ) return;
-        table.innerHTML += `<td>${track.label}</td><td>${track.type}${["Clock","Xp"].includes(track.type) ? `(${track.max})`  : ''}</td><td><label><input type="checkbox" data-key="${track.label}" value="add">Dodaj</label></td>`;
+        table.innerHTML += `<td>${track.label}</td><td>${track.type}${["Clock","Xp"].includes(track.type) ? `(${track.max})`  : ''}</td>${cellOpt(track.label,"add")}`;
         
     })
 
@@ -195,10 +272,10 @@ async function trackDialog(actor) {
         title: actor.name,
         content: `${table.outerHTML}`,
         buttons: {
-            submit: {
+            reload: {
                 label: "Przeładuj",
                 callback: async ( html ) => {
-                    const checks = html.find('input:checked'),result = {};
+                    const checks = html.find('input[type="checkbox"]:checked'),result = {};
                     for(let check of checks) {
                         const label = check.getAttribute('data-key');
                         switch (check.value) {
@@ -220,11 +297,24 @@ async function trackDialog(actor) {
                             ...actor.system.attributes,
                             ...result
                         })
-                    }).then( ()=> {
-                        trackDialog(actor)
-                    })
+                    }).then( ()=> trackDialog(actor) )
                 }
             },
+            add: {
+                label: "Stwórz własny / Edytuj wybrany",
+                callback: async ( html ) => {
+                    const checks = html.find('input[type="radio"]:checked');
+                    if (checks.length) {
+                        const attr = actor.system.attributes[checks[0].getAttribute('data-key')];
+                        editTrackDialog( actor, attr );
+                    } else
+                        editTrackDialog( 
+                            actor,
+                            { "label": "", "type": "", "position": "left" },
+                            checks[0].getAttribute('data-key')
+                        );
+                }
+            }
         }
     }).render(true);
 }
