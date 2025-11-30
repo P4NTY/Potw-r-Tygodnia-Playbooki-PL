@@ -33,7 +33,7 @@ const b_attrs = {
     },
     "xp": {
         "label": "Doświadczenie",
-        "description": "Przy porżce lub kiedy mói o tym ruch.",
+        "description": "Przy porżce lub kiedy mówi o tym ruch.",
         "customLabel": false,
         "userLabel": false,
         "position": "top",
@@ -5173,6 +5173,7 @@ function createPlaybook(playbook) {
         for (let index = 0; index < length; index++) {
             const box = document.createElement('input');
             box.setAttribute('type',"checkbox");
+            box.setAttribute('disabled', true)
             box.setAttribute('name',"luck_"+index);
             track.appendChild(box)
         }
@@ -5188,7 +5189,7 @@ function createPlaybook(playbook) {
     const luck = document.createElement('section'),
         luck_desc = "Zaznacz, aby zamienić wynik rzutu na 12, albo uniknąć obrażeń.";
 
-    luck.innerHTML = `<h3>Szczęśćie</h3><p>${luck_desc}</p>${createTrack(7)}<div><b>Los: </b>${playbook.luck}</div>`;
+    luck.innerHTML = `<h3>Szczęście</h3><p>${luck_desc}</p>${createTrack(7)}<div><b>Los: </b>${playbook.luck}</div>`;
     page.appendChild(luck)
 
     const harm = document.createElement('section'),
@@ -5208,8 +5209,8 @@ function createPlaybook(playbook) {
 
     if ( Array.isArray(playbook.trackers) ){
         playbook.trackers.forEach( ({label, desc, max, value}) => {
-            const track = document.createElement('section')
-            if ( label == "Harm" || label == "Unstable" ) {}
+            const track = document.createElement('section');
+            if ( label == "Harm" || ( value == undefined && desc == undefined ) ) {}
             else {
                 track.innerHTML = `<h3>${label}</h3><p>${desc||value}</p>${max > 0 ? createTrack(max) : ''}`
                 page.appendChild(track);
@@ -5227,7 +5228,7 @@ function createPlaybook(playbook) {
     playbook.stats.forEach( ({charm, cool, sharp, tough, weird}, index) => {
         const  line = document.createElement('p');
         if (charm)
-        line.innerHTML = `<label><input type="checkbox" name="stat" value="${index}"/>Charm: ${charm}, Cool: ${cool}, Sharp: ${sharp}, Tough: ${tough}, Weird: ${weird}</label>`;
+        line.innerHTML = `<label><input type="checkbox" name="stat" value="${index}"/>Urok: ${charm}, Spokój: ${cool}, Spryt: ${sharp}, Hart: ${tough}, Dziw: ${weird}</label>`;
         statsSection.appendChild(line);
     })
     page.appendChild(statsSection)
@@ -5379,7 +5380,7 @@ function createItem({name, tags, type}) {
     return result
 }
 
-const style = `.playbook:is(h1,h3,p){margin:0;min-height:0}.playbook ul{margin:0;padding:0 5mm}.playbook{text-align:justify}.playbook .title p{font-style:italic}.playbook .move{position:relative;margin-left:5mm}.playbook .move label{font-weight:bold}.playbook .move label input{display:none}.playbook .move::before{position:absolute;content:'';width:3mm;height:3mm;display:inline-block;border:1px solid;border-radius:2px;left:-5mm;top:1mm}.playbook .move:has(input:checked)::before{background:blue}.playbook .move:has(input:disabled:checked)::before{background:gold}.playbook label:has([name="unstable"])::before{content:"|"}`;
+const style = `.playbook:is(h1,h3,p){margin:0;min-height:0} .playbook ul{margin:0;padding:0 5mm} .playbook{text-align:justify} .playbook .title p{font-style:italic} .playbook .move{position:relative;margin-left:5mm} .playbook .move label{font-weight:bold} .playbook .move label input{display:none} .playbook .move::before{position:absolute;content:'';width:3mm;height:3mm;display:inline-block;border:1px solid;border-radius:2px;left:-5mm;top:1mm} .playbook .move:has(input:checked)::before{background:blue} .playbook .move:has(input:disabled:checked)::before{background:gold} .playbook label:has([name="unstable"])::before{content:"|"} .playbook .moves p {display: inline}`;
 
 async function playbookDialog(actor, playbook, isReset = false) {
     const statsLabel = { charm: "Urok", cool: "Spokój", wierd: "Dziw", tough: "Hart", sharp: "Spryt"};
