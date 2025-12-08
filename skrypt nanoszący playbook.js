@@ -191,7 +191,7 @@ const b_moves = [
                 "failure": {
                     "key": "system.moveResults.failure.value",
                     "label": "Miss...",
-                    "value": "<p>obrażasz lub wkur zasz rozmówcę</p>"
+                    "value": "<p>obrażasz lub wkur zaszrozmówcę</p>"
                 }
             },
             "moveType": "basic",
@@ -1951,7 +1951,7 @@ const playbooks = [
             {"type": "weapon", "name": "Noże do rzucania","tags": [ "1-ran", "bliski", "many" ],"group": "Ukryta Broń"},
             {"type": "weapon", "name": "Ukryty pistolet","tags": [ "2-ran", "bliski", "głośny", "magazynki" ],"group": "Ukryta Broń"},
             {"type": "weapon", "name": "Garrota","tags": [ "3-ran", "intymny" ],"group": "Ukryta Broń"},
-            {"type": "weapon", "name": "Latarka srażnicza","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"},
+            {"type": "weapon", "name": "Latarka strażnicza","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"},
             {"type": "weapon", "name": "Obciążone rękawice","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"},
             {"type": "weapon", "name": "Nóż motylkowy","tags": [ "1-ran", "na dłoń" ],"group": "Ukryta Broń"}
         ],
@@ -4798,7 +4798,7 @@ const playbooks = [
             },
             {
                 "name": "Ale Dlaczego?",
-                "desc": "Twoje trudności w rozumieniu ludzi oznaczają, że mogą oni ujawniać więcej, niż zamierzają. Masz dodatkowe Zatrzymanie, gdy badajesz tajemnicę lub ogarniasz problem, rozmawiając z kimś."
+                "desc": "Twoje trudności w rozumieniu ludzi oznaczają, że mogą oni ujawniać więcej, niż zamierzają. Masz dodatkowe Zatrzymanie, gdy Badasz Tajemnicę lub Ogarniasz Problem, rozmawiając z kimś."
             }
         ],
         "gear": [
